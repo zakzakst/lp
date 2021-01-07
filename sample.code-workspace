@@ -15,7 +15,8 @@
       ".stylelintrc.json": true,
       ".prettierrc": true,
       ".eslintrc.js": true,
-      ".editorconfig": true
+      ".editorconfig": true,
+      ".babelrc": true
     },
     // 設定：TODO Highlight
     "todohighlight.keywords": [
