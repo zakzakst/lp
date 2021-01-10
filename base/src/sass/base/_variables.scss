@@ -1,0 +1,24 @@
+// 色の設定
+$color-primary: #00bfa6;
+$color-primary--bg: #ecfff8;
+$color-primary--darker: #004037;
+$color-base: #fff;
+$color-text: #4a4a4a;
+
+// フォントサイズの設定
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-default: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+
+// トランジションの設定
+$transition-fast: 0.3s;
+$transition-default: 0.5s;
+$transition-slow: 1s;
+
+// z-indexの数値
+$z-go-top: 100 !default;
+$z-header-menu: 1000 !default;
+$z-header-btn: 1001 !default;
+$z-page-overlay: 10000 !default;

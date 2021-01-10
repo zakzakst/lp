@@ -1,0 +1,9 @@
+{
+  "siteData": {
+    "name": "サイト名",
+    "domain": "https://domain/",
+    "shortcutIcon": "https://domain/common/img/favicon.ico",
+    "appleIcon": "https://domain/common/img/apple-touch-icon.png",
+    "ogImage": "https://domain/common/img/ogp.png"
+  }
+}
