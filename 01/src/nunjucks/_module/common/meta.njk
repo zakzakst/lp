@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<title>{{ pageData.title }}｜{{ siteData.name }}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="{{ pageData.keywords }}">
+<meta name="description" content="{{ pageData.description }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="{{ siteData.domain }}{{ pageData.path }}">
+<link rel="shortcut icon" href="{{ siteData.shortcutIcon }}" type="image/x-icon">
+<link rel="apple-touch-icon" href="{{ siteData.appleIcon }}" type="image/png">
+
+<!--OpenGraph-->
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="{{ pageData.title }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ siteData.domain }}{{ pageData.path }}">
+<meta property="og:site_name" content="{{ siteData.name }}">
+<meta property="og:image" content="{{ siteData.ogImage }}">
+<meta property="og:description" content="{{ pageData.description }}">
