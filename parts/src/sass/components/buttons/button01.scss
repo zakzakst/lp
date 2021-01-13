@@ -1,0 +1,72 @@
+$color-primary: #fa0000;
+$color-border: #e6e6e6;
+$transition-border: .5s;
+$transition-arrow: .5s;
+$height-border: 2px;
+
+.button-01 {
+  position: relative;
+  display: flex;
+  padding: 30px 0;
+  align-items: center;
+  border-bottom: $height-border solid $color-border;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 100%;
+    height: $height-border;
+    background: $color-primary;
+  }
+  &::before {
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform $transition-border;
+  }
+  &::after {
+    right: 0;
+    width: 30px;
+  }
+  &__text {
+    flex-grow: 1;
+    font-weight: bold;
+  }
+  &__arrow {
+    margin-right: 4px;
+    color: $color-primary;
+    overflow: hidden;
+  }
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    .button-01__arrow {
+      svg {
+        animation: arrowSlide $transition-arrow forwards;
+      }
+    }
+  }
+}
+
+@keyframes arrowSlide {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  51% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
