@@ -1,4 +1,8 @@
+a {
+  color: inherit;
+}
+
 @import 'common/variables';
 
 // パーツ
-@import 'components/buttons.scss';
+@import 'components/buttons/buttons';
