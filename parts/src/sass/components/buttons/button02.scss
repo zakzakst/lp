@@ -1,0 +1,56 @@
+$color-primary: #ffff00;
+$color-border: #000;
+$transition-bg: .5s;
+
+.button-02 {
+  position: relative;
+  display: flex;
+  height: 55px;
+  padding: 0 20px;
+  align-items: center;
+  font-weight: bold;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+  }
+  &::before {
+    top: 0;
+    bottom: 0;
+    background: $color-primary;
+    transform: scaleX(0);
+    transform-origin: top right;
+    transition: transform $transition-bg;
+    z-index: 1;
+  }
+  &::after {
+    bottom: 0;
+    height: 2px;
+    background: $color-border;
+  }
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      transform-origin: top left;
+    }
+  }
+  &__text {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 30px;
+      height: 1px;
+      margin: auto 0;
+      background: $color-border;
+    }
+  }
+}
