@@ -1,0 +1,27 @@
+$transition-border: 0.5s;
+$easing-border: cubic-bezier(0.32, 0, 0.21, 1);
+$gradient-border: linear-gradient(90deg, #efb8b7, #3298c6, #efb8b7);
+
+.button-06 {
+  position: relative;
+  padding-bottom: 0.6em;
+  font-size: 15px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 0.2em;
+    background: $gradient-border;
+    background-size: 200% 100%;
+    background-position: left;
+    transition: background-position $transition-border $easing-border;
+  }
+  &:hover {
+    &::after {
+      background-position: right;
+    }
+  }
+}
