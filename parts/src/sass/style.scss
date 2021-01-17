@@ -1,9 +1,12 @@
 a {
   color: inherit;
+  &:hover {
+    color: inherit;
+  }
 }
 
-@import 'common/variables';
+@import "common/variables";
 
 // パーツ
-@import 'components/buttons/buttons';
-@import 'components/news-lists/news-lists';
+@import "components/buttons/buttons";
+@import "components/news-lists/news-lists";
