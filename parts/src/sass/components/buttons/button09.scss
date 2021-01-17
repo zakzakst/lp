@@ -1,0 +1,41 @@
+$color_text_primary: #989898;
+$color_border_primary: #d5d5d5;
+$color_hover: #171e27;
+$transition_border: 0.3s;
+
+.button-09 {
+  position: relative;
+  display: inline-block;
+  padding-right: 8.5em;
+  color: $color_text_primary;
+  font-size: 16px;
+  font-family: "EB Garamond", serif;
+  transition: color 0s ease 0.1s;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 2.5em;
+    display: block;
+    width: 4.5em;
+    height: 1px;
+    margin: auto 0;
+  }
+  &::before {
+    background: $color_border_primary;
+  }
+  &::after {
+    background: $color_hover;
+    transform: scale(0.1, 1);
+    transform-origin: left;
+    transition: transform $transition_border;
+  }
+  &:hover {
+    color: $color_hover;
+    &::after {
+      transform: scale(1);
+    }
+  }
+}
