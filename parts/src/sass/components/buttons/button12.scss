@@ -1,0 +1,52 @@
+$primary_color: #1a1a1a;
+$width_border: 1px;
+$transition_char: 1s;
+$easing_char: cubic-bezier(0.19, 1, 0.22, 1);
+$delay_char: 0.03s;
+
+.button-12 {
+  display: flex;
+  height: 60px;
+  color: $primary_color;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  align-items: center;
+  justify-content: center;
+  border-top: $width_border solid $primary_color;
+  border-bottom: $width_border solid $primary_color;
+  &__char {
+    position: relative;
+    display: inline-block;
+    line-height: 1.1;
+    overflow: hidden;
+    & > span {
+      display: inline-block;
+      transition: transform 0s;
+    }
+    & > span:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(100%);
+    }
+  }
+  &:hover &__char {
+    & > span {
+      transition: transform $transition_char $easing_char;
+    }
+    & > span:nth-child(1) {
+      transform: translateY(-100%);
+    }
+    & > span:nth-child(2) {
+      transform: translateY(0);
+    }
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        & > span {
+          transition-delay: #{$i * $delay_char};
+        }
+      }
+    }
+  }
+}
