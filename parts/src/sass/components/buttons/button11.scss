@@ -1,0 +1,71 @@
+$color_primary: #1c9dc9;
+$gradient_base: linear-gradient(
+  117deg,
+  rgba(255, 255, 255, 0.57) 0%,
+  rgba(255, 255, 255, 0.09) 100%
+);
+$gradient_inner: linear-gradient(135deg, #eaf1f3 0%, #e4edf0 90%, #e4edf0 100%);
+$gradient_icon: linear-gradient(135deg, #38b5e1 0%, #21adde 90%, #21adde 100%);
+$shadow_base: -5px -5px 15px 0px rgba(255, 255, 255, 0.56),
+  -3px -3px 20px 0px rgba(255, 255, 255, 0.76),
+  5px 5px 12px 0 rgba(90, 125, 136, 0.16),
+  3px 3px 24px 0 rgba(90, 125, 136, 0.32);
+$shadow_base_hover: -3px -3px 6px 0px rgba(255, 255, 255, 0.56),
+  -1px -1px 3px 0px rgba(255, 255, 255, 0.76),
+  3px 3px 6px 0 rgba(90, 125, 136, 0.16), 1px 1px 4px 0 rgba(90, 125, 136, 0.32);
+$shadow_icon: 2px 2px 4px 0px rgba(34, 111, 138, 0.16) inset,
+  2px 2px 3px 0 rgba(255, 255, 255, 0.26) inset;
+$height_base: 64px;
+$border_base: 1px; // ボーダー部分にグラデーションを当てるために「border」でなく、「padding」でオフセットを設定している
+$transition_default: 0.3s;
+
+.button-11 {
+  position: relative;
+  display: block;
+  height: $height_base;
+  padding: $border_base;
+  background: $gradient_base;
+  border-radius: $height_base / 2;
+  color: $color_primary;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+  box-shadow: $shadow_base;
+  transition: box-shadow $transition_default ease;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 14px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    background: url(https://ion-e-air.jp/images/icon_arrow_w@2x.png),
+      $gradient_icon;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 16px auto, 100%;
+    background-position: center, center;
+    border-radius: 50%;
+  }
+  &__text {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 12px 56px 12px 32px;
+    background: $gradient_inner;
+    border-radius: ($height_base - $border_base * 2) / 2;
+    justify-content: center;
+    align-items: center;
+  }
+  &:hover {
+    color: $color_primary;
+    box-shadow: $shadow_base_hover;
+  }
+  // 背景の色
+  &__bg {
+    background: linear-gradient(106deg, #dbe9ec 0%, #e2ecee 100%);
+  }
+}
