@@ -1,0 +1,29 @@
+<!-- 参考：https://www.bebit.co.jp/ -->
+-
+  var newsList = [
+    {
+      category: 'お知らせ',
+      date: '2021.01.01 Fri.'
+    },
+    {
+      category: 'お知らせ',
+      date: '2021.01.02 Sat.'
+    },
+    {
+      category: 'お知らせ',
+      date: '2021.01.03 Sun.'
+    }
+  ]
+
+<ul class="news-list-02">
+  each news in newsList
+    <li>
+      <a href="#" class="news-list-02__link">
+        <dl class="news-list-02__item">
+          <dt class="news-list-02__item-date">#{ news.category }<span>#{ news.date }</span>
+          </dt>
+          <dd class="news-list-02__item-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+        </dl>
+      </a>
+    </li>
+</ul>
