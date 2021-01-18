@@ -1,3 +1,61 @@
-.test {
-  color: #f00;
+$color_primary: #000;
+$transition_default: 0.2s;
+
+.news-list-01 {
+  font-size: 13px;
+  &__item {
+    display: block;
+    padding: 4px 0;
+    color: $color_primary;
+    transition: opacity $transition_default ease-out;
+    &:hover {
+      opacity: 0.55;
+    }
+    @include mq-md() {
+      display: flex;
+      padding: 5px 0;
+      align-items: center;
+    }
+  }
+  &__item-date {
+    position: relative;
+    display: block;
+    width: 115px;
+    padding-left: 15px;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 4px;
+      height: 4px;
+      margin: auto;
+      background: $color_primary;
+      border-radius: 50%;
+    }
+    @include mq-md() {
+      padding: 0 25px 0 0;
+      &::before {
+        left: auto;
+        right: 0;
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+  &__item-text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include mq-md() {
+      padding-left: 25px;
+    }
+  }
 }
