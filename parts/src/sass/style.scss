@@ -4,6 +4,9 @@ a {
     color: inherit;
   }
 }
+img {
+  vertical-align: bottom;
+}
 
 @import "common/variables";
 @import "common/mixins";
@@ -11,3 +14,4 @@ a {
 // パーツ
 @import "components/buttons/buttons";
 @import "components/news-lists/news-lists";
+@import "components/cards/cards";
