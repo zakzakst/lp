@@ -9,3 +9,6 @@ button10('js-button-04-hover-text');
 
 import { splitCloneText as button12 } from './components/buttons/button12';
 button12('js-button-12', 'button-12__char');
+
+import { card03 } from './components/cards/card03';
+card03();
