@@ -1,0 +1,27 @@
+$easing_default: cubic-bezier(0.87, 0, 0.13, 1);
+
+.scroll-anim-04 {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5%;
+    bottom: -5%;
+    left: -10%;
+    right: -10%;
+    display: block;
+    background: #fff;
+    transform: rotate(0.09deg) skewX(10deg);
+  }
+  &.is-animated {
+    &::after {
+      transform: rotate(0deg) skewX(10deg) translateX(-100%);
+      transition: transform 1s $easing_default;
+    }
+  }
+  & > img {
+    width: 100%;
+  }
+}
