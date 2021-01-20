@@ -1,0 +1,116 @@
+$color_primary: #000;
+$color_secondary: #fdcf10;
+$transition_bg: 0.3s;
+$transition_border: 0.3s;
+$transition_arrow: 1.5s;
+$easing_default: cubic-bezier(0.45, 0.05, 0.3, 0.93);
+$delay_arrow: 1s;
+$arrowAnimOption: $transition_arrow $easing_default $delay_arrow infinite;
+
+.button-13 {
+  position: relative;
+  display: inline-flex;
+  height: 45px;
+  padding: 0 78px 0 36px;
+  align-items: center;
+  font-size: 12px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  border: 1px solid $color_primary;
+  transition: border-color $transition_border $easing_default;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background: $color_secondary;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform $transition_bg $easing_default;
+    z-index: -1;
+  }
+  &:hover {
+    border-color: $color_secondary;
+    &::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    display: block;
+    width: 48px;
+    margin: auto 0;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: block;
+      margin: auto 0;
+      background: $color_primary;
+    }
+    &::before {
+      right: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      animation: button13ArrowDot $arrowAnimOption;
+    }
+    &::after {
+      left: 0;
+      right: 4px;
+      height: 1px;
+      animation: button13ArrowLine $arrowAnimOption;
+    }
+  }
+}
+
+@keyframes button13ArrowDot {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes button13ArrowLine {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+  30% {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+  31% {
+    transform: scaleX(1);
+    transform-origin: right center;
+  }
+  60% {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+}
