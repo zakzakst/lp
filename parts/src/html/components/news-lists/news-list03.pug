@@ -1,0 +1,35 @@
+<!-- 参考：https://www.bish.tokyo/ -->
+-
+  var newsList = [
+    {
+      category: 'LIVE/EVENT',
+      date: '2021.01.20',
+      week: '[WED]',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      category: 'LIVE/EVENT',
+      date: '2021.01.21',
+      week: '[THU]',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      category: 'LIVE/EVENT',
+      date: '2021.01.22',
+      week: '[FRI]',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    }
+  ]
+
+<ul class="news-list-03">
+  each news in newsList
+    <li>
+      <a href="#" class="news-list-03__item">
+        <div class="news-list-03__head">
+          <span class="news-list-03__category">#{ news.category }</span>
+          <span class="news-list-03__date">#{ news.date }<span class="news-list-03__week">#{ news.week }</span></span>
+        </div>
+        <span class="news-list-03__text">#{ news.text }</span>
+      </a>
+    </li>
+</ul>
