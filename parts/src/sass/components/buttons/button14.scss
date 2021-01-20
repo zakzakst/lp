@@ -1,0 +1,42 @@
+$color_primary: #cb000f;
+$color_secondary: #111;
+$size_icon: 80px;
+$transition_default: 0.4s;
+$easing_default: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+.button-14 {
+  position: relative;
+  display: inline-flex;
+  height: $size_icon;
+  padding-left: 40px;
+  align-items: center;
+  &__text {
+    display: inline-block;
+    padding-bottom: 6px;
+    color: $color_primary;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 30px;
+    background: #fff;
+    transition: all $transition_default $easing_default;
+    z-index: 1;
+  }
+  &:hover &__text {
+    color: $color_secondary;
+    transform: translateX(-8px);
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: $size_icon;
+    height: $size_icon;
+    border: 3px solid $color_primary;
+    transition: all $transition_default $easing_default;
+  }
+  &:hover &__icon {
+    border-color: $color_secondary;
+    transform: scale(0.9);
+  }
+}
