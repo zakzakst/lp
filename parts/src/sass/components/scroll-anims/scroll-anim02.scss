@@ -1,0 +1,15 @@
+$easing_default: cubic-bezier(0.545, 0.08, 0.52, 0.975);
+// イージング参考
+// https://dev.oro.com/posts/2017/07/design/transition_template/
+
+.scroll-anim-02 {
+  opacity: 0;
+  filter: blur(10px);
+  transition-property: opacity, filter;
+  transition-duration: 0.5s;
+  transition-timing-function: $easing_default;
+  &.is-animated {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
