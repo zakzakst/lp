@@ -18,3 +18,5 @@ import { scrollAnim01 } from './components/scroll-anims/scroll-anim01';
 scrollAnim01();
 import { scrollAnim02 } from './components/scroll-anims/scroll-anim02';
 scrollAnim02();
+import { scrollAnim03 } from './components/scroll-anims/scroll-anim03';
+scrollAnim03();
