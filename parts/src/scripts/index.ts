@@ -12,3 +12,6 @@ button12('js-button-12', 'button-12__char');
 
 import { card03 } from './components/cards/card03';
 card03();
+
+import { scrollAnim01 } from './components/scroll-anims/scroll-anim01';
+scrollAnim01();
