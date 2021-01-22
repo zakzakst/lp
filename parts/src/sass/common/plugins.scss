@@ -1,0 +1,8 @@
+/*
+ * Slick
+ */
+// フォントとローダー画像のパス変数書き換え
+$slick-font-path: "../../node_modules/slick-carousel/slick/fonts/";
+$slick-loader-path: "../../node_modules/slick-carousel/slick/";
+@import "../../../node_modules/slick-carousel/slick/slick";
+@import "../../../node_modules/slick-carousel/slick/slick-theme";
