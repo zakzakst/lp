@@ -1,0 +1,165 @@
+$color_primary: #dd2e1e;
+$color_secondary: #b32619;
+$color_pager_line: #ea6b60;
+$width_title: 180px;
+$width_pager: 40px;
+$height_pager: 40px;
+$duration_pager_line: 2.8s;
+
+.carousel-01 {
+  display: flex;
+  height: 100px;
+  padding-right: 30px;
+  background: $color_primary;
+  color: #fff;
+  font-family: YakuHanJP, "Noto Sans JP", sans-serif;
+  & :focus {
+    outline: none;
+  }
+  &__title {
+    display: flex;
+    width: $width_title;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: $color_secondary;
+    font-weight: bold;
+    letter-spacing: 0.18em;
+  }
+  &__items {
+    display: flex;
+    width: calc(100% - #{$width_title + $width_pager});
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 40px 0 30px;
+    & > ul {
+      width: 100%;
+    }
+  }
+  &__item {
+    display: block;
+    line-height: 1.15;
+  }
+  &__item-date {
+    font-size: 12px;
+  }
+  &__item-text {
+    display: block;
+    padding-top: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__pager {
+    position: relative;
+    display: flex;
+    width: $width_pager;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  &__pager-item {
+    & > li {
+      position: absolute;
+      display: block;
+      width: $width_pager;
+      height: $height_pager;
+      padding: 2px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0;
+      overflow: hidden;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: block;
+        width: 50%;
+        background: $color_pager_line;
+      }
+      &::before {
+        right: 0;
+        transform-origin: center left;
+        z-index: 1;
+      }
+      &::after {
+        left: 0;
+        transform-origin: center right;
+      }
+      &.slick-active {
+        position: relative;
+        opacity: 1;
+        &::before {
+          animation: rotate-circle-right $duration_pager_line linear forwards;
+        }
+        &::after {
+          animation: rotate-circle-left $duration_pager_line linear forwards;
+        }
+        @at-root {
+          .carousel-01__items:hover + .carousel-01__pager &::before,
+          .carousel-01__items:hover + .carousel-01__pager &::after {
+            animation-play-state: paused;
+          }
+        }
+      }
+      & > button {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background: $color_primary;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1;
+        z-index: 1;
+        &::before {
+          content: "0";
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate-circle-right {
+  0% {
+    transform: rotate(0deg);
+    background: $color_pager_line;
+  }
+  50% {
+    transform: rotate(180deg);
+    background: $color_pager_line;
+  }
+  50.01% {
+    transform: rotate(360deg);
+    background: #fff;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: #fff;
+  }
+}
+
+@keyframes rotate-circle-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}

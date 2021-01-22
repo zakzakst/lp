@@ -22,3 +22,7 @@ import { scrollAnim03 } from './components/scroll-anims/scroll-anim03';
 scrollAnim03();
 import { scrollAnim04 } from './components/scroll-anims/scroll-anim04';
 scrollAnim04();
+
+// カルーセル
+import { carousel01 } from './components/carousels/carousel01';
+carousel01();

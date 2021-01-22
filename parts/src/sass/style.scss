@@ -10,9 +10,11 @@ img {
 
 @import "common/variables";
 @import "common/mixins";
+@import "common/plugins";
 
 // パーツ
 @import "components/buttons/buttons";
 @import "components/news-lists/news-lists";
 @import "components/cards/cards";
 @import "components/scroll-anims/scroll-anims";
+@import "components/carousels/carousels";
