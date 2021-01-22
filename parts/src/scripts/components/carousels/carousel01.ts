@@ -3,7 +3,11 @@ import 'slick-carousel';
 
 export const carousel01 = () => {
   $(function() {
-    $('#js-carousel-01-items ul').slick({
+    const el = $('#js-carousel-01-items ul');
+    // 要素がない場合、処理を終了
+    if (!el) return;
+    // カルーセルの実行
+    el.slick({
       autoplay: true,
       autoplaySpeed: 3000,
       arrows: false,

@@ -26,3 +26,5 @@ scrollAnim04();
 // カルーセル
 import { carousel01 } from './components/carousels/carousel01';
 carousel01();
+import { carousel02 } from './components/carousels/carousel02';
+carousel02();
