@@ -1,0 +1,55 @@
+<!-- 参考：https://www.andrew.ac.jp/businessdesign/ -->
+-
+  var carouselItems = [
+    {
+      img: 'https://picsum.photos/400/400',
+      date: '2021/01/01',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      img: 'https://picsum.photos/400/400',
+      date: '2021/01/02',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      img: 'https://picsum.photos/400/400',
+      date: '2021/01/03',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      img: 'https://picsum.photos/400/400',
+      date: '2021/01/04',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      img: 'https://picsum.photos/400/400',
+      date: '2021/01/05',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+  ]
+
+<div class="carousel-02">
+  <div class="carousel-02__items" id="js-carousel-02-items">
+    <ul>
+      each item in carouselItems
+        <li>
+          <a href="" class="carousel-02__item">
+            <div class="carousel-02__item-img">
+              <img src="#{ item.img }" alt="">
+            </div>
+            <p class="carousel-02__item-date">#{ item.date }</p>
+            <p class="carousel-02__item-text">#{ item.text }</p>
+          </a>
+        </li>
+    </ul>
+  </div>
+  <div class="carousel-02__foot">
+    <div class="carousel-02__buttons">
+      <a href="" class="carousel-02__button carousel-02__button--prev" id="js-carousel-02-button-prev">&lt;</a>
+      <a href="" class="carousel-02__button carousel-02__button--next" id="js-carousel-02-button-next">&gt;</a>
+    </div>
+    <div class="carousel-02__indicator-base">
+      <div class="carousel-02__indicator" id="js-carousel-02-indicator"></div>
+    </div>
+  </div>
+</div>

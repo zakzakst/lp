@@ -1,0 +1,84 @@
+$color_primary: #800000;
+$color_text: #333;
+$color_bg: #fafafa;
+$color_line: rgba(0, 0, 0, 0.12);
+
+.carousel-02 {
+  position: relative;
+  width: 600px;
+  background: $color_bg;
+  padding: 24px;
+  // スライダーの左側を隠す目的で疑似要素配置
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    background: $color_bg;
+  }
+  &__items {
+    margin: 0 -8px;
+    .slick-list {
+      overflow: visible;
+    }
+  }
+  &__item {
+    display: block;
+    padding: 0 8px;
+  }
+  &__item-img {
+    & > img {
+      width: 100%;
+    }
+  }
+  &__item-date {
+    padding-top: 15px;
+    color: $color_primary;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  &__item-text {
+    padding-top: 7px;
+    color: $color_text;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  &__foot {
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+  }
+  &__buttons {
+    display: flex;
+    margin-right: 24px;
+    flex-shrink: 0;
+  }
+  &__button {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: $color_primary;
+    &.is-disable {
+      color: #ddd;
+    }
+  }
+  &__indicator-base {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: $color_line;
+  }
+  &__indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: $color_primary;
+    transition: width 0.5s;
+  }
+}
