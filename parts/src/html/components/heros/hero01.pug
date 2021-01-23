@@ -1,0 +1,31 @@
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanjp.min.css">
+
+-
+  var mvItems = [
+    { src: 'https://picsum.photos/id/237/400/400' },
+    { src: 'https://picsum.photos/id/238/400/400' },
+    { src: 'https://picsum.photos/id/239/400/400' }
+  ]
+
+<div class="hero01 columns is-relative" id="js-hero-01">
+  <div class="column is-5">
+    <h1 class="hero01__title">
+      <span class="hero01__title-line"><span>ここに</span></span>
+      <span class="hero01__title-line"><span>タイトルが</span></span>
+      <span class="hero01__title-line"><span>入ります</span></span>
+    </h1>
+    <p class="hero01__lead"><span>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span></p>
+  </div>
+  <div class="hero01__mv-wrapper column is-7">
+    //- <div class="hero01__mv" style="background-image: url(https://picsum.photos/id/237/20/20);">
+    <div class="hero01__mv">
+      each item in mvItems
+        <div class="hero01__mv-item">
+          <div class="hero01__mv-img-container">
+            <div class="hero01__mv-img" data-img-src="#{ item.src }"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
