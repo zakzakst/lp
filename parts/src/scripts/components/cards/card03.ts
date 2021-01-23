@@ -1,7 +1,7 @@
 'use strict';
 
 export function card03() {
-  console.log('card03');
+  // console.log('card03');
 }
 
 class test {
