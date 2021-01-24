@@ -1,0 +1,27 @@
+-
+  var mvItems = [
+    { src: 'https://picsum.photos/id/237/400/400' },
+    { src: 'https://picsum.photos/id/238/400/400' },
+    { src: 'https://picsum.photos/id/239/400/400' }
+  ]
+
+<div class="hero columns is-relative" id="js-hero">
+  <div class="column is-5">
+    <h1 class="hero__title">
+      <span class="hero__title-line"><span>ここに</span></span>
+      <span class="hero__title-line"><span>タイトルが</span></span>
+      <span class="hero__title-line"><span>入ります</span></span>
+    </h1>
+    <p class="hero__lead"><span>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span></p>
+  </div>
+  <div class="hero__mv-wrapper column is-7">
+    <div class="hero__mv">
+      each item in mvItems
+        <div class="hero__mv-item">
+          <div class="hero__mv-img-container">
+            <div class="hero__mv-img" data-img-src="#{ item.src }"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
