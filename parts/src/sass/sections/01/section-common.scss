@@ -1,0 +1,31 @@
+.section-01 {
+  font-family: YakuHanJP, "Noto Sans JP", sans-serif;
+  .lead {
+    &__heading {
+      position: relative;
+      padding-top: 64px;
+      color: $color_primary;
+      font-size: 20px;
+      font-weight: 700;
+      @include mq-md() {
+        padding-top: 108px;
+        font-size: 28px;
+      }
+    }
+    &__heading-shoulder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Oswald", sans-serif;
+      font-size: 60px;
+      line-height: 1;
+      @include mq-md() {
+        top: -12px;
+        font-size: 120px;
+      }
+    }
+    &__text {
+      margin-top: 16px;
+    }
+  }
+}

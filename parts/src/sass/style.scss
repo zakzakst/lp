@@ -13,9 +13,12 @@ img {
 @import "common/plugins";
 
 // パーツ
-@import "components/buttons/buttons";
-@import "components/news-lists/news-lists";
-@import "components/cards/cards";
-@import "components/scroll-anims/scroll-anims";
-@import "components/carousels/carousels";
-@import "components/heros/heros";
+// @import "components/buttons/buttons";
+// @import "components/news-lists/news-lists";
+// @import "components/cards/cards";
+// @import "components/scroll-anims/scroll-anims";
+// @import "components/carousels/carousels";
+// @import "components/heros/heros";
+
+// セクション
+@import "sections/01/sections01";

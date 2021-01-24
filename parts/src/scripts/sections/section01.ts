@@ -1,6 +1,7 @@
 'use strict';
 
-export const hero01 = () => {
+export const section01 = () => {
+  console.log('teest')
   const hero = new Hero01();
   hero.init();
 }
@@ -14,9 +15,9 @@ class Hero01 {
   mvInterval: number;
   mvDuration: number;
   constructor() {
-    this.heroEl = document.getElementById('js-hero-01');
-    this.mvItemEls = document.getElementsByClassName('hero01__mv-item');
-    this.mvImgClassName = 'hero01__mv-img';
+    this.heroEl = document.getElementById('js-hero');
+    this.mvItemEls = document.getElementsByClassName('hero__mv-item');
+    this.mvImgClassName = 'hero__mv-img';
     this.mvCurrent = 0;
     this.mvCount = this.mvItemEls.length;
     this.mvInterval = 5000;
@@ -27,6 +28,7 @@ class Hero01 {
    * 初期化
    */
   init() {
+    console.log(this.heroEl)
     // 要素が存在しない場合、処理を終了
     if (!this.heroEl) return;
     this.mvInit();

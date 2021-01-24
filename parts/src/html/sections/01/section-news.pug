@@ -1,0 +1,41 @@
+-
+  var newsList = [
+    {
+      category: 'お知らせ',
+      date: '2021.01.01',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      category: 'イベント',
+      date: '2021.01.02',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      category: 'お知らせ',
+      date: '2021.01.03',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    }
+  ]
+
+<div class="section-news columns">
+  <div class="section-news__lead column is-4">
+    <h2 class="lead__heading">
+      <span class="lead__heading-shoulder">NEWS</span>ニュース
+    </h2>
+    <p class="lead__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+  </div>
+  <div class="section-news__content column is-7">
+    <ul class="news-list">
+      each news in newsList
+        <li>
+          <a href="#" class="news-list__item">
+            <div class="news-list__head">
+              <span class="news-list__head-category">#{ news.category }</span>
+              <span class="news-list__head-date">#{ news.date }</span>
+            </div>
+            <div class="news-list__text">#{ news.text }</div>
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
