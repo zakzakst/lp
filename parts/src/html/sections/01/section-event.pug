@@ -1,0 +1,57 @@
+-
+  var eventList = [
+    {
+      url: '#',
+      img: 'https://picsum.photos/400/200',
+      date: '2021.01.01',
+      title: 'イベント名が入ります。イベント名が入ります。',
+      text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+    },
+    {
+      url: '#',
+      img: 'https://picsum.photos/400/200',
+      date: '2021.01.02',
+      title: 'イベント名が入ります。イベント名が入ります。',
+      text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+    },
+    {
+      url: '#',
+      img: 'https://picsum.photos/400/200',
+      date: '2021.01.03',
+      title: 'イベント名が入ります。イベント名が入ります。',
+      text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+    },
+    {
+      url: '#',
+      img: 'https://picsum.photos/400/200',
+      date: '2021.01.04',
+      title: 'イベント名が入ります。イベント名が入ります。',
+      text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+    }
+  ]
+
+<div class="section-event columns">
+  <div class="section-event__lead column is-4 is-align-right">
+    <h2 class="lead__heading">
+      <span class="lead__heading-shoulder">EVENT</span>イベント
+    </h2>
+    <p class="lead__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+  </div>
+  <div class="section-event__content column is-7">
+    <ul class="event-list">
+      each event in eventList
+        <li class="event-list__item">
+          <a href="#{ event.url }">
+            <div class="event-list__item-head">
+              <img src="#{ event.img }" alt="" width="240" height="120">
+              <span>#{ event.date }</span>
+            </div>
+            <div class="event-list__item-body">
+              <h3 class="event-list__item-title">#{ event.title }</h3>
+              <p class="event-list__item-text">!{ event.text }</p>
+            </div>
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
