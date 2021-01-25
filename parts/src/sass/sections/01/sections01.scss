@@ -3,9 +3,10 @@ $color_secondary: #f9f7dc;
 $color_border: #707070;
 $color_white: #fff;
 $color_black: #4a4a4a;
+$color_light: #ddd;
 $duration_default: 0.5s;
 $easing_default: ease;
 
 @import "section-common";
-@import "section-hero";
 @import "section-news";
+@import "section-event";
