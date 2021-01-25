@@ -36,5 +36,3 @@
 // hero01();
 
 // セクション
-import { section01 } from './sections/section01';
-section01();
