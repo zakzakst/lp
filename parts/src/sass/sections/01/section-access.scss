@@ -1,0 +1,47 @@
+.section-01 {
+  // セクション
+  .section-access {
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .access-info {
+    padding-top: 12px;
+    @include mq-md() {
+      padding-top: 0;
+    }
+  }
+  .access-info-item {
+    padding: 12px 0;
+    border-bottom: 1px solid $color_border;
+    font-size: 12px;
+    @include mq-md() {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+    }
+    &:first-child {
+      border-top: 1px solid $color_border;
+    }
+    dt {
+      font-weight: bold;
+      @include mq-md() {
+        width: 120px;
+        padding-right: 8px;
+        flex-shrink: 0;
+      }
+    }
+    dd {
+      margin-top: 8px;
+      @include mq-md() {
+        margin-top: 0;
+        padding-left: 8px;
+        flex-grow: 1;
+      }
+    }
+  }
+  .access-map {
+    margin-top: 24px;
+    filter: grayscale(1);
+  }
+}

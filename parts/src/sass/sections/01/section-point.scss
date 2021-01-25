@@ -2,7 +2,7 @@ $color_point_bg: linear-gradient(rgba(9, 40, 4, 0.8), rgba(9, 40, 4, 0.8));
 
 .section-01 {
   .section-point {
-    margin-top: 24px;
+    margin: 24px 0;
     background: $color_point_bg,
       url(https://picsum.photos/400/200) center center no-repeat;
     background-attachment: fixed;
