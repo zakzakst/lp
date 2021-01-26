@@ -1,0 +1,51 @@
+$color_primary: #074e40;
+$color_white: #fff;
+$duration_default: 0.2s;
+
+.button-16 {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: $color_white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+  background: $color_primary;
+  border: 1px solid $color_primary;
+  transition: all $duration_default;
+  @include mq-md() {
+    padding: 30px 80px;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #000;
+    transition: all $duration_default;
+  }
+  &::before {
+    top: 45%;
+    right: -9px;
+    background: linear-gradient(to right, #fff 70%, $color_primary 70% 100%);
+  }
+  &::after {
+    top: 50%;
+    right: -21px;
+    background: linear-gradient(to right, #fff 30%, $color_primary 30% 100%);
+  }
+  &:hover {
+    color: $color_primary;
+    background: $color_white;
+    letter-spacing: 5px;
+    &::before,
+    &::after {
+      right: -15px;
+      background: $color_primary;
+    }
+  }
+}
