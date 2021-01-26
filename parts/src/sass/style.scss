@@ -13,7 +13,7 @@ img {
 @import "common/plugins";
 
 // パーツ
-// @import "components/buttons/buttons";
+@import "components/buttons/buttons";
 // @import "components/news-lists/news-lists";
 // @import "components/cards/cards";
 // @import "components/scroll-anims/scroll-anims";
@@ -21,4 +21,4 @@ img {
 // @import "components/heros/heros";
 
 // セクション
-@import "sections/01/sections01";
+// @import "sections/01/sections01";
