@@ -1,0 +1,54 @@
+$color_primary: #009b63;
+$color_secondary: #0056a1;
+$color_black: #222;
+$radius_default: 16px;
+$width_border: 3px;
+
+.heading-06 {
+  position: relative;
+  width: 300px;
+  margin-top: 48px;
+  padding: 24px 0 40px;
+  // フォント指定
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  color: $color_black;
+  letter-spacing: 0.1em;
+  text-align: center;
+  // ボーダー指定
+  border: $width_border solid $color_primary;
+  border-top: none;
+  border-bottom-left-radius: $radius_default;
+  border-bottom-right-radius: $radius_default;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: -$width_border;
+    right: -$width_border;
+    display: block;
+    height: 20px;
+    // ボーダー指定
+    border: $width_border solid $color_secondary;
+    border-bottom: none;
+    border-top-left-radius: $radius_default;
+    border-top-right-radius: $radius_default;
+    // 角度指定
+    transform: rotate(-5deg);
+    transform-origin: bottom left;
+  }
+  &__en {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+}
+.is-color-primary {
+  color: $color_primary;
+}
+.is-color-secondary {
+  color: $color_secondary;
+}
