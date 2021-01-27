@@ -1,0 +1,36 @@
+$color_primary: #3c60c7;
+$color_black: #141c36;
+
+.heading-04 {
+  position: relative;
+  padding-bottom: 20px;
+  font-size: 12px;
+  font-family: "Yu Gothic", "YuGothic", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  @include mq-md() {
+    display: flex;
+    padding-bottom: 25px;
+    font-size: 14px;
+    align-items: baseline;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: $color_primary;
+  }
+  &__en {
+    display: block;
+    font-size: 40px;
+    font-family: "EB Garamond", serif;
+    @include mq-md() {
+      display: inline-block;
+      margin-right: 30px;
+      font-size: 53px;
+    }
+  }
+}
