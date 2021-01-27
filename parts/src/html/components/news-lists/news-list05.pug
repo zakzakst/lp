@@ -1,0 +1,31 @@
+<!-- 参考：https://smartdrive.co.jp/ -->
+-
+  var newsList = [
+    {
+      date: '2021.01.01',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      date: '2021.01.02',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      date: '2021.01.03',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    }
+  ]
+
+<link href="https://fonts.googleapis.com/css2?family=Metrophobic&display=swap" rel="stylesheet">
+
+<div class="news-list-05__wrapper">
+  <h3 class="news-list-05__heading"><span>T<br>O<br>P<br>I<br>C<br>S</span></h3>
+  <ul class="news-list-05">
+    each news in newsList
+      <li>
+        <a href="#" class="news-list-05__item">
+          <span class="news-list-05__date">#{ news.date }</span>
+          <span class="news-list-05__text">#{ news.text }</span>
+        </a>
+      </li>
+  </ul>
+</div>
