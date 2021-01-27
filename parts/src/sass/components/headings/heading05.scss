@@ -1,0 +1,26 @@
+.heading-05 {
+  font-size: 0;
+  & > span {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    line-height: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 3px;
+      background: url(https://www.orikane.co.jp/wp/wp-content/themes/orikane/assets/img/common/line-dot.png)
+        left top repeat-x;
+      background-size: contain;
+    }
+  }
+}
