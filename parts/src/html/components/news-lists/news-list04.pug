@@ -1,0 +1,30 @@
+<!-- 参考：https://recruit.i-goods.co.jp/ -->
+-
+  var newsList = [
+    {
+      date: '2021.01.01',
+      category: 'お知らせ',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      date: '2021.01.02',
+      category: 'メディア',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      date: '2021.01.03',
+      category: 'お知らせ',
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    }
+  ]
+
+<ul class="news-list-04">
+  each news in newsList
+    <li>
+      <a href="#" class="news-list-04__item">
+        <span class="news-list-04__date">#{ news.date }</span>
+        <span class="news-list-04__cat">#{ news.category }</span>
+        <span class="news-list-04__text">#{ news.text }</span>
+      </a>
+    </li>
+</ul>
