@@ -1,0 +1,56 @@
+$color_black: #3f3f3f;
+$color_border: #d7d7d7;
+
+.heading-03 {
+  color: $color_black;
+  font-family: YuGothic, 游ゴシック, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  @include mq-md() {
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    font-family: "Kosugi Maru", sans-serif;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 1px;
+    @include mq-md() {
+      flex-shrink: 0;
+      font-size: 45px;
+      letter-spacing: 0.12em;
+    }
+  }
+  &__lead {
+    position: relative;
+    margin-top: 56px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: (-56px / 2 - 2px);
+      left: 0;
+      right: 0;
+      display: block;
+      width: 36px;
+      height: 4px;
+      margin: auto;
+      background: $color_border;
+      border-radius: 2px;
+    }
+    @include mq-md() {
+      margin-top: 0;
+      margin-left: 134px;
+      &::before {
+        top: 6px;
+        bottom: 6px;
+        left: (-134px / 2);
+        right: auto;
+        display: block;
+        width: 3px;
+        height: auto;
+        background: $color_border;
+        border-radius: 2px;
+      }
+    }
+  }
+}
