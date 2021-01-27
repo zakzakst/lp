@@ -1,0 +1,88 @@
+$BLOCK_NAME: ".service-list01";
+$color_primary: #333;
+$color_white: #fff;
+$color_black: #000;
+$duration_default: 0.2s;
+$easing_default: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+
+#{ $BLOCK_NAME } {
+  max-width: 280px;
+  margin: 0 auto;
+  &__icon {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    background: $color_primary;
+    border-radius: 50%;
+    &::before {
+      content: "VIEW WORKS";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color_white;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      opacity: 0;
+      z-index: 2;
+      transition: all $duration_default $easing_default;
+    }
+    &:hover::before {
+      letter-spacing: 0.1em;
+      opacity: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $color_black;
+      border-radius: 50%;
+      transform: scale(0);
+      z-index: 1;
+      transition: all $duration_default $easing_default;
+    }
+    &:hover::after {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    & > svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      width: 80%;
+      height: 80%;
+      margin: auto;
+      fill: $color_white;
+      transition: opacity $duration_default $easing_default;
+    }
+    &:hover > svg {
+      opacity: 0.2;
+    }
+  }
+  &__text {
+    padding-top: 13px;
+    color: $color_black;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    & > span {
+      display: block;
+      font-size: 19px;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 600;
+    }
+  }
+}
