@@ -1,0 +1,46 @@
+$color_primary: #56bcb3;
+
+.heading-01 {
+  padding-top: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.75;
+  @include mq-md() {
+    padding-top: 20px;
+    font-size: 24px;
+    letter-spacing: 0.11em;
+    line-height: 1.67;
+  }
+  &__shoulder {
+    position: relative;
+    display: block;
+    max-width: 130px;
+    color: $color_primary;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    @include mq-md() {
+      max-width: 154px;
+      font-size: 13px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      display: block;
+      width: 60px;
+      height: 1px;
+      margin: auto;
+      background-color: $color_primary;
+      @include mq-md() {
+        width: 80px;
+      }
+    }
+  }
+}
