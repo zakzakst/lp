@@ -1,0 +1,32 @@
+<!-- 参考：https://www.digireha.com/faq/ -->
+-
+  var faqItems = [
+    {
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    }
+  ]
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500;700&display=swap" rel="stylesheet">
+<ul class="faq-01">
+  each faq in faqItems
+    <li class="faq-01__item js-faq-01-item">
+      <div class="faq-01__question">
+        <span class="faq-01__question-icon"></span>
+        <span class="faq-01__question-text">#{ faq.question }</span>
+        <span class="faq-01__question-opener"></span>
+      </div>
+      <div class="faq-01__answer">
+        <span class="faq-01__answer-icon"></span>#{ faq.answer }
+      </div>
+    </li>
+</ul>

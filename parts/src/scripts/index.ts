@@ -35,4 +35,10 @@
 // import { hero01 } from './components/heros/hero01';
 // hero01();
 
+// FAQ
+// import { faq01 } from './components/faqs/faq01';
+// faq01();
+import { faq02 } from './components/faqs/faq02';
+faq02();
+
 // セクション
