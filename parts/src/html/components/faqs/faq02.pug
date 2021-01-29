@@ -1,0 +1,24 @@
+<!-- 参考：https://recruit.i-goods.co.jp/faq/ -->
+-
+  var faqItems = [
+    {
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    }
+  ]
+
+<dl class="faq-02">
+  each faq in faqItems
+    <dt class="faq-02__question js-faq-01-question">#{ faq.question }</dt>
+    <dd class="faq-02__answer">
+      <div class="faq-02__answer-text">#{ faq.answer }</div>
+    </dd>
+</dl>
