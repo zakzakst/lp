@@ -1,0 +1,31 @@
+<!-- 参考：https://www.itoki.jp/special/akimiru/viewer/help/ -->
+-
+  var faqItems = [
+    {
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    }
+  ]
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<ul class="faq-04">
+  each faq in faqItems
+    <li class="faq-04__item">
+      <p class="faq-04__question js-faq-04-question">
+        <span class="faq-04__question-text">#{ faq.question }</span>
+        <span class="faq-04__question-icon"></span>
+      </p>
+      <div class="faq-04__answer">
+        <p class="faq-04__answer-inner">#{ faq.answer }</p>
+      </div>
+    </li>
+</ul>

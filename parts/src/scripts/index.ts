@@ -40,7 +40,9 @@
 // faq01();
 // import { faq02 } from './components/faqs/faq02';
 // faq02();
-import { faq03 } from './components/faqs/faq03';
-faq03();
+// import { faq03 } from './components/faqs/faq03';
+// faq03();
+import { faq04 } from './components/faqs/faq04';
+faq04();
 
 // セクション
