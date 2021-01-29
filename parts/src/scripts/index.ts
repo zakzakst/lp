@@ -38,7 +38,9 @@
 // FAQ
 // import { faq01 } from './components/faqs/faq01';
 // faq01();
-import { faq02 } from './components/faqs/faq02';
-faq02();
+// import { faq02 } from './components/faqs/faq02';
+// faq02();
+import { faq03 } from './components/faqs/faq03';
+faq03();
 
 // セクション
