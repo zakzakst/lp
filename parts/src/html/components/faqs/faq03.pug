@@ -1,24 +1,38 @@
-<!-- 参考：https://recruit.i-goods.co.jp/faq/ -->
+<!-- 参考：https://naoshichi-kyoto.jp/faq -->
 -
   var faqItems = [
     {
+      num: 1,
       question: '質問が入ります。',
       answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
     },
     {
+      num: 2,
       question: '質問が入ります。',
       answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
     },
     {
+      num: 3,
       question: '質問が入ります。',
       answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
     }
   ]
 
-<dl class="faq-02">
+<ul class="faq-03">
   each faq in faqItems
-    <dt class="faq-02__question js-faq-02-question">#{ faq.question }</dt>
-    <dd class="faq-02__answer">
-      <div class="faq-02__answer-text">#{ faq.answer }</div>
-    </dd>
-</dl>
+    <li class="faq-03__item">
+      <p class="faq-03__question js-faq-03-question">
+        <span class="faq-03__question-num">Q#{ faq.num }</span>
+        <span class="faq-03__question-text">#{ faq.question }</span>
+        <span class="faq-03__question-arrow">
+          <img class="faq-item__arrow-img" src="https://naoshichi-kyoto.jp/images/faq/up.svg">
+        </span>
+      </p>
+      <div class="faq-03__answer">
+        <p class="faq-03__answer-inner">
+          <span class="faq-03__answer-num">A#{ faq.num }</span>
+          <span class="faq-03__answer-text">#{ faq.answer }</span>
+        </p>
+      </div>
+    </li>
+</ul>
