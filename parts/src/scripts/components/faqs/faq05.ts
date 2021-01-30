@@ -1,14 +1,14 @@
 import { gsap } from "gsap";
 
-export function faq04() {
-  const items = document.getElementsByClassName('js-faq-04-question');
+export function faq05() {
+  const items = document.getElementsByClassName('js-faq-05-question');
   [...items].forEach(item => {
-    const faq = new Faq04(<HTMLElement>item);
+    const faq = new Faq05(<HTMLElement>item);
     faq.init();
   });
 }
 
-class Faq04 {
+class Faq05 {
   questionEl: HTMLElement;
   answerEl: HTMLElement;
   isOpen: Boolean;

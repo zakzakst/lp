@@ -1,0 +1,34 @@
+<!-- 参考：https://www.net-marketing.co.jp/ir/faq/ -->
+-
+  var faqItems = [
+    {
+      category: 'その他',
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      category: '企業情報について',
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      category: '株式情報について',
+      question: '質問が入ります。',
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    }
+  ]
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+<ul class="faq-05">
+  each faq in faqItems
+    <li class="faq-05__item">
+      <p class="faq-05__question js-faq-05-question">
+        <span class="faq-05__question-category">#{ faq.category }</span>
+        <span class="faq-05__question-text">#{ faq.question }</span>
+      </p>
+      <div class="faq-05__answer">
+        <p class="faq-05__answer-inner">#{ faq.answer }</p>
+      </div>
+    </li>
+</ul>
