@@ -1,0 +1,95 @@
+<!-- 参考：https://ion-e-air.jp/faq/ -->
+-
+  var faqItems = [
+    {
+      categoryLabel: '○○について',
+      contents: [
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        },
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        },
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        },
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        }
+      ]
+    },
+    {
+      categoryLabel: '××について',
+      contents: [
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        },
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        },
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        }
+      ]
+    },
+    {
+      categoryLabel: '□□について',
+      contents: [
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        },
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        },
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        },
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        }
+      ]
+    },
+    {
+      categoryLabel: '△△について',
+      contents: [
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        },
+        {
+          question: '質問が入ります。',
+          answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        }
+      ]
+    }
+  ]
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<ul class="faq-06">
+  <ul class="faq-06__tab">
+    each faq, index in faqItems
+      <li class="faq-06__tab-item" data-target-index="#{ index }">#{ faq.categoryLabel }</li>
+  </ul>
+  <div class="faq-06__contents">
+    each faq in faqItems
+      <div class="faq-06__content">
+        each content in faq.contents
+          <div class="faq-06__content-item">
+            <h3 class="faq-06__content-question">#{ content.question }</h3>
+            <p class="faq-06__content-answer">#{ content.answer }</p>
+          </div>
+      </div>
+  </div>
+</ul>

@@ -5,8 +5,8 @@ html(lang="ja")
     link(rel='stylesheet', href='sass/style.scss')
 
   body
-    //- div.container
-    //-   section.section
+    div.container
+      section.section
         //- include html/components/buttons/buttons.pug
         //- include html/components/news-lists/news-lists.pug
         //- include html/components/cards/cards.pug
@@ -15,10 +15,10 @@ html(lang="ja")
         //- include html/components/heros/heros.pug
         //- include html/components/headings/headings.pug
         //- include html/components/service-lists/service-lists.pug
-        //- include html/components/faqs/faqs.pug
+        include html/components/faqs/faqs.pug
         //- include html/components/others/others.pug
 
-    include html/sections/01/sections01.pug
+    //- include html/sections/01/sections01.pug
 
     //- スクリプト読込
     script(src='scripts/index.ts')

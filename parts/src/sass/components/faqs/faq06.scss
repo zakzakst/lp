@@ -1,0 +1,83 @@
+$BLOCK_NAME: ".faq-06";
+$color_primary: #4cb6e0;
+$color_secondary: #c9d0d2;
+$color_white: #fff;
+$duration_default: 0.4s;
+
+#{ $BLOCK_NAME } {
+  font-family: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック",
+    "MS PGothic", Sans-Serif;
+  &__tab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__tab-item {
+    width: 47%;
+    margin-bottom: 15px;
+    padding-bottom: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all $duration_default ease;
+    @include mq-md() {
+      width: 24%;
+      padding-bottom: 5px;
+      font-size: 16px;
+    }
+    &:hover {
+      color: $color_primary;
+    }
+    &.is-active {
+      color: $color_primary;
+      border-color: $color_primary;
+      pointer-events: none;
+    }
+  }
+  &__content {
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+  &__content-item {
+    margin-bottom: 2px;
+    padding: 32px;
+    // background: $color_white;
+    background: #f1f1f1; // セクションに背景色がある場合は消す
+  }
+  &__content-question {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 32px;
+    font-weight: bold;
+    &::before {
+      content: "Q";
+      position: absolute;
+      top: -6px;
+      left: 0;
+      color: $color_primary;
+      font-size: 24px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+    }
+  }
+  &__content-answer {
+    position: relative;
+    padding-left: 32px;
+    font-size: 13px;
+    &::before {
+      content: "A";
+      position: absolute;
+      top: -6px;
+      left: 2px;
+      color: $color_secondary;
+      font-size: 24px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+    }
+  }
+}
