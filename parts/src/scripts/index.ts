@@ -49,4 +49,8 @@
 // import { faq06 } from './components/faqs/faq06';
 // faq06();
 
+// 問い合わせ
+import { contact02 } from './components/contacts/contact02';
+contact02();
+
 // セクション
