@@ -1,0 +1,87 @@
+$BLOCK_NAME: ".contact-01";
+$color_primary: #1236e6;
+$color_secondary: #082ad0;
+$color_white: #fff;
+$duration_default: 0.8s;
+$duration_arrow: 0.4s;
+$easing_default: cubic-bezier(0.65, 0.05, 0.35, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  background: $color_primary;
+  color: $color_white;
+  font-family: "Noto Sans JP", sans-serif;
+  text-align: center;
+  &:hover {
+    color: $color_white;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $color_secondary;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform $duration_default $easing_default;
+  }
+  &:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  &__inner {
+    position: relative;
+    width: 87.5%;
+    margin: 0 auto;
+    padding: 135px 0;
+  }
+  &__heading {
+    position: relative;
+    margin-bottom: 25px;
+    font-size: 50px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    z-index: 1;
+  }
+  &__text {
+    position: relative;
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    z-index: 1;
+  }
+  &__arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border: 2px solid $color_white;
+    border-radius: 50%;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -50%;
+      right: 50%;
+      display: block;
+      height: 2px;
+      margin: auto;
+      background: $color_white;
+      transform: translateX(-10px);
+      transition: transform $duration_arrow $easing_default;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: translateX(0);
+      }
+    }
+  }
+}

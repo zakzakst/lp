@@ -46,7 +46,7 @@
 // faq04();
 // import { faq05 } from './components/faqs/faq05';
 // faq05();
-import { faq06 } from './components/faqs/faq06';
-faq06();
+// import { faq06 } from './components/faqs/faq06';
+// faq06();
 
 // セクション
