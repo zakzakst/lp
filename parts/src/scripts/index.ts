@@ -50,7 +50,11 @@
 // faq06();
 
 // 問い合わせ
-import { contact02 } from './components/contacts/contact02';
-contact02();
+// import { contact02 } from './components/contacts/contact02';
+// contact02();
+
+// メニュー
+import { menu01 } from './components/menus/menu01';
+menu01();
 
 // セクション
