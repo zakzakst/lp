@@ -54,7 +54,7 @@
 // contact02();
 
 // メニュー
-import { menu01 } from './components/menus/menu01';
-menu01();
+// import { menu01 } from './components/menus/menu01';
+// menu01();
 
 // セクション

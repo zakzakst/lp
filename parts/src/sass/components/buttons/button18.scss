@@ -1,0 +1,64 @@
+$BLOCK_NAME: ".button-18";
+$color_white: #fff;
+$color_black: #111;
+$shadow_default: 11px 13px 27px 6px rgb(0 0 0 / 8%);
+$duration_bg: 0.7s;
+$easing_bg: cubic-bezier(0.475, 0.425, 0, 0.995);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  width: 330px;
+  height: 80px;
+  background: $color_black;
+  color: $color_white;
+  font-size: 14px;
+  text-align: center;
+  line-height: 80px;
+  letter-spacing: 3.5px;
+  box-shadow: $shadow_default;
+  overflow: hidden;
+  transition: color 0.2s ease-out;
+  &:hover {
+    color: $color_black;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: -70px;
+    bottom: -60px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: $color_white;
+    border-radius: 50%;
+    transition: $duration_bg $easing_bg;
+    transition-property: width, height;
+  }
+  &:hover::before {
+    width: 350px;
+    height: 350px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 32px;
+    display: block;
+    width: 32px;
+    height: 11px;
+    margin: auto;
+    background: url(https://giginc.co.jp/assets/img/icon-arrow-white.png)
+      no-repeat center center;
+    background-size: contain;
+    transition: transform 0.2s ease-out;
+  }
+  &:hover::after {
+    transform: translateX(10px);
+  }
+  & > span {
+    position: relative;
+    z-index: 1;
+  }
+}
