@@ -1,0 +1,88 @@
+$BLOCK_NAME: ".card-08";
+$color_overlay: #000;
+$color_black: #000;
+$easing_default: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+#{ $BLOCK_NAME } {
+  &__date {
+    font-size: 12px;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  &__img {
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $color_overlay;
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.45s ease;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        opacity: 0.4;
+      }
+    }
+    & > img {
+      transition: transform 10s linear;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1.1) rotate(2.8deg);
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-top: 7px;
+    padding-bottom: 3px;
+    font-size: 28px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: $color_black;
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: transform 0.35s $easing_default;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+    }
+  }
+
+  &__link {
+    margin-top: 6px;
+    & > span {
+      display: inline-block;
+      padding-right: 18px;
+      font-size: 12px;
+      font-family: "Lato", sans-serif;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0.1em;
+      background: url(https://www.dot-st.com/static/docs/jeanasis/pages/media/img/fashion/btn_backnumber.png)
+        right 3px no-repeat;
+      background-size: 10px;
+      transition: transform 0.45s $easing_default;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: translateX(10px);
+      }
+    }
+  }
+}
