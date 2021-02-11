@@ -57,4 +57,8 @@
 // import { menu01 } from './components/menus/menu01';
 // menu01();
 
+// アコーディオン
+import { accordion01 } from './components/accordions/accordion01'
+accordion01();
+
 // セクション

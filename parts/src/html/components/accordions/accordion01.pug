@@ -1,0 +1,31 @@
+<!-- 参考：http://a-dot.co.jp/ -->
+-
+  var accordionItems = [
+    {
+      subHeading: 'ACCORDION 01',
+      heading: 'アコーディオン 01',
+      content: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    },
+    {
+      subHeading: 'ACCORDION 01',
+      heading: 'アコーディオン 01',
+      content: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    }
+  ]
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+
+each accordion in accordionItems
+  <div class="accordion-01 js-accordion-01">
+    <div class="accordion-01__head">
+      <p class="accordion-01__sub-heading">
+        <span>#{ accordion.subHeading }</span>
+      </p>
+      <h3 class="accordion-01__heading">#{ accordion.heading }</h3>
+      <div class="accordion-01__icon"></div>
+    </div>
+    <div class="accordion-01__content-wrapper">
+      <div class="accordion-01__content">#{ accordion.content }</div>
+    </div>
+  </div>
