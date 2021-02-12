@@ -1,35 +1,28 @@
 TODO:
-  ☐ やること1
-  ☐ やること2
-  ☐ やること3
+  ☐ tsconfigの設定調べる
+  ☐ html圧縮のオプション調べる（styleの中身とscriptの中身にはインデントつけたくない）
+  ☐ コンポーネントの変更
 
 Archive:
+  ✔ サイト全体の情報をenvファイルで管理させる @done(21-02-12 17:05) @project(TODO)
+  ✔ webpack書き出しの「mode: develop / production」の出し分けをnpmスクリプトでコントロールできるようにする（普通に「NODE_ENV」を参照しようとしたら出来なかった。おそらく「webpack-stream」で呼び出しているから？gulpタスクのほうのオプションに反映する必要があるかも https://stackoverflow.com/questions/42509830/gulp-webpack-stream-run-production）→一応できたがNODE_ENVでの反映ではない。一旦現状で進める→「cross-env」使って解決できた @done(21-02-12 12:16) @project(TODO)
+  ✔ webpackの「TerserPlugin」のエラー確認（「test」の位置を「terserOptions」の外に出せば解決した） @done(21-02-12 10:47) @project(TODO)
 
 Memo:
   ■■■ 参考 ■■■
+  ・「gulp-htmlmin」のオプション
+  https://github.com/kangax/html-minifier#options-quick-reference
+
+  ・dotenvとcross-envで環境変数を設定して開発環境の処理を切り替える
+  https://www.tam-tam.co.jp/tipsnote/program/post17589.html
+
+  ・jqueryのモジュールをimportした時に出た「'esModuleInterop' フラグを使用して既定でのみインポートできます」への対応
+  https://numb86-tech.hatenablog.com/entry/2020/07/11/160159
+
+  ・jsのモジュール設定eslintエラー
+  http://howdy.hatenablog.com/entry/2016/11/07/201159
+
+  ・webpackでのtypescript利用
+  https://gist.github.com/kemsakurai/69297e692a5274b216a1ce0a4fd39561
 
   ■■■ 反省など ■■■
-
-
-
-Sample1:
-  ☐ Item
-  ✔ Item @done(20-09-25 23:07)
-  ✘ Item @cancelled(20-09-25 23:07)
-
-Sample2:
-  ☐ Item @critical
-  ☐ Item @high
-  ☐ Item @today
-  ☐ Item @low
-
-Sample3:
-  ☐ Item @3d
-  ☐ Item @3h
-  ☐ Item @2h
-  ☐ Item @3m
-
-使い方参考
-https://fereria.github.io/reincarnation_tech/98_Other/VSCode/vscode_task/
-
-Todo:Open Embedded　タスクリストの作成
