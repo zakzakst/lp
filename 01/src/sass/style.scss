@@ -1,2 +1,36 @@
-// 変数
-@import './base/_variables.scss';
+@charset 'utf-8';
+
+/*
+ * List
+ */
+@import './list/easing';
+@import './list/shadow';
+
+/*
+ * Foundation
+ */
+@import './foundation/variables';
+
+/*
+ * Plugins
+ */
+@import './plugins/bulma';
+
+/*
+ * Functions
+ */
+@import './functions/functions';
+
+/*
+ * Mixins
+ */
+@import './mixins/mixins';
+
+// .shadow {
+//   // box-shadow: shadows(4);
+//   z-index: Z(header);
+//   transition: all 3s Ease();
+//   @include Mq(tb) {
+//     color: #f00;
+//   }
+// }

@@ -1,34 +1,41 @@
 /* eslint-disable no-undef */
 const gulp = require('gulp');
-const fs = require('fs');
 const nunjucksRender = require('gulp-nunjucks-render');
-const prettify = require('gulp-prettify');
+// const prettify = require('gulp-prettify');
 const htmlmin = require('gulp-htmlmin');
+
+// 環境変数からサイトデータを取得
+const environment = process.env.NODE_ENV || 'development';
+const SITE_DATA = require(`../env.${ environment }.js`);
 
 // Nunjucksのビルド
 function nunjucksBuild() {
   const nunjucksPath = {
     root: 'src/nunjucks/',
-    siteData: 'src/nunjucks/_module/common/site-data.json',
     src: [
       'src/nunjucks/html/**/*.njk',
       '!src/nunjucks/html/**/_*.njk'
     ],
     dist: 'dist/',
   };
-  const data = JSON.parse(fs.readFileSync(nunjucksPath.siteData, 'utf8'));
   return gulp.src(nunjucksPath.src)
     .pipe(nunjucksRender({
       path: [nunjucksPath.root],
-      data: data
+      data: SITE_DATA
     }))
     .pipe(htmlmin({
-      // collapseWhitespace : true,
-      removeComments : true
+      collapseInlineTagWhitespace: true,
+      collapseWhitespace : true,
+      // preserveLineBreaks: true,
+      removeComments : true,
+      minifyCSS: true,
+      minifyJS: true,
+      sortAttributes: true,
+      sortClassName: true,
     }))
-    .pipe(prettify({
-      indent_size: 2,
-    }))
+    // .pipe(prettify({
+    //   indent_size: 2,
+    // }))
     .pipe(gulp.dest(nunjucksPath.dist));
 }
 

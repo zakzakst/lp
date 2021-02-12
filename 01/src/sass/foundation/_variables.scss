@@ -1,0 +1,72 @@
+@charset 'utf-8';
+
+/*
+ * COLUMN GAP
+ */
+$column_gap: 24px;
+
+/*
+ * BREAK POINT
+ */
+$break_point_items: (
+  sp: 480px,
+  tb: 769px,
+  pc: 960px + 24px * 2,
+  wide: 1152px + 24px * 2,
+  full: 1344px + 24px * 2,
+);
+
+/*
+ * COLOR
+ */
+$color_items: (
+  primary: #345017,
+  secondary: #f9f7dc,
+  white: #fff,
+  black: #4a4a4a,
+  light: #ddd,
+  border: #707070,
+);
+
+/*
+ * FONT
+ */
+$font_size_items: (
+  xs: 12px,
+  sm: 14px,
+  md: 16px,
+  lg: 18px,
+  xl: 24px,
+);
+
+/*
+ * DURATION
+ */
+$duration_items: (
+  fast: 0.3s,
+  default: 0.5s,
+  slow: 0.7s,
+);
+
+/*
+ * EASING
+ */
+$easing_items: (
+  default: EasingList(back),
+);
+
+/*
+ * SHADOW
+ */
+$shadow_items: (
+  default: ShadowList(4),
+);
+
+/*
+ * Z INDEX
+ */
+$z_index_items: (
+  header: 100,
+  modal: 1000,
+  overlay: 10000,
+);

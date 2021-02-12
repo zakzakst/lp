@@ -1,16 +1,23 @@
 /* eslint-disable no-undef */
 const TerserPlugin = require('terser-webpack-plugin');
+const environment = process.env.NODE_ENV || 'development';
 
 module.exports = {
   entry: {
-    script: './src/js/script.js',
-    // top: './src/js/page01.js',
+    script: './src/js/script.ts',
+    // script: './src/js/script.js',
+  },
+  resolve: {
+    extensions: [
+      '.js',
+      '.ts',
+    ]
   },
   output: {
     path: `${__dirname}/dist/js`,
     filename: '[name].js'
   },
-  mode: 'development', // production development
+  mode: environment, // production development
   module: {
     rules: [
       {
@@ -25,15 +32,23 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.ts$/,
+        use: [
+          {
+            loader: 'ts-loader',
+          }
+        ]
+      },
     ]
   },
   optimization: {
     minimize: true,
     minimizer: [
       new TerserPlugin({
+        test: /\.js$/,
         terserOptions: {
-          test: /\.js$/,
           compress: {drop_console: true},
         },
       }),

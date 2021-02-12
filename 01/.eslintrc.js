@@ -14,4 +14,7 @@ module.exports = {
     module: true,
     gsap: true,
   },
+  parserOptions: {
+    sourceType: 'module'
+  },
 };
