@@ -26,11 +26,7 @@
  */
 @import './mixins/mixins';
 
-// .shadow {
-//   // box-shadow: shadows(4);
-//   z-index: Z(header);
-//   transition: all 3s Ease();
-//   @include Mq(tb) {
-//     color: #f00;
-//   }
-// }
+/*
+ * Components
+ */
+@import './components/components';
