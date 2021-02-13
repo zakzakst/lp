@@ -1,3 +1,5 @@
+'use strict';
+
 export class FaqList {
   tabEls: HTMLCollection;
   contentEls: HTMLCollection;
@@ -9,7 +11,7 @@ export class FaqList {
    * 初期化
    */
   init() {
-    if (!this.tabEls) return;
+    if (!this.tabEls.length) return;
     this.changeHandler();
     /* @ts-ignore */
     this.tabEls[0].click();

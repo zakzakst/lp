@@ -1,0 +1,49 @@
+$BLOCK_NAME: '.footer';
+
+#{ $BLOCK_NAME } {
+  background: Color(blackDark);
+
+  &__inner {
+    @include Mq(tb) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__links {
+    margin-bottom: 12px;
+    text-align: center;
+    @include Mq(tb) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    & > li {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1;
+      & + li {
+        padding-left: 12px;
+        margin-left: 12px;
+        border-left: 1px solid Color(white);
+      }
+    }
+  }
+
+  &__link {
+    color: Color(white);
+    transition: opacity Dur(fast) Ease();
+    &:hover {
+      color: Color(white);
+      opacity: 0.5;
+    }
+  }
+
+  &__copy {
+    font-size: 12px;
+    color: Color(white);
+    text-align: center;
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,24 @@
+$BLOCK_NAME: '.footer-go-top';
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  right: 12px;
+  bottom: 0;
+  z-index: Z(float);
+  box-shadow: Shadow(float);
+
+  &__button {
+    display: block;
+    padding: 4px 16px 4px 12px;
+    font-size: 14px;
+    color: Color(white);
+    background: Color(primary);
+    border-top-left-radius: Rad();
+    border-top-right-radius: Rad();
+    transition: all Dur(fast) Ease();
+    &:hover {
+      color: Color(white);
+      background: Color(primaryDark);
+    }
+  }
+}

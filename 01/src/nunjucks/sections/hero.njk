@@ -1,0 +1,31 @@
+{% set heroMvItems = [
+  { src: 'https://picsum.photos/id/237/400/400' },
+  { src: 'https://picsum.photos/id/238/400/400' },
+  { src: 'https://picsum.photos/id/239/400/400' }
+] -%}
+
+<div class="container">
+  <section class="section">
+    <div class="section-hero columns is-relative" id="js-section-hero">
+      <div class="column is-5">
+        <h1 class="section-hero__title">
+          <span class="section-hero__title-line"><span>ここに</span></span>
+          <span class="section-hero__title-line"><span>タイトルが</span></span>
+          <span class="section-hero__title-line"><span>入ります</span></span>
+        </h1>
+        <p class="section-hero__lead"><span>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span></p>
+      </div>
+      <div class="section-hero__mv-wrapper column is-7">
+        <div class="section-hero__mv">
+          {% for item in heroMvItems %}
+            <div class="section-hero__mv-item">
+              <div class="section-hero__mv-img-container">
+                <div class="section-hero__mv-img" data-img-src="{{ item.src }}"></div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
