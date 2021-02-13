@@ -58,7 +58,7 @@ $BLOCK_NAME: '.news-list';
     line-height: 19px;
     color: Color(white);
     text-align: center;
-    background: Color(black);
+    background: Color(blackDark);
     transition: all Dur();
     @at-root #{ $BLOCK_NAME }__item:hover & {
       color: Color(primary);

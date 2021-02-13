@@ -33,6 +33,13 @@
 }
 
 /*
+ * BORDER RADIUS
+ */
+@function Rad($name: default) {
+  @return map-get($radius_items, $name);
+}
+
+/*
  * SHADOW
  */
 @function Shadow($name: default) {

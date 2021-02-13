@@ -24,6 +24,7 @@ $BLOCK_NAME: '.faq-list';
     }
     &:hover {
       color: Color(primary);
+      border-color: Color(primary);
     }
     &.is-active {
       color: Color(primary);
@@ -71,7 +72,7 @@ $BLOCK_NAME: '.faq-list';
   &__content-answer {
     font-size: 13px;
     &::before {
-      color: Color(black);
+      color: Color(blackDark);
       content: 'A';
     }
   }
