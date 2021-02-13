@@ -22,5 +22,5 @@ export function test() {
   // テスト
   /* テスト2 */
   console.log('test');
-  alert('test');
+  // alert('test');
 }

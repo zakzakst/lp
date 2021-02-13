@@ -10,7 +10,7 @@ const { webpack } = require('./tasks/webpack');
 gulp.task('watch-files', (done) => {
   gulp.watch('./src/nunjucks/**/*.njk', gulp.series(nunjucksBuild, browsersync.reload));
   gulp.watch('./src/sass/**/*.scss', gulp.series(sassBuild, browsersync.reload));
-  gulp.watch('./src/js/**/*.js', gulp.series(webpack, browsersync.reload));
+  gulp.watch('./src/js/**/*.ts', gulp.series(webpack, browsersync.reload));
   done();
 });
 

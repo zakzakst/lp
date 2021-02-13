@@ -1,0 +1,23 @@
+{% macro list(items)%}
+
+<div class="faq-list">
+  <ul class="faq-list__tab">
+    {% for item in items %}
+      <li class="faq-list__tab-item" data-target-index="{{ loop.index - 1 }}">{{ item.categoryLabel }}</li>
+    {% endfor %}
+  </ul>
+  <div class="faq-list__contents">
+    {% for item in items %}
+      <div class="faq-list__content">
+        {% for content in item.contents %}
+          <div class="faq-list__content-item">
+            <h3 class="faq-list__content-question">{{ content.question }}</h3>
+            <p class="faq-list__content-answer">{{ content.answer }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endmacro %}

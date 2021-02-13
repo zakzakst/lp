@@ -1,0 +1,22 @@
+$BLOCK_NAME: '.section-news';
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  &::before {
+    position: absolute;
+    top: 42px;
+    right: (100% / 4);
+    bottom: -24px;
+    z-index: -1;
+    display: block;
+    width: 100vw;
+    content: '';
+    background: Color(secondary);
+    @include Mq(tb) {
+      top: -24px;
+      right: (100% / 6);
+    }
+  }
+}

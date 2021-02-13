@@ -1,0 +1,21 @@
+{% macro content(
+  heading='',
+  shoulder='',
+  text='',
+  img=''
+)%}
+
+<div class="point-content columns">
+  <div class="column is-7">
+    <p class="point-content__shoulder"><span>{{ shoulder }}</span></p>
+    <h3 class="point-content__heading">{{ heading }}</h3>
+    <div class="point-content__text">{{ text | safe }}</div>
+  </div>
+  <div class="column is-5">
+    <p class="point-content__img">
+      <img src="{{ img }}" alt="">
+    </p>
+  </div>
+</div>
+
+{% endmacro %}
