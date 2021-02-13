@@ -1,0 +1,44 @@
+$BLOCK_NAME: '.lead';
+
+#{ $BLOCK_NAME } {
+  &.is-align-right {
+    @include Mq(tb) {
+      text-align: right;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    padding-top: 64px;
+    font-size: 20px;
+    font-weight: 700;
+    color: Color(primary);
+    @include Mq(tb) {
+      padding-top: 104px;
+      font-size: 28px;
+    }
+  }
+
+  &__shoulder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: Ff(en);
+    font-size: 60px;
+    line-height: 1;
+    @include Mq(tb) {
+      top: -16px;
+      font-size: 120px;
+    }
+    @at-root #{ $BLOCK_NAME }.is-align-right & {
+      @include Mq(tb) {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 16px;
+  }
+}

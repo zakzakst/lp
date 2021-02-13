@@ -14,6 +14,10 @@
   @return map-get($font_size_items, $size);
 }
 
+@function Ff($name: default) {
+  @return map-get($font_family_items, $name);
+}
+
 /*
  * DURATION
  */

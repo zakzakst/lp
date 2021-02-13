@@ -1,0 +1,73 @@
+$BLOCK_NAME: '.news-list';
+
+#{ $BLOCK_NAME } {
+  padding-top: 12px;
+  @include Mq(tb) {
+    padding-top: 0;
+  }
+
+  & > li {
+    border-bottom: 1px solid Color(border);
+    &:first-child {
+      border-top: 1px solid Color(border);
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    padding: 12px 0;
+    transition: color Dur();
+    @include Mq(tb) {
+      padding: 12px 16px;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      background: Color(primary);
+      transition: transform Dur();
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+    &:hover {
+      color: Color(white);
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  &__head-category {
+    display: inline-block;
+    width: 90px;
+    height: 20px;
+    margin-right: 8px;
+    line-height: 19px;
+    color: Color(white);
+    text-align: center;
+    background: Color(black);
+    transition: all Dur();
+    @at-root #{ $BLOCK_NAME }__item:hover & {
+      color: Color(primary);
+      background: Color(white);
+    }
+  }
+
+  &__text {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+}

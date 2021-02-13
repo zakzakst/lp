@@ -19,5 +19,7 @@ $spacing-values: (
   '6': 24px,
 );
 @import '../../../node_modules/bulma/sass/base/_all';
+@import '../../../node_modules/bulma/sass/elements/container';
+@import '../../../node_modules/bulma/sass/layout/section';
 @import '../../../node_modules/bulma/sass/grid/columns';
 @import '../../../node_modules/bulma/sass/helpers/spacing';

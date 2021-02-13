@@ -1,0 +1,12 @@
+$BLOCK_NAME: '.section-access';
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  &__map {
+    margin-top: 24px;
+    filter: grayscale(1);
+  }
+}

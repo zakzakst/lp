@@ -3,7 +3,7 @@
 /*
  * COLUMN GAP
  */
-$column_gap: 24px;
+$column_gap: 16px;
 
 /*
  * BREAK POINT
@@ -11,9 +11,9 @@ $column_gap: 24px;
 $break_point_items: (
   sp: 480px,
   tb: 769px,
-  pc: 960px + 24px * 2,
-  wide: 1152px + 24px * 2,
-  full: 1344px + 24px * 2,
+  pc: 960px + 16px * 2,
+  wide: 1152px + 16px * 2,
+  full: 1344px + 16px * 2,
 );
 
 /*
@@ -37,6 +37,18 @@ $font_size_items: (
   md: 16px,
   lg: 18px,
   xl: 24px,
+);
+
+$font_family_items: (
+  default: (
+    YakuHanJP,
+    'Noto Sans JP',
+    sans-serif,
+  ),
+  en: (
+    'Oswald',
+    sans-serif,
+  ),
 );
 
 /*
