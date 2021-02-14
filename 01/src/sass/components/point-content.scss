@@ -2,6 +2,14 @@ $BLOCK_NAME: '.point-content';
 
 #{ $BLOCK_NAME } {
   color: Color(white);
+  opacity: 0;
+  transition: all Dur(slow) Ease();
+  transform: translateY(24px);
+  &.is-animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   & + & {
     padding-top: 32px;
   }
@@ -47,6 +55,8 @@ $BLOCK_NAME: '.point-content';
     }
   }
   &__img {
+    max-width: 480px;
+    margin: 0 auto;
     & > img {
       width: 100%;
     }

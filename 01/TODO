@@ -1,4 +1,5 @@
 Todo:
+  ☐ SASSのスコープかかるやつ対応
 
 Pend:
   ☐ tsconfigの設定調べる
@@ -13,6 +14,9 @@ Archive:
 
 Memo:
   ■■■ 参考 ■■■
+  ・TypeScriptで関数を型にする
+  https://qiita.com/shundroid/items/8d453a7a7bc09c658893
+
   ・nunjucksのloop.index
   https://qiita.com/toshifumiimanishi/items/d3fd1035697618c3c33b
 
