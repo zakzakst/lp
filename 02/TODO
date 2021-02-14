@@ -1,47 +1,15 @@
 Todo:
-  ☐ SASSのスコープかかるやつ対応
+  ☐ 「Voices」セクションも作成する（デザインにないけど）
 
 Pend:
   ☐ tsconfigの設定調べる
   ☐ html圧縮のオプション調べる（styleの中身とscriptの中身にはインデントつけたくない）
   ☐ パンくずや構造化データの書き出し方を検討・修正
+  ☐ SASSのスコープかかるやつ対応
 
 Archive:
-  ✔ コンポーネントの整理 @done(21-02-13 07:31) @project(TODO)
-  ✔ サイト全体の情報をenvファイルで管理させる @done(21-02-12 17:05) @project(TODO)
-  ✔ webpack書き出しの「mode: develop / production」の出し分けをnpmスクリプトでコントロールできるようにする（普通に「NODE_ENV」を参照しようとしたら出来なかった。おそらく「webpack-stream」で呼び出しているから？gulpタスクのほうのオプションに反映する必要があるかも https://stackoverflow.com/questions/42509830/gulp-webpack-stream-run-production）→一応できたがNODE_ENVでの反映ではない。一旦現状で進める→「cross-env」使って解決できた @done(21-02-12 12:16) @project(TODO)
-  ✔ webpackの「TerserPlugin」のエラー確認（「test」の位置を「terserOptions」の外に出せば解決した） @done(21-02-12 10:47) @project(TODO)
 
 Memo:
   ■■■ 参考 ■■■
-  ・TypeScriptで関数を型にする
-  https://qiita.com/shundroid/items/8d453a7a7bc09c658893
-
-  ・nunjucksのloop.index
-  https://qiita.com/toshifumiimanishi/items/d3fd1035697618c3c33b
-
-  ・nunjucksの変数をエスケープしない
-  http://bashalog.c-brains.jp/17/03/14-114514.php
-
-  ・nunjucksのfilter
-  https://gist.github.com/turusuke/27dd6cb152d112d3d1bc28442ac3b10c
-
-  ・nunjucksのmacro
-  https://qiita.com/toshifumiimanishi/items/d3fd1035697618c3c33b#%E5%85%B1%E9%80%9A%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E5%86%8D%E5%88%A9%E7%94%A8
-
-  ・「gulp-htmlmin」のオプション
-  https://github.com/kangax/html-minifier#options-quick-reference
-
-  ・dotenvとcross-envで環境変数を設定して開発環境の処理を切り替える
-  https://www.tam-tam.co.jp/tipsnote/program/post17589.html
-
-  ・jqueryのモジュールをimportした時に出た「'esModuleInterop' フラグを使用して既定でのみインポートできます」への対応
-  https://numb86-tech.hatenablog.com/entry/2020/07/11/160159
-
-  ・jsのモジュール設定eslintエラー
-  http://howdy.hatenablog.com/entry/2016/11/07/201159
-
-  ・webpackでのtypescript利用
-  https://gist.github.com/kemsakurai/69297e692a5274b216a1ce0a4fd39561
 
   ■■■ 反省など ■■■
