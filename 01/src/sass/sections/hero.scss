@@ -63,13 +63,13 @@ $scale_mv: 1.2;
 
   &__lead {
     position: relative;
-    padding: 16px 16px 0 0;
-    margin-top: 32px;
+    padding: 16px 16px 0 1px;
+    margin: 32px 0 -1px 0;
     overflow: hidden;
     color: Color(primary);
     background: Color(white);
     @include Mq(tb) {
-      padding: 24px 24px 0 0;
+      padding: 24px 24px 0 1px;
       margin-right: -60%;
     }
     & > span {

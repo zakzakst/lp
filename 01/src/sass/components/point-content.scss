@@ -55,6 +55,8 @@ $BLOCK_NAME: '.point-content';
     }
   }
   &__img {
+    max-width: 480px;
+    margin: 0 auto;
     & > img {
       width: 100%;
     }
