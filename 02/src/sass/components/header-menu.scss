@@ -1,0 +1,46 @@
+$BLOCK_NAME: '.header-menu';
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: Color(primary);
+  transition: transform Dur(fast) Ease() Dur();
+  transform: translateX(100%);
+  &.is-open {
+    transition-delay: 0s;
+    transform: translateX(0);
+  }
+
+  &__items > li {
+    display: block;
+    overflow: hidden;
+  }
+
+  &__item {
+    display: block;
+    padding: 4px;
+    font-family: Ff(en);
+    font-size: 24px;
+    color: Color(white);
+    letter-spacing: 2px;
+    transition: all Dur() Ease();
+    transform: translateY(100%);
+    @include Mq(tb) {
+      font-size: 40px;
+    }
+    @at-root #{ $BLOCK_NAME }.is-open & {
+      transition-delay: Dur(), 0s;
+      transition-property: transform, color;
+      transform: translateY(0);
+    }
+    &:hover {
+      color: Color(secondary);
+    }
+  }
+}

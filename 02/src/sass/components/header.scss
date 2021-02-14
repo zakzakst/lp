@@ -1,0 +1,6 @@
+$BLOCK_NAME: '.header';
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  z-index: Z(header);
+}

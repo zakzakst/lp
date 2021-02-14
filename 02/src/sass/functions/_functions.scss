@@ -1,0 +1,54 @@
+@charset 'utf-8';
+
+/*
+ * COLOR
+ */
+@function Color($name) {
+  @return map-get($color_items, $name);
+}
+
+/*
+ * FONT
+ */
+@function Fz($size: md) {
+  @return map-get($font_size_items, $size);
+}
+
+@function Ff($name: default) {
+  @return map-get($font_family_items, $name);
+}
+
+/*
+ * DURATION
+ */
+@function Dur($speed: default) {
+  @return map-get($duration_items, $speed);
+}
+
+/*
+ * EASING
+ */
+@function Ease($name: default) {
+  @return map-get($easing_items, $name);
+}
+
+/*
+ * BORDER RADIUS
+ */
+@function Rad($name: default) {
+  @return map-get($radius_items, $name);
+}
+
+/*
+ * SHADOW
+ */
+@function Shadow($name: default) {
+  @return map-get($shadow_items, $name);
+}
+
+/*
+ * Z-INDEX
+ */
+@function Z($name) {
+  @return map-get($z_index_items, $name);
+}

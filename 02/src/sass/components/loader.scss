@@ -1,0 +1,27 @@
+$BLOCK_NAME: '.loader';
+
+#{ $BLOCK_NAME } {
+  &__content > span {
+    animation: loaderAnim 2.5s infinite;
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: 0.15s * ($i - 1);
+      }
+    }
+  }
+}
+
+@keyframes loaderAnim {
+  0% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}

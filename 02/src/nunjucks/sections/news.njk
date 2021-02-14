@@ -1,0 +1,36 @@
+{%- import '../_module/components/lead.njk' as lead -%}
+{%- import '../_module/components/news-list.njk' as newsList -%}
+{% set newsListItems = [
+  {
+    category: 'お知らせ',
+    date: '2021.01.01',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    category: 'イベント',
+    date: '2021.01.02',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    category: 'お知らせ',
+    date: '2021.01.03',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] -%}
+
+<div class="container js-scroll-anim">
+  <section class="section">
+    <div class="section-news columns">
+      <div class="column is-4">
+        {{ lead.lead(
+          heading='ニュース',
+          shoulder='NEWS',
+          text='テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+        ) }}
+      </div>
+      <div class="column is-7">
+        {{ newsList.list(newsListItems) }}
+      </div>
+    </div>
+  </section>
+</div>

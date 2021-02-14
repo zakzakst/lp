@@ -1,0 +1,38 @@
+$BLOCK_NAME: '.info-list';
+
+#{ $BLOCK_NAME } {
+  padding-top: 12px;
+  @include Mq(tb) {
+    padding-top: 0;
+  }
+
+  &__item {
+    padding: 12px 0;
+    font-size: 12px;
+    border-bottom: 1px solid Color(border);
+    @include Mq(tb) {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+    }
+    &:first-child {
+      border-top: 1px solid Color(border);
+    }
+    & > dt {
+      font-weight: bold;
+      @include Mq(tb) {
+        flex-shrink: 0;
+        width: 120px;
+        padding-right: 8px;
+      }
+    }
+    & > dd {
+      margin-top: 8px;
+      @include Mq(tb) {
+        flex-grow: 1;
+        padding-left: 8px;
+        margin-top: 0;
+      }
+    }
+  }
+}
