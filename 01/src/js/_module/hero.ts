@@ -29,8 +29,16 @@ export class Hero {
     // 要素が存在しない場合、処理を終了
     if (!this.heroEl) return;
     this.mvInit();
+  }
+
+  /**
+   * アニメーション開始
+   */
+  startAnim() {
     this.heroEl.classList.add('is-animated');
-    this.mvAnim();
+    setTimeout(() => {
+      this.mvAnim();
+    }, 1000);
   }
 
   /**

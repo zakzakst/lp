@@ -32,26 +32,40 @@ $scale_mv: 1.2;
       margin-top: 12px;
     }
     & > span {
+      position: relative;
       display: inline-block;
       padding: 8px 16px 16px 16px;
+      overflow: hidden;
       color: Color(white);
       background: Color(primary);
-      transition: transform Dur() Ease();
-      transform: translateY(100%);
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        background: Color(white);
+        transition: transform Dur(fast) Ease();
+      }
       @include Mq(pc) {
         padding-bottom: 20px;
       }
       @at-root {
         #{ $BLOCK_WORD }.is-animated & {
-          transform: translateY(0);
+          &::after {
+            transform: translateX(100%);
+          }
         }
       }
     }
   }
 
   &__lead {
+    position: relative;
     padding: 16px 16px 0 0;
     margin-top: 32px;
+    overflow: hidden;
     color: Color(primary);
     background: Color(white);
     @include Mq(tb) {
@@ -61,14 +75,16 @@ $scale_mv: 1.2;
     & > span {
       display: inline-block;
       opacity: 0;
-      transition: Dur() Ease() 0.35s;
+      transition: Dur() Ease() Dur();
       transition-property: transform, opacity;
       transform: translateY(16px);
     }
     @at-root {
-      #{ $BLOCK_WORD }.is-animated & > span {
-        opacity: 1;
-        transform: translateY(0);
+      #{ $BLOCK_WORD }.is-animated & {
+        & > span {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
   }
@@ -91,6 +107,23 @@ $scale_mv: 1.2;
     z-index: -1;
     display: block;
     width: $width_mv;
+    overflow: hidden;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      content: '';
+      background: Color(white);
+      transition: transform Dur(fast) Ease();
+      @at-root {
+        #{ $BLOCK_WORD }.is-animated & {
+          transform: translateX(100%);
+        }
+      }
+    }
     @include Mq(tb) {
       right: auto;
       bottom: 1rem;

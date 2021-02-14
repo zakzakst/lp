@@ -1,20 +1,17 @@
 'use strict';
 
-import $ from 'jquery';
-
 export class FooterGoTop {
-  $el: JQuery;
+  el: HTMLElement;
   speed: number; // ミリ秒
   constructor(elId: string) {
-    this.$el = $(`#${elId}`);
-    this.speed = 500;
+    this.el = document.getElementById(elId);
   }
 
   /**
    * 初期化
    */
   init(): void {
-    if (!this.$el) return;
+    if (!this.el) return;
     this.onClickEl();
   }
 
@@ -22,16 +19,17 @@ export class FooterGoTop {
    * トップへ戻る
    */
   goTop(): void {
-    $('body, html').animate({
-      scrollTop: 0
-    }, this.speed);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
   /**
    * クリック時の挙動を設定
    */
   onClickEl(): void {
-    this.$el.on('click', e => {
+    this.el.addEventListener('click', e => {
       e.preventDefault();
       this.goTop();
     });

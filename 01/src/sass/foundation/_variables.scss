@@ -66,7 +66,7 @@ $duration_items: (
  * EASING
  */
 $easing_items: (
-  default: EasingList(sine),
+  default: EasingList(sine, out),
 );
 
 /*
