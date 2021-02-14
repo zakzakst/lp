@@ -1,0 +1,72 @@
+$BLOCK_NAME: '.point-content';
+
+#{ $BLOCK_NAME } {
+  color: Color(white);
+  opacity: 0;
+  transition: all Dur(slow) Ease();
+  transform: translateY(24px);
+  &.is-animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  & + & {
+    padding-top: 32px;
+  }
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  &__shoulder {
+    padding-left: 3px;
+    margin-bottom: 8px;
+    font-family: Ff(en);
+    font-size: 12px;
+    color: Color(secondary);
+    letter-spacing: 1px;
+    & > span {
+      position: relative;
+      display: inline-block;
+      width: 70px;
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        display: block;
+        width: 80px;
+        height: 1px;
+        margin: auto;
+        content: '';
+        background: Color(secondary);
+        opacity: 0.5;
+      }
+    }
+  }
+  &__heading {
+    font-size: 24px;
+  }
+  &__text {
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 1.8;
+    & > p {
+      margin-top: 8px;
+    }
+  }
+  &__img {
+    max-width: 480px;
+    margin: 0 auto;
+    & > img {
+      width: 100%;
+    }
+  }
+  @include Mq(tb) {
+    &:nth-child(odd) .point-content__img {
+      padding-left: 24px;
+    }
+    &:nth-child(even) .point-content__img {
+      padding-right: 24px;
+    }
+  }
+}

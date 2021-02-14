@@ -1,0 +1,50 @@
+{%- import '../_module/components/lead.njk' as lead -%}
+{%- import '../_module/components/event-list.njk' as eventList -%}
+{% set eventListItems = [
+  {
+    url: '#',
+    img: 'img/event/event-01.jpg',
+    date: '2021.01.01',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  },
+  {
+    url: '#',
+    img: 'img/event/event-02.jpg',
+    date: '2021.01.02',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  },
+  {
+    url: '#',
+    img: 'img/event/event-03.jpg',
+    date: '2021.01.03',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  },
+  {
+    url: '#',
+    img: 'img/event/event-01.jpg',
+    date: '2021.01.04',
+    title: 'イベント名が入ります。イベント名が入ります。',
+    text: 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。'
+  }
+] -%}
+
+<div class="container js-scroll-anim">
+  <section class="section">
+    <div class="section-event columns">
+      <div class="column is-4">
+        {{ lead.lead(
+          heading='イベント',
+          shoulder='EVENT',
+          text='テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+          align='right'
+        ) }}
+      </div>
+      <div class="column is-7">
+        {{ eventList.list(eventListItems) }}
+      </div>
+    </div>
+  </section>
+</div>

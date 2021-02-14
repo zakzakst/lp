@@ -1,0 +1,11 @@
+$BLOCK_NAME: '.section-point';
+$color_point_bg: linear-gradient(rgba(9, 40, 4, 0.8), rgba(9, 40, 4, 0.8));
+
+#{ $BLOCK_NAME } {
+  padding: 32px 0;
+  margin: 24px 0;
+  background: $color_point_bg,
+    url(../img/point/point-bg.jpg) center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}

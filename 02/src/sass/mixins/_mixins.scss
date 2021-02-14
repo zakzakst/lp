@@ -1,0 +1,10 @@
+@charset 'utf-8';
+
+/*
+ * MEDIA QUERY
+ */
+@mixin Mq($name) {
+  @media screen and (min-width: map-get($break_point_items, $name)) {
+    @content;
+  }
+}
