@@ -1,0 +1,74 @@
+$BLOCK_NAME: '.about-section';
+$width_about_frame: 4px;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  padding: 48px;
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 96px;
+    height: 96px;
+    content: '';
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    border-top: $width_about_frame solid Color(primary);
+    border-left: $width_about_frame solid Color(primary);
+    border-top-left-radius: Rad(card);
+  }
+  &::after {
+    right: 0;
+    bottom: 0;
+    border-right: $width_about_frame solid Color(secondary);
+    border-bottom: $width_about_frame solid Color(secondary);
+    border-bottom-right-radius: Rad(card);
+  }
+
+  &__heading {
+    text-align: center;
+    & > span {
+      display: inline-block;
+      font-size: 32px;
+      // font-weight: bold;
+      color: transparent;
+      background: Grad();
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+  &__content {
+    margin-top: 24px;
+  }
+
+  &__text {
+    & + & {
+      margin-top: 12px;
+    }
+  }
+
+  &__fragment {
+    position: absolute;
+    z-index: -1;
+    &.is-1 {
+      top: -30px;
+      left: -20px;
+    }
+    &.is-2 {
+      top: 0;
+      right: -20px;
+    }
+    &.is-3 {
+      bottom: -60px;
+      left: 30%;
+    }
+    &.is-4 {
+      right: 30%;
+      bottom: -100px;
+    }
+  }
+}

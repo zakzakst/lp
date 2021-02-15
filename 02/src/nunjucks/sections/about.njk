@@ -1,0 +1,28 @@
+{%- import '../_module/components/fragments.njk' as fragments -%}
+
+<div class="container">
+  <section class="section">
+    <div class="about-section">
+      <h2 class="about-section__heading">
+        <span>見出しが入ります</span>
+      </h2>
+      <div class="about-section__content">
+        <p class="about-section__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        <p class="about-section__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        <p class="about-section__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+      </div>
+      <div class="about-section__fragment is-1">
+        {{ fragments.triangle( type="1", speed="fast", rotate="left" ) }}
+      </div>
+      <div class="about-section__fragment is-2">
+        {{ fragments.triangle( type="4", speed="slow" ) }}
+      </div>
+      <div class="about-section__fragment is-3">
+        {{ fragments.triangle( type="3", rotate="left" ) }}
+      </div>
+      <div class="about-section__fragment is-4">
+        {{ fragments.triangle( type="2", speed="slow", rotate="left" ) }}
+      </div>
+    </div>
+  </section>
+</div>

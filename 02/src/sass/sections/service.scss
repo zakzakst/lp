@@ -1,5 +1,86 @@
-$BLOCK_NAME: '.section-service';
+$BLOCK_NAME: '.service-section';
 
 #{ $BLOCK_NAME } {
-  //
+  position: relative;
+  margin-top: 32px;
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: 32px;
+    margin-top: 40px;
+    background: Color(white);
+    border-radius: Rad(card);
+    box-shadow: 0 3px 15px -5px rgba(0, 0, 0, 0.1),
+      0 9px 25px -10px rgba(0, 0, 0, 0.1), 0 15px 35px -15px rgba(0, 0, 0, 0.1);
+    @at-root #{ $BLOCK_NAME }:nth-child(odd) & {
+      margin-right: -90px;
+    }
+    @at-root #{ $BLOCK_NAME }:nth-child(even) & {
+      margin-left: -90px;
+    }
+  }
+
+  &__heading {
+    & > span {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      color: transparent;
+      background: Grad();
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+  &__text {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: Rad(card);
+  }
+
+  &__fragment {
+    position: absolute;
+    z-index: -1;
+    &.is-1 {
+      top: -10px;
+      right: -10px;
+    }
+    &.is-2 {
+      bottom: -10px;
+      left: -30px;
+    }
+    &.is-3 {
+      top: -10px;
+      left: 60%;
+    }
+    &.is-4 {
+      bottom: -30px;
+      left: 50px;
+    }
+    &.is-5 {
+      top: 50%;
+      right: -50px;
+    }
+    &.is-6 {
+      top: 0;
+      left: 35%;
+    }
+    &.is-7 {
+      right: 20px;
+      bottom: 20px;
+    }
+    &.is-8 {
+      bottom: -60px;
+      left: 20%;
+    }
+  }
 }

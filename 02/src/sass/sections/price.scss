@@ -1,0 +1,27 @@
+$BLOCK_NAME: '.price-section';
+
+#{ $BLOCK_NAME } {
+  margin: 48px 0 16px;
+
+  &__item {
+    position: relative;
+    height: 100%;
+    padding: 16px;
+    background: Color(white);
+    box-shadow: Shadow();
+    &.--free {
+      border-top-left-radius: Rad(card);
+      border-bottom-left-radius: Rad(card);
+    }
+    &.--standard {
+      z-index: 1;
+      height: calc(100% + 32px);
+      margin: -16px 0;
+      border-radius: Rad(card);
+    }
+    &.--premium {
+      border-top-right-radius: Rad(card);
+      border-bottom-right-radius: Rad(card);
+    }
+  }
+}

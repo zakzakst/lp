@@ -9,6 +9,8 @@ $tablet: map-get($break_point_items, tb);
 $desktop: map-get($break_point_items, pc);
 $widescreen: map-get($break_point_items, wide);
 $fullhd: map-get($break_point_items, full);
+$widescreen-enabled: false;
+$fullhd-enabled: false;
 $spacing-values: (
   '0': 0,
   '1': 4px,
