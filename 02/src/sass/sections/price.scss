@@ -1,6 +1,9 @@
 $BLOCK_NAME: '.price-section';
+$shadow_price_card: 0 3px 15px -5px rgba(0, 0, 0, 0.1),
+  0 9px 25px -10px rgba(0, 0, 0, 0.1), 0 15px 35px -15px rgba(0, 0, 0, 0.1);
 
 #{ $BLOCK_NAME } {
+  position: relative;
   margin: 48px 0 16px;
 
   &__item {
@@ -8,7 +11,7 @@ $BLOCK_NAME: '.price-section';
     height: 100%;
     padding: 16px;
     background: Color(white);
-    box-shadow: Shadow();
+    box-shadow: $shadow_price_card;
     &.--free {
       border-top-left-radius: Rad(card);
       border-bottom-left-radius: Rad(card);
@@ -17,11 +20,78 @@ $BLOCK_NAME: '.price-section';
       z-index: 1;
       height: calc(100% + 32px);
       margin: -16px 0;
+      border: 3px solid Color(secondary);
       border-radius: Rad(card);
     }
     &.--premium {
       border-top-right-radius: Rad(card);
       border-bottom-right-radius: Rad(card);
+    }
+  }
+
+  &__heading {
+    padding-bottom: 12px;
+    font-family: Ff(en);
+    font-size: 24px;
+    color: Color(black);
+    text-align: center;
+    border-bottom: 1px dotted Color(black);
+    @at-root #{ $BLOCK_NAME }__item.--standard & {
+      color: Color(secondary);
+    }
+  }
+
+  &__price {
+    margin-top: 8px;
+    text-align: center;
+    & > span {
+      display: block;
+      font-family: Ff(en);
+      font-size: 48px;
+      line-height: 1.2;
+      @at-root #{ $BLOCK_NAME }__item.--standard & {
+        font-size: 58px;
+        color: Color(secondary);
+      }
+    }
+  }
+
+  &__tag {
+    padding: 4px;
+    margin-top: 8px;
+    color: Color(white);
+    text-align: center;
+    background: Color(gray);
+    border-radius: 4px;
+  }
+
+  &__content {
+    margin-top: 16px;
+    text-align: center;
+    & + & {
+      margin-top: 8px;
+    }
+    & > dd {
+      margin-top: 4px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  &__fragment {
+    position: absolute;
+    z-index: -1;
+    &.is-1 {
+      top: -30px;
+      left: -120px;
+    }
+    &.is-2 {
+      top: 50%;
+      right: -120px;
+    }
+    &.is-3 {
+      top: -60px;
+      left: 55%;
     }
   }
 }

@@ -14,14 +14,14 @@ $BLOCK_NAME: '.service-section';
     margin-top: 40px;
     background: Color(white);
     border-radius: Rad(card);
-    box-shadow: 0 3px 15px -5px rgba(0, 0, 0, 0.1),
-      0 9px 25px -10px rgba(0, 0, 0, 0.1), 0 15px 35px -15px rgba(0, 0, 0, 0.1);
-    @at-root #{ $BLOCK_NAME }:nth-child(odd) & {
-      margin-right: -90px;
-    }
-    @at-root #{ $BLOCK_NAME }:nth-child(even) & {
-      margin-left: -90px;
-    }
+    // box-shadow: 0 3px 15px -5px rgba(0, 0, 0, 0.1),
+    //   0 9px 25px -10px rgba(0, 0, 0, 0.1), 0 15px 35px -15px rgba(0, 0, 0, 0.1);
+    // @at-root #{ $BLOCK_NAME }:nth-child(odd) & {
+    //   margin-right: -60px;
+    // }
+    // @at-root #{ $BLOCK_NAME }:nth-child(even) & {
+    //   margin-left: -60px;
+    // }
   }
 
   &__heading {
