@@ -14,8 +14,13 @@ $BLOCK_NAME: '.heading';
 
   &__text {
     font-family: Ff(en);
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
+    line-height: 1.2;
+    color: Color(white);
+  }
+
+  &__sub-text {
     color: Color(white);
   }
 
