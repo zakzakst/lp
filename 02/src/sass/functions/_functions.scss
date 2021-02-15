@@ -8,6 +8,13 @@
 }
 
 /*
+ * GRADIENT
+ */
+@function Grad($name: default) {
+  @return map-get($gradient_items, $name);
+}
+
+/*
  * FONT
  */
 @function Fz($size: md) {
