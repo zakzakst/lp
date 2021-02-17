@@ -1,0 +1,67 @@
+$BLOCK_NAME: '.news-link';
+
+#{ $BLOCK_NAME } {
+  &__text {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0 24px;
+    background: Color(white);
+    border-radius: 9999px;
+    box-shadow: Shadow();
+  }
+
+  &__date {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    padding-right: 16px;
+    margin-right: 16px;
+    font-weight: bold;
+    // color: Color(primary);
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -3px;
+      bottom: 0;
+      display: block;
+      width: 6px;
+      height: 6px;
+      margin: auto;
+      content: '';
+      background: Color(primary);
+      border-radius: 50%;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    overflow: hidden;
+    // font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: opacity Dur() Ease();
+    &:hover {
+      opacity: Op();
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    flex-shrink: 0;
+    height: 40px;
+    padding: 0 24px;
+    margin-left: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 40px;
+    color: Color(white);
+    background: Color(primary);
+    border-radius: 9999px;
+    transition: background-color Dur() Ease();
+    &:hover {
+      color: Color(white);
+      background: Color(secondary);
+    }
+  }
+}

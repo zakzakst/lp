@@ -88,7 +88,7 @@ $radius_items: (
  * SHADOW
  */
 $shadow_items: (
-  default: ShadowList(8),
+  default: ShadowList2(1),
   float: ShadowList(12),
 );
 
@@ -100,4 +100,11 @@ $z_index_items: (
   header: 101,
   modal: 1000,
   overlay: 10000,
+);
+
+/*
+ * OPACITY
+ */
+$opacity_items: (
+  default: 0.6,
 );

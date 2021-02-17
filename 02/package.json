@@ -8,7 +8,8 @@
     "build:dev": "gulp build",
     "build:prd": "cross-env NODE_ENV=production gulp build",
     "lint:css": "stylelint --fix **/*.{css,scss,sass}",
-    "lint:js": "eslint --fix **/*.js"
+    "lint:js": "eslint --fix **/*.js",
+    "imagemin": "gulp imagemin"
   },
   "repository": {
     "type": "git",
