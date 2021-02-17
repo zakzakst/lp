@@ -1,0 +1,42 @@
+{%- import '../_module/components/fragments.njk' as fragments -%}
+{%- import '../_module/components/news-link.njk' as newsLink -%}
+
+<div class="hero-section container">
+  <section class="section">
+    <div class="hero-section__content">
+      <h1 class="hero-section__title">ここに<br>タイトルが<br>入ります</h1>
+      <p class="hero-section__lead">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    </div>
+    <div class="hero-section__news">
+      {{ newsLink.content(
+        date="2021.01.01",
+        text="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。",
+        link="#",
+        listLink="#"
+      ) }}
+    </div>
+    <svg class="hero-section__bg" viewBox="0 0 500 500">
+      <path
+        d="M498.977,261.986c-1.736,6.904 -1.866,8.77 -4.857,15.275c-4.482,9.745 -11.382,18.324 -19.94,24.791c-2.136,1.613 -4.462,2.958 -6.692,4.437l-319.897,184.846c-2.397,1.194 -4.724,2.539 -7.19,3.583c-17.306,7.332 -37.733,6.689 -54.518,-1.665c-19.203,-9.557 -33.04,-29.1 -35.676,-50.387c-0.33,-2.657 -0.33,-5.345 -0.495,-8.018l0,-369.691c0.165,-2.673 0.165,-5.361 0.495,-8.018c2.636,-21.287 16.473,-40.83 35.676,-50.387c16.785,-8.354 37.181,-9.01 54.518,-1.665c2.466,1.044 4.793,2.389 7.19,3.583l319.897,184.845c5.933,3.934 7.649,4.678 12.788,9.663c9.623,9.337 16.24,21.669 18.701,34.84c1.315,7.039 0.986,8.879 0.986,15.999c-0.328,2.656 -0.657,5.312 -0.986,7.969Z"
+      />
+    </svg>
+    <div class="hero-section__fragment is-1">
+      {{ fragments.triangle( type="2", speed="fast", rotate="left" ) }}
+    </div>
+    <div class="hero-section__fragment is-2">
+      {{ fragments.triangle( type="1", speed="slow" ) }}
+    </div>
+    <div class="hero-section__fragment is-3">
+      {{ fragments.triangle( type="3", rotate="left" ) }}
+    </div>
+    <div class="hero-section__fragment is-4">
+      {{ fragments.triangle( type="4", speed="slow" ) }}
+    </div>
+    <div class="hero-section__fragment is-5">
+      {{ fragments.triangle( type="2" ) }}
+    </div>
+    <div class="hero-section__fragment is-6">
+      {{ fragments.triangle( type="4", speed="fast", rotate="left" ) }}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+$shadow_list2: (
+  1: (
+    0 3px 15px -5px rgba(0, 0, 0, 0.1),
+    0 9px 25px -10px rgba(0, 0, 0, 0.1),
+    0 15px 35px -15px rgba(0, 0, 0, 0.1),
+  ),
+);
+
+@function ShadowList2($num) {
+  @return map-get($shadow_list2, $num);
+}

@@ -59,3 +59,10 @@
 @function Z($name) {
   @return map-get($z_index_items, $name);
 }
+
+/*
+ * OPACITY
+ */
+@function Op($name: default) {
+  @return map-get($opacity_items, $name);
+}

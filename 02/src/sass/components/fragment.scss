@@ -1,29 +1,31 @@
 $BLOCK_NAME: '.fragment';
+$opacity_fragment01: 0.2;
+$opacity_fragment02: 0.4;
 
 #{ $BLOCK_NAME } {
   width: 40px;
   fill: none;
 
   &.--type1 {
-    opacity: 0.3;
+    opacity: $opacity_fragment01;
     fill: Color(primary);
   }
 
   &.--type2 {
-    opacity: 0.3;
+    opacity: $opacity_fragment01;
     fill: Color(secondary);
   }
 
   &.--type3 {
     width: 80px;
-    opacity: 0.6;
+    opacity: $opacity_fragment02;
     stroke: Color(primary);
     stroke-width: 4px;
   }
 
   &.--type4 {
     width: 80px;
-    opacity: 0.6;
+    opacity: $opacity_fragment02;
     stroke: Color(secondary);
     stroke-width: 4px;
   }

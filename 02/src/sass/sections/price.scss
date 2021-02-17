@@ -1,6 +1,4 @@
 $BLOCK_NAME: '.price-section';
-$shadow_price_card: 0 3px 15px -5px rgba(0, 0, 0, 0.1),
-  0 9px 25px -10px rgba(0, 0, 0, 0.1), 0 15px 35px -15px rgba(0, 0, 0, 0.1);
 
 #{ $BLOCK_NAME } {
   position: relative;
@@ -11,7 +9,7 @@ $shadow_price_card: 0 3px 15px -5px rgba(0, 0, 0, 0.1),
     height: 100%;
     padding: 16px;
     background: Color(white);
-    box-shadow: $shadow_price_card;
+    box-shadow: Shadow();
     &.--free {
       border-top-left-radius: Rad(card);
       border-bottom-left-radius: Rad(card);

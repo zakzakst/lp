@@ -1,0 +1,16 @@
+{% macro content(
+  date='',
+  text='',
+  link='',
+  listLink=''
+)%}
+
+<div class="news-link">
+  <p class="news-link__text">
+    <span class="news-link__date">{{ date }}</span>
+    <a class="news-link__link" href="{{ link }}">{{ text }}</a>
+    <a class="news-link__button" href="{{ listLink }}">一覧を見る</a>
+  </p>
+</div>
+
+{% endmacro %}
