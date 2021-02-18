@@ -1,9 +1,11 @@
 {%- import "../_module/components/headings.njk" as headings -%}
+{%- import "../_module/components/voice-list.njk" as voiceList -%}
 
 <div class="container">
   <section class="section">
     {{ headings.h2( text="VOICES", subText="お客様の声" ) }}
     <div class="voices-section">
+      {{ voiceList.list() }}
     </div>
   </section>
 </div>
