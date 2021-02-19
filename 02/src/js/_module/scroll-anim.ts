@@ -1,3 +1,5 @@
+'use strict';
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,7 +16,6 @@ export class ScrollAnim {
    */
   init(): void {
     if (!this.els.length) return;
-    console.log('test');
     [...this.els].forEach(el => {
       ScrollTrigger.create({
         trigger: el,
