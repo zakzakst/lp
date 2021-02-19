@@ -8,6 +8,16 @@ import { VoiceList } from './_module/voice-list';
   voiceList.init();
 })();
 
+// ヘッダースクリプトの実行
+import { Header } from './_module/header';
+(() => {
+  const header = new Header(
+    'js-header-button',
+    'js-header-menu'
+  );
+  header.init();
+})();
+
 // トップへ戻るスクリプトの実行
 import { FooterGoTop } from './_module/footer-go-top';
 (() => {

@@ -6,20 +6,16 @@ $BLOCK_NAME: '.header-menu';
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  background: Color(primary);
-  transition: transform Dur(fast) Ease() Dur();
-  transform: translateX(100%);
-  &.is-open {
-    transition-delay: 0s;
-    transform: translateX(0);
-  }
 
-  &__items > li {
-    display: block;
-    overflow: hidden;
+  &__items {
+    z-index: 1;
+    & > li {
+      opacity: 0;
+      transform: translateY(24px);
+    }
   }
 
   &__item {
@@ -27,20 +23,26 @@ $BLOCK_NAME: '.header-menu';
     padding: 4px;
     font-family: Ff(en);
     font-size: 24px;
-    color: Color(white);
+    color: Color(primary);
     letter-spacing: 2px;
-    transition: all Dur() Ease();
-    transform: translateY(100%);
+    transition: color Dur() Ease();
     @include Mq(tb) {
-      font-size: 40px;
-    }
-    @at-root #{ $BLOCK_NAME }.is-open & {
-      transition-delay: Dur(), 0s;
-      transition-property: transform, color;
-      transform: translateY(0);
+      font-size: 32px;
     }
     &:hover {
       color: Color(secondary);
     }
+  }
+
+  &__bg {
+    position: fixed;
+    top: 57px;
+    right: 57px;
+    width: calc(max(100vw, 100vh) * 3);
+    height: calc(max(100vw, 100vh) * 3);
+    background: Color(white);
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(50%, -50%) scale(0);
   }
 }
