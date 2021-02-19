@@ -1,10 +1,16 @@
 'use strict';
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export class FooterGoTop {
   el: HTMLElement;
-  speed: number; // ミリ秒
+  showOffset: string;
   constructor(elId: string) {
     this.el = document.getElementById(elId);
+    this.showOffset = '-400px';
   }
 
   /**
@@ -13,6 +19,7 @@ export class FooterGoTop {
   init(): void {
     if (!this.el) return;
     this.onClickEl();
+    this.handlerShowEl();
   }
 
   /**
@@ -32,6 +39,23 @@ export class FooterGoTop {
     this.el.addEventListener('click', e => {
       e.preventDefault();
       this.goTop();
+    });
+  }
+
+  /**
+   * 一定量のスクロール後に表示する
+   */
+  handlerShowEl(): void {
+    const self = this;
+    ScrollTrigger.create({
+      trigger: document.body,
+      start: `top ${self.showOffset}`,
+      onEnter() {
+        self.el.classList.add('is-show');
+      },
+      onLeaveBack() {
+        self.el.classList.remove('is-show');
+      }
     });
   }
 }

@@ -7,3 +7,10 @@ import { VoiceList } from './_module/voice-list';
   const voiceList = new VoiceList('js-voice-list');
   voiceList.init();
 })();
+
+// トップへ戻るスクリプトの実行
+import { FooterGoTop } from './_module/footer-go-top';
+(() => {
+  const footerGoTop = new FooterGoTop('js-footer-go-top');
+  footerGoTop.init();
+})();
