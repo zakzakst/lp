@@ -7,15 +7,16 @@ export class VoiceList {
   constructor(elId: string) {
     this.el = $(`#${elId}`);
     this.slickConf = {
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 3000,
-      arrows: false,
+      arrows: true,
       dots: true,
       pauseOnFocus: false,
       pauseOnHover: true,
-      dotsClass: 'carousel-01__pager-item',
-      appendDots: $('#js-carousel-01-pager'),
-      vertical: false,
+      variableWidth: true,
+      centerMode: true,
+      prevArrow: '<div class="voice-list__arrow-prev"><span class="icon is-large"><i class="fas fa-angle-left fa-lg"></i></span></div>',
+      nextArrow: '<div class="voice-list__arrow-next"><span class="icon is-large"><i class="fas fa-angle-right fa-lg"></i></span></div>',
     };
   }
 
