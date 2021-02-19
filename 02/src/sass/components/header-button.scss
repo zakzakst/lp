@@ -9,22 +9,15 @@ $BLOCK_NAME: '.header-button';
   }
 
   display: block;
-  width: 48px;
-  height: 48px;
-  padding: 12px;
-  background: Color(primary);
-  border-radius: Rad();
-  box-shadow: Shadow(float);
+  width: 90px;
+  height: 90px;
+  padding: 30px;
+  background: Color(white);
+  border-radius: 50%;
+  box-shadow: Shadow();
   transition: all Dur(fast) Ease();
-  &:hover {
-    background: Color(primaryDark);
-  }
   &.is-open {
-    background: Color(primary);
     box-shadow: none;
-    &:hover {
-      background: Color(primaryDark);
-    }
   }
 
   &__bar {
@@ -42,7 +35,7 @@ $BLOCK_NAME: '.header-button';
     display: block;
     height: 2px;
     margin: auto;
-    background: Color(white);
+    background: Color(primary);
     transition: all Dur(fast) Ease();
     &:nth-child(1) {
       top: 20px;
@@ -53,6 +46,9 @@ $BLOCK_NAME: '.header-button';
         top: 0;
         transform: rotate(-45deg);
       }
+      @at-root #{ $BLOCK_NAME }.is-open:hover & {
+        background: Color(secondary);
+      }
     }
     &:nth-child(2) {
       bottom: 20px;
@@ -62,6 +58,9 @@ $BLOCK_NAME: '.header-button';
       @at-root #{ $BLOCK_NAME }.is-open & {
         bottom: 0;
         transform: rotate(45deg);
+      }
+      @at-root #{ $BLOCK_NAME }.is-open:hover & {
+        background: Color(secondary);
       }
     }
     &:nth-child(3) {
