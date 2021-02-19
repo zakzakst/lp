@@ -1,0 +1,64 @@
+$BLOCK_NAME: '.contact-section';
+
+#{ $BLOCK_NAME } {
+  padding: 90px 0 36px;
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__heading-inner {
+    display: inline-block;
+    font-family: Ff(en);
+    font-size: 40px;
+    font-weight: 900;
+    color: transparent;
+    letter-spacing: 3px;
+    background: Grad();
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  &__lead {
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &__buttons {
+    margin-top: 48px;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    padding-bottom: 8px;
+    color: Color(white);
+    border-radius: 60px;
+    transition: all Dur() Ease();
+    &.--mail {
+      background: Color(primary);
+      border: 3px solid Color(primary);
+      &:hover {
+        color: Color(primary);
+        background: Color(white);
+      }
+    }
+    &.--tell {
+      background: Color(secondary);
+      border: 3px solid Color(secondary);
+      &:hover {
+        color: Color(secondary);
+        background: Color(white);
+      }
+    }
+  }
+
+  &__button-text {
+    font-family: Ff(en);
+    font-size: 28px;
+  }
+}

@@ -1,5 +1,35 @@
 $BLOCK_NAME: '.voices-section';
 
 #{ $BLOCK_NAME } {
-  //
+  position: relative;
+  padding-bottom: 12px;
+
+  &__fragment {
+    position: absolute;
+    z-index: -1;
+    &.is-1 {
+      top: 0;
+      right: 30px;
+    }
+    &.is-2 {
+      top: 120px;
+      right: 30%;
+    }
+    &.is-3 {
+      top: 90px;
+      left: 50%;
+    }
+    &.is-4 {
+      bottom: -90px;
+      left: 30%;
+    }
+    &.is-5 {
+      bottom: -30px;
+      left: 15%;
+    }
+    &.is-6 {
+      right: 20%;
+      bottom: 10px;
+    }
+  }
 }
