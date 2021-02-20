@@ -12,11 +12,32 @@ $BLOCK_NAME: '.contact-section';
     font-family: Ff(en);
     font-size: 40px;
     font-weight: 900;
-    color: transparent;
     letter-spacing: 3px;
     background: Grad();
     -webkit-background-clip: text;
     background-clip: text;
+    & > span {
+      color: rgba(#fff, 1);
+      transition: all Dur() Ease();
+      @for $i from 0 through 20 {
+        &:nth-child(#{$i + 1}) {
+          transition-delay: 0.05s * $i;
+        }
+      }
+      @at-root #{ $BLOCK_NAME }.is-animated & {
+        color: rgba(#fff, 0);
+      }
+    }
+  }
+
+  &__content {
+    opacity: 0;
+    transition: all Dur() Ease() 0.5s;
+    transform: translateY(24px);
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__lead {

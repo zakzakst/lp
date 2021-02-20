@@ -28,13 +28,15 @@
   }
 ] -%}
 
-<div class="voices-section">
+<div class="voices-section js-scroll-anim">
   <div class="container">
     <section class="section">
       {{ headings.h2( text="VOICES", subText="お客様の声" ) }}
     </section>
   </div>
-  {{ voiceList.list( voiceListItems ) }}
+  <div class="voices-section__content">
+    {{ voiceList.list( voiceListItems ) }}
+  </div>
   <div class="voices-section__fragment is-1">
     {{ fragments.triangle( type="1", speed="fast", rotate="left" ) }}
   </div>

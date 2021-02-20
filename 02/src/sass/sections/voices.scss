@@ -4,6 +4,16 @@ $BLOCK_NAME: '.voices-section';
   position: relative;
   padding-bottom: 12px;
 
+  &__content {
+    opacity: 0;
+    transition: all Dur() Ease();
+    transform: translateY(24px);
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   &__fragment {
     position: absolute;
     z-index: -1;
