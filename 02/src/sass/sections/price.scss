@@ -97,15 +97,26 @@ $BLOCK_NAME: '.price-section';
     z-index: -1;
     &.is-1 {
       top: -30px;
-      left: -120px;
+      left: -20px;
+      @include Mq(sp) {
+        left: -120px;
+      }
     }
     &.is-2 {
-      top: 50%;
-      right: -120px;
+      display: none;
+      @include Mq(tb) {
+        top: 50%;
+        right: -120px;
+        display: block;
+      }
     }
     &.is-3 {
-      top: -60px;
-      left: 55%;
+      display: none;
+      @include Mq(sp) {
+        top: -60px;
+        left: 55%;
+        display: block;
+      }
     }
   }
 }
