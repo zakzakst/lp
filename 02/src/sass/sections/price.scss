@@ -4,6 +4,16 @@ $BLOCK_NAME: '.price-section';
   position: relative;
   margin: 48px 0 16px;
 
+  &__inner {
+    opacity: 0;
+    transition: all Dur() Ease();
+    transform: translateY(24px);
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   &__item {
     position: relative;
     height: 100%;
