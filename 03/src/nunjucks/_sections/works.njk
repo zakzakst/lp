@@ -1,0 +1,11 @@
+{%- import '../_module/components/headings.njk' as headings -%}
+{%- import "../_module/components/work-list.njk" as workList -%}
+
+<section class="works-section py-4">
+  <div class="container">
+    {{ headings.h2( text="導入実績", subText="Works" ) }}
+    <div class="works-section__content">
+      {{ workList.list() }}
+    </div>
+  </div>
+</section>

@@ -1,6 +1,44 @@
 @charset 'utf-8';
 $BLOCK_NAME: '.service-section';
+$size_sub_text: 48px;
+$offset_bg: 60px;
 
 #{ $BLOCK_NAME } {
-  //
+  padding-bottom: 1px;
+  margin-top: $size_sub_text;
+  background: Color(primary);
+
+  &__wrapper {
+    margin-bottom: $offset_bg + 1px;
+  }
+
+  &__inner {
+    position: relative;
+    margin-bottom: -$offset_bg;
+  }
+
+  &__sub-heading {
+    position: absolute;
+    top: -38px;
+    font-family: Ff(en);
+    font-size: $size_sub_text;
+    line-height: $size_sub_text;
+    color: Color(primary);
+  }
+
+  &__heading {
+    padding-top: 12px;
+    font-size: 14px;
+    color: Color(white);
+  }
+
+  &__lead {
+    margin-top: 16px;
+    font-weight: 100;
+    color: Color(white);
+  }
+
+  &__content {
+    margin-top: 32px;
+  }
 }

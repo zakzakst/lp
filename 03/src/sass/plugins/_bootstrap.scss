@@ -5,14 +5,27 @@
  * https://getbootstrap.com/
  */
 
+$spacer: $column_gap;
+
 // Required
 @import '../../../node_modules/bootstrap/scss/functions';
 @import '../../../node_modules/bootstrap/scss/variables';
 @import '../../../node_modules/bootstrap/scss/mixins';
 
 // Include custom variable default overrides here
+$container-max-widths: $break_point_items;
+$grid-gutter-width: $column_gap;
+$gutters: (
+  0: 0,
+  1: $column_gap * 0.5,
+  2: $column_gap,
+  3: $column_gap * 1.5,
+  4: $column_gap * 2,
+);
 
 // Optional
 @import '../../../node_modules/bootstrap/scss/reboot';
 @import '../../../node_modules/bootstrap/scss/containers';
 @import '../../../node_modules/bootstrap/scss/grid';
+@import '../../../node_modules/bootstrap/scss/utilities';
+@import '../../../node_modules/bootstrap/scss/utilities/api';
