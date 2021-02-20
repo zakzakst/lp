@@ -1,0 +1,10 @@
+@charset 'utf-8';
+
+/*
+ * Slick settings
+ * https://kenwheeler.github.io/slick/
+ */
+$slick-font-path: '../lib/slick/fonts/';
+$slick-loader-path: '../lib/slick/';
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';

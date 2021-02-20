@@ -1,0 +1,122 @@
+$BLOCK_NAME: '.service-section';
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  margin-top: 32px;
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: 16px;
+    background: Color(white);
+    border-radius: Rad(card);
+    @include Mq(tb) {
+      padding: 32px;
+      margin-top: 40px;
+    }
+  }
+
+  &__heading-inner {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    background: Grad();
+    -webkit-background-clip: text;
+    background-clip: text;
+    & > span {
+      color: rgba(#fff, 1);
+      transition: color Dur() Ease();
+      @for $i from 0 through 20 {
+        &:nth-child(#{$i + 1}) {
+          transition-delay: 0.05s * $i;
+        }
+      }
+      @at-root #{ $BLOCK_NAME }.is-animated & {
+        color: rgba(#fff, 0);
+      }
+    }
+  }
+
+  &__content-inner {
+    opacity: 0;
+    transition: all Dur() Ease() 0.5s;
+    transform: translateY(24px);
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__text {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  &__img {
+    max-width: 320px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all Dur() Ease() 1s;
+    transform: translateY(24px);
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @include Mq(tb) {
+      max-width: none;
+    }
+  }
+
+  &__fragment {
+    position: absolute;
+    z-index: -1;
+    &.is-1 {
+      top: -10px;
+      right: -10px;
+    }
+    &.is-2 {
+      bottom: -10px;
+      left: -30px;
+    }
+    &.is-3 {
+      top: -10px;
+      left: 60%;
+    }
+    &.is-4 {
+      bottom: -40px;
+      left: 50px;
+      @include Mq(sp) {
+        bottom: -30px;
+      }
+    }
+    &.is-5 {
+      top: 50%;
+      right: -20px;
+      @include Mq(sp) {
+        right: -50px;
+      }
+    }
+    &.is-6 {
+      top: 0;
+      left: 95%;
+      @include Mq(sp) {
+        left: 35%;
+      }
+    }
+    &.is-7 {
+      right: -20px;
+      bottom: 20px;
+      @include Mq(sp) {
+        right: 20px;
+      }
+    }
+    &.is-8 {
+      bottom: -60px;
+      left: 20%;
+    }
+  }
+}

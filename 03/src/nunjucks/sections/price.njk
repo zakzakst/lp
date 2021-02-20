@@ -1,0 +1,81 @@
+{%- import '../_module/components/headings.njk' as headings -%}
+{%- import '../_module/components/fragments.njk' as fragments -%}
+
+<div class="container">
+  <section class="section">
+    {{ headings.h2( text="PRICE", subText="価格", align="right" ) }}
+    <div class="price-section js-scroll-anim">
+      <div class="price-section__inner">
+        {# <div class="columns is-gapless"> #}
+        <div class="columns is-variable is-0-tablet">
+          <div class="column">
+            <div class="price-section__item --free">
+              <h3 class="price-section__heading">FREE</h3>
+              <p class="price-section__price"><span>0</span>円／月</p>
+              <p class="price-section__tag">まずはお試し</p>
+              <dl class="price-section__content">
+                <dt>項目01</dt>
+                <dd>〇</dd>
+              </dl>
+              <dl class="price-section__content">
+                <dt>項目02</dt>
+                <dd>×</dd>
+              </dl>
+              <dl class="price-section__content">
+                <dt>項目03</dt>
+                <dd>1</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="column">
+            <div class="price-section__item --standard">
+              <h3 class="price-section__heading">STANDARD</h3>
+              <p class="price-section__price"><span>1,000</span>円／月</p>
+              <p class="price-section__tag">おすすめ</p>
+              <dl class="price-section__content">
+                <dt>項目01</dt>
+                <dd>〇</dd>
+              </dl>
+              <dl class="price-section__content">
+                <dt>項目02</dt>
+                <dd>〇</dd>
+              </dl>
+              <dl class="price-section__content">
+                <dt>項目03</dt>
+                <dd>5</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="column">
+            <div class="price-section__item --premium">
+              <h3 class="price-section__heading">PREMIUM</h3>
+              <p class="price-section__price"><span>2,000</span>円／月</p>
+              <p class="price-section__tag">ビジネス向け</p>
+              <dl class="price-section__content">
+                <dt>項目01</dt>
+                <dd>〇</dd>
+              </dl>
+              <dl class="price-section__content">
+                <dt>項目02</dt>
+                <dd>〇</dd>
+              </dl>
+              <dl class="price-section__content">
+                <dt>項目03</dt>
+                <dd>無制限</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price-section__fragment is-1">
+        {{ fragments.triangle( type="4", speed="fast", rotate="left" ) }}
+      </div>
+      <div class="price-section__fragment is-2">
+        {{ fragments.triangle( type="4", speed="fast" ) }}
+      </div>
+      <div class="price-section__fragment is-3">
+        {{ fragments.triangle( type="2", speed="slow", rotate="left" ) }}
+      </div>
+    </div>
+  </section>
+</div>
