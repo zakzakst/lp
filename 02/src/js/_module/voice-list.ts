@@ -7,7 +7,7 @@ export class VoiceList {
   constructor(elId: string) {
     this.el = $(`#${elId}`);
     this.slickConf = {
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 3000,
       dots: true,
       pauseOnFocus: false,
