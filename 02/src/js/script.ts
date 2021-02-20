@@ -1,13 +1,24 @@
 'use strict';
-
+import { Loader } from './_module/loader';
 import { VoiceList } from './_module/voice-list';
+import { Header } from './_module/header';
+import { FooterGoTop } from './_module/footer-go-top';
+import { SplitText } from './_module/split-text';
+import { ScrollAnim } from './_module/scroll-anim';
 
 // ページ表示アニメーション
 (() => {
-  setTimeout(() => {
-    const el = document.querySelector('.hero-section');
+  const el = document.querySelector('.hero-section');
+  const loader = new Loader('js-loader', () => {
+    // ローダーを閉じた後にヒーローアニメーションを実行
     el.classList.add('is-animated');
-  }, 500);
+  });
+  // データ読み込み完了後、ローダーを閉じる
+  window.onload = () => {
+    setTimeout(() => {
+      loader.closeLoader();
+    }, 400);
+  }
 })();
 
 // お客様の声スクリプトの実行
@@ -17,7 +28,6 @@ import { VoiceList } from './_module/voice-list';
 })();
 
 // ヘッダースクリプトの実行
-import { Header } from './_module/header';
 (() => {
   const header = new Header(
     'js-header-button',
@@ -27,21 +37,18 @@ import { Header } from './_module/header';
 })();
 
 // トップへ戻るスクリプトの実行
-import { FooterGoTop } from './_module/footer-go-top';
 (() => {
   const footerGoTop = new FooterGoTop('js-footer-go-top');
   footerGoTop.init();
 })();
 
 // 文言分割スクリプトの実行
-import { SplitText } from './_module/split-text';
 (() => {
   const splitText = new SplitText('js-split-text');
   splitText.init();
 })();
 
 // スクロールアニメーションスクリプトの実行
-import { ScrollAnim } from './_module/scroll-anim';
 (() => {
   const scrollAnim = new ScrollAnim('js-scroll-anim');
   scrollAnim.init();

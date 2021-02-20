@@ -15,9 +15,9 @@ $width_voice_list_border: 3px solid Color(primary);
   &__item-inner {
     position: relative;
     z-index: 1;
-    width: 400px;
+    width: 280px;
     height: 100%;
-    padding: 36px;
+    padding: 32px 16px;
     background: Color(white);
     border-radius: Rad(card);
     &::before,
@@ -41,6 +41,10 @@ $width_voice_list_border: 3px solid Color(primary);
       border-right: $width_voice_list_border;
       border-bottom: $width_voice_list_border;
       border-bottom-right-radius: $radius_voice_list;
+    }
+    @include Mq(sp) {
+      width: 400px;
+      padding: 36px;
     }
   }
 
@@ -90,7 +94,7 @@ $width_voice_list_border: 3px solid Color(primary);
   }
 
   &__name {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: Color(primary);
     & > span {
@@ -98,11 +102,17 @@ $width_voice_list_border: 3px solid Color(primary);
       margin-left: 8px;
       font-size: 0.7em;
     }
+    @include Mq(sp) {
+      font-size: 24px;
+    }
   }
 
   &__position {
     margin-top: 4px;
-    font-size: 14px;
+    font-size: 12px;
+    @include Mq(sp) {
+      font-size: 14px;
+    }
   }
 
   &__text {

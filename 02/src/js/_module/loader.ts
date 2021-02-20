@@ -4,13 +4,11 @@ import { gsap } from "gsap";
 
 export class Loader {
   el: HTMLElement;
-  bgEl: HTMLElement;
-  contentEl: HTMLElement;
+  circleEl: HTMLElement;
   callback;
-  constructor(elId: string, bgClass: string, contentClass: string, callback: any) {
+  constructor(elId: string, callback: any) {
     this.el = document.getElementById(elId);
-    this.bgEl = document.querySelector(`.${bgClass}`);
-    this.contentEl = document.querySelector(`.${contentClass}`);
+    this.circleEl = <HTMLElement>this.el.querySelector('loader__circle');
     this.callback = callback;
   }
 
@@ -22,16 +20,15 @@ export class Loader {
     const self = this;
     const tl = gsap.timeline();
     tl
-      .to(this.contentEl, {
+      .to(this.circleEl, {
         autoAlpha: 0,
         onComplete:() => {
           self.clearWindow();
         }
       })
-      .to(this.bgEl, {
-        duration: .3,
-        xPercent: -100,
-      }, '+=.5')
+      .to(this.el, {
+        autoAlpha: 0,
+      })
       .set(this.el, {
         display: 'none',
         onComplete:() => {

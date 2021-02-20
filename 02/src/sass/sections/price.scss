@@ -19,21 +19,27 @@ $BLOCK_NAME: '.price-section';
     height: 100%;
     padding: 16px;
     background: Color(white);
+    border-radius: Rad(card);
     box-shadow: Shadow();
     &.--free {
-      border-top-left-radius: Rad(card);
-      border-bottom-left-radius: Rad(card);
+      @include Mq(tb) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
     }
     &.--standard {
-      z-index: 1;
-      height: calc(100% + 32px);
-      margin: -16px 0;
       border: 3px solid Color(secondary);
-      border-radius: Rad(card);
+      @include Mq(tb) {
+        z-index: 1;
+        height: calc(100% + 32px);
+        margin: -16px 0;
+      }
     }
     &.--premium {
-      border-top-right-radius: Rad(card);
-      border-bottom-right-radius: Rad(card);
+      @include Mq(tb) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
     }
   }
 

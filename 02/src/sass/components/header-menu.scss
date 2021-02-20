@@ -36,13 +36,17 @@ $BLOCK_NAME: '.header-menu';
 
   &__bg {
     position: fixed;
-    top: 57px;
-    right: 57px;
+    top: 44px;
+    right: 44px;
     width: calc(max(100vw, 100vh) * 3);
     height: calc(max(100vw, 100vh) * 3);
     background: Color(white);
     border-radius: 50%;
     opacity: 0;
     transform: translate(50%, -50%) scale(0);
+    @include Mq(sp) {
+      top: 57px;
+      right: 57px;
+    }
   }
 }

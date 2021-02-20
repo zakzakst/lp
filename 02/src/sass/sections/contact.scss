@@ -1,7 +1,10 @@
 $BLOCK_NAME: '.contact-section';
 
 #{ $BLOCK_NAME } {
-  padding: 90px 0 36px;
+  padding: 60px 0 0;
+  @include Mq(sp) {
+    padding: 90px 0 36px;
+  }
 
   &__heading {
     text-align: center;
@@ -47,7 +50,10 @@ $BLOCK_NAME: '.contact-section';
   }
 
   &__buttons {
-    margin-top: 48px;
+    margin-top: 24px;
+    @include Mq(sp) {
+      margin-top: 48px;
+    }
   }
 
   &__button {
@@ -55,10 +61,9 @@ $BLOCK_NAME: '.contact-section';
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 120px;
-    padding-bottom: 8px;
+    height: 90px;
     color: Color(white);
-    border-radius: 60px;
+    border-radius: 45px;
     transition: all Dur() Ease();
     &.--mail {
       background: Color(primary);
@@ -76,10 +81,18 @@ $BLOCK_NAME: '.contact-section';
         background: Color(white);
       }
     }
+    @include Mq(sp) {
+      height: 120px;
+      padding-bottom: 8px;
+      border-radius: 60px;
+    }
   }
 
   &__button-text {
     font-family: Ff(en);
-    font-size: 28px;
+    font-size: 24px;
+    @include Mq(sp) {
+      font-size: 28px;
+    }
   }
 }
