@@ -1,8 +1,8 @@
 {% extends "_layout/single.njk" %}
 {% set PAGE_DATA = {
-  title: "サンプルページ02",
+  title: "サンプルページ03",
   description: "ページの概要が入ります。ページの概要が入ります。ページの概要が入ります。",
-  path: "sample/02/"
+  path: "sample/03/"
 } -%}
 
 {% block head %}
@@ -10,12 +10,7 @@
 {% endblock %}
 
 {% block main %}
-  {% include 'sections/hero.njk' %}
-  {% include 'sections/about.njk' %}
-  {% include 'sections/service.njk' %}
-  {% include 'sections/price.njk' %}
-  {% include 'sections/voices.njk' %}
-  {% include 'sections/contact.njk' %}
+  {# {% include 'sections/hero.njk' %} #}
 {% endblock %}
 
 {% block foot %}
