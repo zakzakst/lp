@@ -1,0 +1,44 @@
+{%- import '../_module/components/fragments.njk' as fragments -%}
+{%- import '../_module/components/news-link.njk' as newsLink -%}
+
+<div class="hero-section container">
+  <section class="section">
+    <div class="hero-section__content">
+      <h1 class="hero-section__title">
+        <span class="hero-section__title-inner js-split-text">ここに</span><br>
+        <span class="hero-section__title-inner js-split-text">タイトルが</span><br>
+        <span class="hero-section__title-inner js-split-text">入ります</span>
+      </h1>
+      <p class="hero-section__lead">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    </div>
+    <div class="hero-section__news">
+      {{ newsLink.content(
+        date="2021.01.01",
+        text="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。",
+        link="#",
+        listLink="#"
+      ) }}
+    </div>
+    <div class="hero-section__bg">
+      <img src="img/hero/hero-mv.png" width="1580" height="1260" alt="">
+    </div>
+    <div class="hero-section__fragment is-1">
+      {{ fragments.triangle( type="2", speed="fast", rotate="left" ) }}
+    </div>
+    <div class="hero-section__fragment is-2">
+      {{ fragments.triangle( type="1", speed="slow" ) }}
+    </div>
+    <div class="hero-section__fragment is-3">
+      {{ fragments.triangle( type="3", rotate="left" ) }}
+    </div>
+    <div class="hero-section__fragment is-4">
+      {{ fragments.triangle( type="4", speed="slow" ) }}
+    </div>
+    <div class="hero-section__fragment is-5">
+      {{ fragments.triangle( type="2" ) }}
+    </div>
+    <div class="hero-section__fragment is-6">
+      {{ fragments.triangle( type="4", speed="fast", rotate="left" ) }}
+    </div>
+  </section>
+</div>

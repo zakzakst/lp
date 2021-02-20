@@ -1,0 +1,19 @@
+Todo:
+  ☐ SVGスプライト使えば、装飾の三角もっとスマートに記述できるか？
+
+Pend:
+  ☐ tsconfigの設定調べる
+  ☐ html圧縮のオプション調べる（styleの中身とscriptの中身にはインデントつけたくない）
+  ☐ パンくずや構造化データの書き出し方を検討・修正
+  ☐ SASSのスコープかかるやつ対応
+
+Archive:
+  ✔ 「Voices」セクションも作成する（デザインにないけど） @done(21-02-20 06:49) @project(Todo)
+  ✔ 「問い合わせ」セクションも作成する（デザインにないけど） @done(21-02-20 06:49) @project(Todo)
+
+Memo:
+  ■■■ 参考 ■■■
+  ・querySelectorAllの型
+  https://qiita.com/macotok/items/a5820092609576fcd752
+
+  ■■■ 反省など ■■■

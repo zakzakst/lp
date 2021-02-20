@@ -1,0 +1,153 @@
+$BLOCK_NAME: '.hero-section';
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  @include Mq(tb) {
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    @include Mq(tb) {
+      width: 50%;
+      padding: 24px 0;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.4;
+    background: Grad();
+    -webkit-background-clip: text;
+    background-clip: text;
+    @include Mq(tb) {
+      font-size: 68px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+  }
+
+  &__title-inner {
+    & > span {
+      color: rgba(#fff, 1);
+      transition: color Dur() Ease();
+      @for $i from 0 through 20 {
+        &:nth-child(#{$i + 1}) {
+          transition-delay: 0.05s * $i;
+        }
+      }
+      @at-root #{ $BLOCK_NAME }.is-animated & {
+        color: rgba(#fff, 0);
+      }
+    }
+  }
+
+  &__lead {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.75;
+    opacity: 0;
+    transition: all Dur() Ease() 0.5s;
+    transform: translateY(24px);
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @include Mq(tb) {
+      margin-top: 32px;
+    }
+  }
+
+  &__news {
+    margin-top: 32px;
+    opacity: 0;
+    transition: all Dur() Ease() 0.75s;
+    transform: translateY(24px);
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30%;
+    z-index: -2;
+    width: 480px;
+    opacity: 0.4;
+    fill: Color(primary);
+    & > img {
+      width: 100%;
+    }
+    @include Mq(sp) {
+      left: 40%;
+    }
+    @include Mq(tb) {
+      bottom: 0;
+      left: 50%;
+      width: auto;
+      height: 100%;
+      opacity: 1;
+      & > img {
+        width: auto;
+        max-width: none;
+        height: 100%;
+      }
+    }
+  }
+
+  &__fragment {
+    position: absolute;
+    z-index: -1;
+    &.is-1 {
+      top: 20px;
+      left: -10px;
+      @include Mq(tb) {
+        left: -50px;
+      }
+    }
+    &.is-2 {
+      top: 20%;
+      right: -10px;
+      @include Mq(tb) {
+        right: -120px;
+      }
+    }
+    &.is-3 {
+      top: -30px;
+      left: 40%;
+      display: none;
+      @include Mq(sp) {
+        display: block;
+      }
+      @include Mq(tb) {
+        top: 60px;
+        left: 50%;
+      }
+    }
+    &.is-4 {
+      bottom: 60px;
+      left: -10px;
+      @include Mq(tb) {
+        left: -100px;
+      }
+    }
+    &.is-5 {
+      right: 30%;
+      bottom: 0;
+      @include Mq(tb) {
+        bottom: 40%;
+      }
+    }
+    &.is-6 {
+      right: -30px;
+      bottom: 20%;
+      @include Mq(tb) {
+        right: -60px;
+      }
+    }
+  }
+}

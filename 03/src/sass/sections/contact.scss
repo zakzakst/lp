@@ -1,0 +1,98 @@
+$BLOCK_NAME: '.contact-section';
+
+#{ $BLOCK_NAME } {
+  padding: 60px 0 0;
+  @include Mq(sp) {
+    padding: 90px 0 36px;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__heading-inner {
+    display: inline-block;
+    font-family: Ff(en);
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    background: Grad();
+    -webkit-background-clip: text;
+    background-clip: text;
+    & > span {
+      color: rgba(#fff, 1);
+      transition: all Dur() Ease();
+      @for $i from 0 through 20 {
+        &:nth-child(#{$i + 1}) {
+          transition-delay: 0.05s * $i;
+        }
+      }
+      @at-root #{ $BLOCK_NAME }.is-animated & {
+        color: rgba(#fff, 0);
+      }
+    }
+  }
+
+  &__content {
+    opacity: 0;
+    transition: all Dur() Ease() 0.5s;
+    transform: translateY(24px);
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__lead {
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &__buttons {
+    margin-top: 24px;
+    @include Mq(sp) {
+      margin-top: 48px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    color: Color(white);
+    border-radius: 45px;
+    transition: all Dur() Ease();
+    &.--mail {
+      background: Color(primary);
+      border: 3px solid Color(primary);
+      &:hover {
+        color: Color(primary);
+        background: Color(white);
+      }
+    }
+    &.--tell {
+      background: Color(secondary);
+      border: 3px solid Color(secondary);
+      &:hover {
+        color: Color(secondary);
+        background: Color(white);
+      }
+    }
+    @include Mq(sp) {
+      height: 120px;
+      padding-bottom: 8px;
+      border-radius: 60px;
+    }
+  }
+
+  &__button-text {
+    font-family: Ff(en);
+    font-size: 24px;
+    @include Mq(sp) {
+      font-size: 28px;
+    }
+  }
+}

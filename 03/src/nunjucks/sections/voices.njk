@@ -1,0 +1,58 @@
+{%- import "../_module/components/headings.njk" as headings -%}
+{%- import "../_module/components/voice-list.njk" as voiceList -%}
+{%- import '../_module/components/fragments.njk' as fragments -%}
+{% set voiceListItems = [
+  {
+    name: '苗字 名前',
+    position: '○○株式会社 △△部 □□チーム',
+    img: 'https://picsum.photos/id/129/128/128',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    name: '苗字 名前',
+    position: '○○株式会社 △△部 □□チーム',
+    img: 'https://picsum.photos/id/1005/128/128',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    name: '苗字 名前',
+    position: '○○株式会社 △△部 □□チーム',
+    img: 'https://picsum.photos/id/1014/128/128',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    name: '苗字 名前',
+    position: '○○株式会社 △△部 □□チーム',
+    img: 'https://picsum.photos/id/1027/128/128',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] -%}
+
+<div class="voices-section js-scroll-anim">
+  <div class="container">
+    <section class="section">
+      {{ headings.h2( text="VOICES", subText="お客様の声" ) }}
+    </section>
+  </div>
+  <div class="voices-section__content">
+    {{ voiceList.list( voiceListItems ) }}
+  </div>
+  <div class="voices-section__fragment is-1">
+    {{ fragments.triangle( type="1", speed="fast", rotate="left" ) }}
+  </div>
+  <div class="voices-section__fragment is-2">
+    {{ fragments.triangle( type="3", speed="slow", rotate="left" ) }}
+  </div>
+  <div class="voices-section__fragment is-3">
+    {{ fragments.triangle( type="2", speed="fast" ) }}
+  </div>
+  <div class="voices-section__fragment is-4">
+    {{ fragments.triangle( type="4", speed="fast" ) }}
+  </div>
+  <div class="voices-section__fragment is-5">
+    {{ fragments.triangle( type="1", speed="slow", rotate="left" ) }}
+  </div>
+  <div class="voices-section__fragment is-6">
+    {{ fragments.triangle( type="2", rotate="left" ) }}
+  </div>
+</div>
