@@ -6,16 +6,23 @@ $BLOCK_NAME: '.hero-section';
 
   &__content {
     width: 50%;
-    padding: 24px 0;
+    @include Mq(tb) {
+      padding: 24px 0;
+    }
   }
 
   &__title {
-    font-size: 68px;
-    font-weight: bold;
-    line-height: 1.2;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.4;
     background: Grad();
     -webkit-background-clip: text;
     background-clip: text;
+    @include Mq(tb) {
+      font-size: 68px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
   }
 
   &__title-inner {

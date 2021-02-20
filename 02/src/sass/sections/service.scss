@@ -10,10 +10,13 @@ $BLOCK_NAME: '.service-section';
   &__content {
     position: relative;
     z-index: 1;
-    padding: 32px;
-    margin-top: 40px;
+    padding: 16px;
     background: Color(white);
     border-radius: Rad(card);
+    @include Mq(tb) {
+      padding: 32px;
+      margin-top: 40px;
+    }
   }
 
   &__heading-inner {
@@ -54,12 +57,17 @@ $BLOCK_NAME: '.service-section';
   }
 
   &__img {
+    max-width: 320px;
+    margin: 0 auto;
     opacity: 0;
     transition: all Dur() Ease() 1s;
     transform: translateY(24px);
     @at-root #{ $BLOCK_NAME }.is-animated & {
       opacity: 1;
       transform: translateY(0);
+    }
+    @include Mq(tb) {
+      max-width: none;
     }
   }
 

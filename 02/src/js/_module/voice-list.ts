@@ -9,7 +9,6 @@ export class VoiceList {
     this.slickConf = {
       // autoplay: true,
       autoplaySpeed: 3000,
-      arrows: true,
       dots: true,
       pauseOnFocus: false,
       pauseOnHover: true,
@@ -17,6 +16,14 @@ export class VoiceList {
       centerMode: true,
       prevArrow: '<div class="voice-list__arrow-prev"><span class="icon is-large"><i class="fas fa-angle-left fa-lg"></i></span></div>',
       nextArrow: '<div class="voice-list__arrow-next"><span class="icon is-large"><i class="fas fa-angle-right fa-lg"></i></span></div>',
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+          },
+        },
+      ],
     };
   }
 

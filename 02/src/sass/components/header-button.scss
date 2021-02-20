@@ -9,15 +9,20 @@ $BLOCK_NAME: '.header-button';
   }
 
   display: block;
-  width: 90px;
-  height: 90px;
-  padding: 30px;
+  width: 64px;
+  height: 64px;
+  padding: 16px;
   background: Color(white);
   border-radius: 50%;
   box-shadow: Shadow();
   transition: all Dur(fast) Ease();
   &.is-open {
     box-shadow: none;
+  }
+  @include Mq(sp) {
+    width: 90px;
+    height: 90px;
+    padding: 30px;
   }
 
   &__bar {
