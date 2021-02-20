@@ -9,18 +9,18 @@ $column_gap: 16px;
  * BREAK POINT
  */
 $break_point_items: (
-  sp: 480px,
-  tb: 769px,
-  pc: 960px + 16px * 2,
-  wide: 1152px + 16px * 2,
-  full: 1344px + 16px * 2,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 960px,
+  xxl: 960px,
 );
 
 /*
  * COLOR
  */
 $color_items: (
-  primary: #f909a0,
+  primary: #363f4d,
   secondary: #9c0def,
   white: #fff,
   black: #555,
@@ -55,8 +55,8 @@ $font_family_items: (
     sans-serif,
   ),
   en: (
-    'Lato',
-    sans-serif,
+    'EB Garamond',
+    serif,
   ),
 );
 

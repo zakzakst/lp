@@ -1,0 +1,9 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.service-list';
+
+#{ $BLOCK_NAME } {
+  box-shadow: Shadow();
+  img {
+    width: 100%;
+  }
+}

@@ -2,5 +2,12 @@
 $BLOCK_NAME: '.about-section';
 
 #{ $BLOCK_NAME } {
-  //
+  &__content {
+    & > p {
+      line-height: 1.75;
+      & + p {
+        margin-top: 8px;
+      }
+    }
+  }
 }
