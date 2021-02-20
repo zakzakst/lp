@@ -26,20 +26,31 @@ $BLOCK_NAME: '.voices-section';
       right: 30%;
     }
     &.is-3 {
-      top: 90px;
-      left: 50%;
+      display: none;
+      @include Mq(tb) {
+        top: 90px;
+        left: 50%;
+        display: block;
+      }
     }
     &.is-4 {
       bottom: -90px;
-      left: 30%;
+      left: 70%;
+      @include Mq(tb) {
+        left: 30%;
+      }
     }
     &.is-5 {
       bottom: -30px;
       left: 15%;
     }
     &.is-6 {
-      right: 20%;
-      bottom: 10px;
+      display: none;
+      @include Mq(tb) {
+        right: 20%;
+        bottom: 10px;
+        display: block;
+      }
     }
   }
 }

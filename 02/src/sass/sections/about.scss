@@ -90,8 +90,12 @@ $width_about_frame: 4px;
       left: 30%;
     }
     &.is-4 {
-      right: 30%;
-      bottom: -100px;
+      display: none;
+      @include Mq(sp) {
+        right: 30%;
+        bottom: -100px;
+        display: block;
+      }
     }
   }
 }

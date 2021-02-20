@@ -87,20 +87,32 @@ $BLOCK_NAME: '.service-section';
       left: 60%;
     }
     &.is-4 {
-      bottom: -30px;
+      bottom: -40px;
       left: 50px;
+      @include Mq(sp) {
+        bottom: -30px;
+      }
     }
     &.is-5 {
       top: 50%;
-      right: -50px;
+      right: -20px;
+      @include Mq(sp) {
+        right: -50px;
+      }
     }
     &.is-6 {
       top: 0;
-      left: 35%;
+      left: 95%;
+      @include Mq(sp) {
+        left: 35%;
+      }
     }
     &.is-7 {
-      right: 20px;
+      right: -20px;
       bottom: 20px;
+      @include Mq(sp) {
+        right: 20px;
+      }
     }
     &.is-8 {
       bottom: -60px;
