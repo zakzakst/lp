@@ -2,5 +2,13 @@
 $BLOCK_NAME: '.works-section';
 
 #{ $BLOCK_NAME } {
-  //
+  &__inner {
+    opacity: 0;
+    transition: all Dur() Ease() Dur();
+    transform: translateY(24px);
+    @at-root .is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

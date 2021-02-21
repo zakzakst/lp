@@ -2,6 +2,16 @@
 $BLOCK_NAME: '.recruit-section';
 
 #{ $BLOCK_NAME } {
+  &__inner {
+    opacity: 0;
+    transition: all Dur() Ease() Dur();
+    transform: translateY(24px);
+    @at-root .is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   &__content {
     & > p {
       line-height: 1.75;

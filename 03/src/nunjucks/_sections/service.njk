@@ -33,15 +33,17 @@
 ] -%}
 
 <div class="service-section__wrapper">
-  <section class="service-section">
+  <section class="service-section js-scroll-anim">
     <div class="service-section__inner container">
       <div class="service-section__sub-heading">Service</div>
-      <h2 class="service-section__heading">サービス</h2>
-      <div class="service-section__lead">
-        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      </div>
-      <div class="service-section__content">
-        {{ serviceList.list( serviceListItems ) }}
+      <div class="service-section__inner-anim">
+        <h2 class="service-section__heading">サービス</h2>
+        <div class="service-section__lead">
+          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        </div>
+        <div class="service-section__content">
+          {{ serviceList.list( serviceListItems ) }}
+        </div>
       </div>
     </div>
   </section>
