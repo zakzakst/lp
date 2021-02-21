@@ -1,7 +1,28 @@
 {%- import '../_module/components/headings.njk' as headings -%}
+{%- import '../_module/components/buttons.njk' as buttons -%}
 
 <section class="works-section py-4">
   <div class="container">
     {{ headings.h2( text="採用情報", subText="Recruit" ) }}
+    <div class="row row-cols-1 row-cols-md-2 g-3">
+      <div class="col">
+        <div class="recruit-section__content">
+          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        </div>
+        <p class="mt-4">
+          {{ buttons.viewAll( link="#" ) }}
+        </p>
+      </div>
+      <div class="col">
+        <div class="recruit-section__img">
+          <img
+            src="https://picsum.photos/id/237/400/200"
+            width="400"
+            height="200"
+            alt=""
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </section>
