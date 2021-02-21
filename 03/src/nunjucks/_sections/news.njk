@@ -1,7 +1,35 @@
 {%- import '../_module/components/headings.njk' as headings -%}
+{%- import '../_module/components/news-list.njk' as newsList -%}
+{%- import '../_module/components/buttons.njk' as buttons -%}
+{% set newsListItems = [
+  {
+    link: '#',
+    date: '2021.01.03',
+    category: 'お知らせ',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    link: '#',
+    date: '2021.01.02',
+    category: 'メディア',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    link: '#',
+    date: '2021.01.01',
+    category: 'お知らせ',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] -%}
 
-<section class="works-section py-4">
+<section class="news-section py-4">
   <div class="container">
     {{ headings.h2( text="お知らせ", subText="News" ) }}
+    <div class="news-section__content">
+      {{ newsList.list( newsListItems ) }}
+    </div>
+    <p class="mt-3 text-end">
+      {{ buttons.viewAll( link="#" ) }}
+    </p>
   </div>
 </section>

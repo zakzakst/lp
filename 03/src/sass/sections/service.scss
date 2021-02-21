@@ -9,7 +9,7 @@ $offset_bg: 60px;
   background: Color(primary);
 
   &__wrapper {
-    margin-bottom: $offset_bg + 1px;
+    padding-bottom: $offset_bg + 1px;
   }
 
   &__inner {

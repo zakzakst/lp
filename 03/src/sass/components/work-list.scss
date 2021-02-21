@@ -1,8 +1,62 @@
 @charset 'utf-8';
 $BLOCK_NAME: '.work-list';
+$BLOCK_ITEM_NAME: '.work-list-item';
 
 #{ $BLOCK_NAME } {
-  img {
-    width: 100%;
+  //
+}
+
+#{ $BLOCK_ITEM_NAME } {
+  position: relative;
+  display: block;
+  background: Color(white);
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    background: Color(secondary);
+    transition: transform Dur(fast) Ease();
+  }
+  &:hover::before {
+    transform: translate(5px, 5px);
+  }
+
+  &__img {
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__body {
+    padding: 24px 16px 32px;
+    background: Color(light);
+  }
+
+  &__category {
+    font-size: 12px;
+  }
+
+  &__title {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+  &__arrow {
+    display: block;
+    width: 20px;
+    margin: 24px 0 0 auto;
+    & > path:nth-child(1) {
+      fill: none;
+      stroke: Color(black);
+      stroke-miterlimit: 10;
+    }
+    & > path:nth-child(2) {
+      fill: Color(black);
+    }
   }
 }
