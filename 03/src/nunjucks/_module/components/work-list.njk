@@ -1,25 +1,29 @@
-{% macro list() %}
+{% macro list( items ) %}
 
 <div class="work-list">
   <div class="row row-cols-2 row-cols-lg-3 g-2">
-    <div class="col">
-      <img src="https://picsum.photos/id/237/400/200" alt="">
-    </div>
-    <div class="col">
-      <img src="https://picsum.photos/id/237/400/200" alt="">
-    </div>
-    <div class="col">
-      <img src="https://picsum.photos/id/237/400/200" alt="">
-    </div>
-    <div class="col">
-      <img src="https://picsum.photos/id/237/400/200" alt="">
-    </div>
-    <div class="col">
-      <img src="https://picsum.photos/id/237/400/200" alt="">
-    </div>
-    <div class="col">
-      <img src="https://picsum.photos/id/237/400/200" alt="">
-    </div>
+    {% for item in items %}
+      <div class="col">
+        <a href="{{ item.link }}" class="work-list-item">
+          <div class="work-list-item__img">
+            <img
+              src="{{ item.img }}"
+              width="400"
+              height="200"
+              alt=""
+            >
+          </div>
+          <div class="work-list-item__body">
+            <p class="work-list-item__category">{{ item.category }}</p>
+            <h3 class="work-list-item__title">{{ item.title }}</h3>
+            <svg class="work-list-item__arrow" viewBox="0 0 21.95 4.93">
+              <path d="M0 4.43h20.17" />
+              <path d="M14.63 0v4.88h7.32L14.63 0z" />
+            </svg>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
   </div>
 </div>
 
