@@ -19,7 +19,7 @@ export class ScrollAnim {
     [...this.els].forEach(el => {
       ScrollTrigger.create({
         trigger: el,
-        start: "top 70%",
+        start: "top 50%",
         onEnter: self => {
           el.classList.add('is-animated');
           self.kill();

@@ -17,6 +17,12 @@ $size_sub_text: 48px;
       height: 1px;
       content: '';
       background: Color(gray);
+      transition: transform Dur() Ease();
+      transform: scaleX(0);
+      transform-origin: left;
+      @at-root .is-animated & {
+        transform: scaleX(1);
+      }
     }
   }
 

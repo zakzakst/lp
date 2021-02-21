@@ -22,14 +22,16 @@
   }
 ] -%}
 
-<section class="works-section py-4 mt-5">
+<section class="works-section py-4 mt-5 js-scroll-anim">
   <div class="container">
     {{ headings.h2( text="導入実績", subText="Works" ) }}
-    <div class="works-section__content">
-      {{ workList.list( workListItems ) }}
+    <div class="works-section__inner">
+      <div class="works-section__content">
+        {{ workList.list( workListItems ) }}
+      </div>
+      <p class="mt-3 text-end">
+        {{ buttons.viewAll( link="#" ) }}
+      </p>
     </div>
-    <p class="mt-3 text-end">
-      {{ buttons.viewAll( link="#" ) }}
-    </p>
   </div>
 </section>
