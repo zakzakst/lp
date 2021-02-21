@@ -5,7 +5,7 @@ $offset_bg: 60px;
 
 #{ $BLOCK_NAME } {
   padding-bottom: 1px;
-  margin-top: $size_sub_text;
+  margin-top: $size_sub_text + 32px;
   background: Color(primary);
 
   &__wrapper {

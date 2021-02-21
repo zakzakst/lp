@@ -10,4 +10,11 @@ $BLOCK_NAME: '.about-section';
       }
     }
   }
+
+  &__img {
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

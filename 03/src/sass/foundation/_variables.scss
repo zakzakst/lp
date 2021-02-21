@@ -21,10 +21,10 @@ $break_point_items: (
  */
 $color_items: (
   primary: #363f4d,
-  secondary: #c3a348,
+  secondary: #a7821d,
   white: #fff,
   black: #555,
-  blackDark: #333,
+  blackDark: #222,
   light: #eee,
   gray: #888,
   border: #ddd,
@@ -34,7 +34,7 @@ $color_items: (
  * GRADIENT
  */
 $gradient_items: (
-  default: linear-gradient(45deg, #f909a0 0%, #9c0def 100%),
+  default: linear-gradient(-45deg, #c3a348 0%, #a7821d 100%),
 );
 
 /*

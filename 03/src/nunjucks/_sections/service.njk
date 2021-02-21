@@ -1,4 +1,36 @@
 {%- import "../_module/components/service-list.njk" as serviceList -%}
+{% set serviceListItems = [
+  {
+    link: '#',
+    text: 'サービス<br>01',
+    img: 'https://picsum.photos/id/236/400/200'
+  },
+  {
+    link: '#',
+    text: 'サービス<br>02',
+    img: 'https://picsum.photos/id/237/400/200'
+  },
+  {
+    link: '#',
+    text: 'サービス<br>03',
+    img: 'https://picsum.photos/id/238/400/200'
+  },
+  {
+    link: '#',
+    text: 'サービス<br>04',
+    img: 'https://picsum.photos/id/239/400/200'
+  },
+  {
+    link: '#',
+    text: 'サービス<br>05',
+    img: 'https://picsum.photos/id/240/400/200'
+  },
+  {
+    link: '#',
+    text: 'サービス<br>06',
+    img: 'https://picsum.photos/id/241/400/200'
+  }
+] -%}
 
 <div class="service-section__wrapper">
   <section class="service-section">
@@ -9,7 +41,7 @@
         <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
       </div>
       <div class="service-section__content">
-        {{ serviceList.list() }}
+        {{ serviceList.list( serviceListItems ) }}
       </div>
     </div>
   </section>

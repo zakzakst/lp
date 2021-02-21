@@ -1,12 +1,25 @@
 {%- import '../_module/components/headings.njk' as headings -%}
 
-<section class="about-section py-4">
+<section class="about-section py-4 mt-5">
   <div class="container">
-      {{ headings.h2( text="○○について", subText="About" ) }}
-      <div class="about-section__content">
-        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    {{ headings.h2( text="○○について", subText="About" ) }}
+    <div class="row row-cols-1 row-cols-md-2 g-3">
+      <div class="col">
+        <div class="about-section__content">
+          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        </div>
       </div>
+      <div class="col">
+        <div class="about-section__img">
+          <img
+            src="https://picsum.photos/id/237/400/200"
+            width="400"
+            height="200"
+            alt=""
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </section>
