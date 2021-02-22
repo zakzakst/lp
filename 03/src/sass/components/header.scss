@@ -27,12 +27,15 @@ $BLOCK_NAME: '.header';
   }
 
   &__nav {
-    display: flex;
+    display: none;
     align-items: center;
     height: 100%;
     margin-left: auto;
     & > li {
       height: 100%;
+    }
+    @include Mq(md) {
+      display: flex;
     }
   }
 
@@ -60,6 +63,25 @@ $BLOCK_NAME: '.header';
       &::after {
         opacity: 1;
       }
+    }
+  }
+
+  &__button {
+    width: 80px;
+    padding: 6px 6px 7px;
+    margin-left: auto;
+    font-size: 14px;
+    color: Color(white);
+    background: Color(primary);
+    border: 1px solid Color(white);
+    border-radius: 2px;
+    transition: all Dur(fast) Ease();
+    &:hover {
+      color: Color(primary);
+      background: Color(white);
+    }
+    @include Mq(md) {
+      display: none;
     }
   }
 }

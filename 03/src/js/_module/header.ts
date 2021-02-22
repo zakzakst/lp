@@ -5,16 +5,16 @@ import { gsap } from "gsap";
 export class Header {
   buttonEl: HTMLElement;
   menuEl: HTMLElement;
-  menuItemsEls: NodeListOf<HTMLElement>;
-  menuBgEl: HTMLElement;
+  closeButtonEls: NodeListOf<HTMLElement>;
+  menuContentEl: HTMLElement;
   isOpen: Boolean;
   isBusy: Boolean;
   fixedContentEls: HTMLCollection;
-  constructor(buttonId: string, menuId: string) {
+  constructor(buttonId: string, menuId: string, closeButtonClass: string) {
     this.buttonEl = document.getElementById(buttonId);
     this.menuEl = document.getElementById(menuId);
-    this.menuItemsEls = this.menuEl.querySelectorAll('.header-menu__items > li');
-    this.menuBgEl = <HTMLElement>this.menuEl.querySelector('.header-menu__bg');
+    this.closeButtonEls = this.menuEl.querySelectorAll(`.${closeButtonClass}`);
+    this.menuContentEl = this.menuEl.querySelector('.header-menu__content');
     this.isOpen = false;
     this.isBusy = false;
     this.fixedContentEls = document.getElementsByClassName('js-fix-content');
@@ -26,6 +26,7 @@ export class Header {
   init(): void {
     if (!this.buttonEl) return;
     this.onClickButton();
+    this.onClickCloseButton();
   }
 
   /**
@@ -34,24 +35,19 @@ export class Header {
   openMenu(): void {
     this.isBusy = true;
     this.fixWindow();
-    this.buttonEl.classList.add('is-open');
     const self = this;
     const tl = gsap.timeline();
     tl
       .set(this.menuEl, {
-        display: 'flex',
+        display: 'block',
       })
-      .to(this.menuBgEl, {
+      .to(this.menuEl, {
         duration: .5,
-        scale: 1,
         opacity: 1,
       })
-      .to(this.menuItemsEls, {
-        y: 0,
-        opacity: 1,
-        stagger: {
-          each: .1,
-        },
+      .to(this.menuContentEl, {
+        duration: .5,
+        x: 0,
         onComplete() {
           self.isOpen = true;
           self.isBusy = false;
@@ -67,23 +63,17 @@ export class Header {
     const self = this;
     const tl = gsap.timeline();
     tl
-      .to(this.menuItemsEls, {
-        y: 50,
-        opacity: 0,
-        stagger: {
-          each: .1,
-          from: 'end',
-        },
-      })
-      .to(this.menuBgEl, {
+      .to(this.menuContentEl, {
         duration: .5,
-        scale: 0,
+        x: 300,
+      })
+      .to(this.menuEl, {
+        duration: .5,
         opacity: 0,
       })
-      .set([this.menuEl, this.menuBgEl, ...this.menuItemsEls], {
+      .set([this.menuEl, this.menuContentEl], {
         clearProps: 'all',
         onComplete() {
-          self.buttonEl.classList.remove('is-open');
           self.clearWindow();
           self.isOpen = false;
           self.isBusy = false;
@@ -149,6 +139,18 @@ export class Header {
     this.buttonEl.addEventListener('click', e => {
       e.preventDefault();
       this.toggleMenu();
+    });
+  }
+
+  /**
+   * 閉じるボタンクリック時の挙動を設定
+   */
+  onClickCloseButton(): void {
+    [...this.closeButtonEls].forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        this.toggleMenu();
+      });
     });
   }
 }

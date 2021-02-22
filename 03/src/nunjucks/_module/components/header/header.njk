@@ -1,6 +1,4 @@
-<header class="header">
-  {# {% include './header-button.njk' %} #}
-  {# {% include './header-menu.njk' %} #}
+<header class="header js-fix-content">
   <div class="header__inner container">
     <a href="#" class="header__logo">
       {# <img src="https://via.placeholder.com/120x40/ffffff/363f4d/?text=LOGO" alt=""> #}
@@ -13,5 +11,8 @@
       <li><a href="#" class="header__nav-link">リンク4</a></li>
       <li><a href="#" class="header__nav-link">リンク5</a></li>
     </ul>
+    <button class="header__button" id="js-header-button">MENU</button>
   </div>
 </header>
+
+{% include './header-menu.njk' %}

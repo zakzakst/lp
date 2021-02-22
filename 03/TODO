@@ -1,6 +1,7 @@
 Todo:
   ☐ ヘッダー・メガメニュー作る
-  ☐ 読込パーセンテージ表示するページローダー
+  ☐ 読込パーセンテージ表示するページローダー（https://github.com/zakzakst/lp-05/blob/master/src/js/module/page-loader.js）
+  ☐ ページ表示後にSlickを開始する
 
 Pend:
   ☐ tsconfigの設定調べる

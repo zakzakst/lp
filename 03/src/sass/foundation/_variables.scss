@@ -9,6 +9,15 @@ $column_gap: 16px;
  * BREAK POINT
  */
 $break_point_items: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$width_container_items: (
   sm: 540px,
   md: 720px,
   lg: 960px,
@@ -22,6 +31,7 @@ $break_point_items: (
 $color_items: (
   primary: #363f4d,
   secondary: #a7821d,
+  secondaryLight: #c3a348,
   white: #fff,
   black: #555,
   blackDark: #222,

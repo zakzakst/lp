@@ -2,6 +2,7 @@
 import { Hero } from './_module/hero';
 import { FooterGoTop } from './_module/footer-go-top';
 import { ScrollAnim } from './_module/scroll-anim';
+import { Header } from './_module/header';
 
 // MVスクリプトの実行
 (() => {
@@ -19,4 +20,14 @@ import { ScrollAnim } from './_module/scroll-anim';
 (() => {
   const scrollAnim = new ScrollAnim('js-scroll-anim');
   scrollAnim.init();
+})();
+
+// ヘッダースクリプトの実行
+(() => {
+  const header = new Header(
+    'js-header-button',
+    'js-header-menu',
+    'js-header-close'
+  );
+  header.init();
 })();

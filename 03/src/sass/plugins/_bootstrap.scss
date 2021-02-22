@@ -13,7 +13,8 @@ $spacer: $column_gap;
 @import '../../../node_modules/bootstrap/scss/mixins';
 
 // Include custom variable default overrides here
-$container-max-widths: $break_point_items;
+$grid-breakpoints: $break_point_items;
+$container-max-widths: $width_container_items;
 $grid-gutter-width: $column_gap;
 $gutters: (
   0: 0,

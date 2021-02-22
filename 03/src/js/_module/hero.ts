@@ -9,7 +9,6 @@ export class Hero {
     this.mvEl = $(`#${mvElId}`);
     this.slickConf = {
       // autoplay: true,
-      autoplay: false,
       autoplaySpeed: 3000,
       arrows: false,
       dots: false,
