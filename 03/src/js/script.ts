@@ -1,13 +1,26 @@
 'use strict';
+import { Loader } from './_module/loader';
 import { Hero } from './_module/hero';
 import { FooterGoTop } from './_module/footer-go-top';
 import { ScrollAnim } from './_module/scroll-anim';
 import { Header } from './_module/header';
 
-// MVスクリプトの実行
+// ページ表示スクリプトの実行
 (() => {
+  // MVスクリプトの初期化
   const hero = new Hero('js-hero-bg');
   hero.init();
+  // ローダースクリプトの実行
+  const loader = new Loader(
+    'js-loader',
+    'js-loader-text',
+    'js-loader-progress',
+    () => {
+      // MVスクリプトの開始
+      hero.start();
+    }
+  );
+  loader.init();
 })();
 
 // トップへ戻るスクリプトの実行

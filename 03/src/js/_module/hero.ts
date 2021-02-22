@@ -28,4 +28,13 @@ export class Hero {
     /* @ts-ignore */
     this.mvEl.slick(this.slickConf);
   }
+
+  /**
+   * 自動再生開始
+   */
+  start() {
+    if (!this.mvEl) return;
+    /* @ts-ignore */
+    this.mvEl.slick('slickPlay');
+  }
 }
