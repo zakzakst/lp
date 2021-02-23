@@ -1,0 +1,120 @@
+@charset 'utf-8';
+
+/*
+ * COLUMN GAP
+ */
+$column_gap: 16px;
+
+/*
+ * BREAK POINT
+ */
+$break_point_items: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$width_container_items: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 960px,
+  xxl: 960px,
+);
+
+/*
+ * COLOR
+ */
+$color_items: (
+  primary: #363f4d,
+  secondary: #a7821d,
+  secondaryLight: #c3a348,
+  white: #fff,
+  black: #555,
+  blackDark: #222,
+  light: #eee,
+  gray: #888,
+  border: #ddd,
+);
+
+/*
+ * GRADIENT
+ */
+$gradient_items: (
+  default: linear-gradient(-45deg, #c3a348 0%, #a7821d 100%),
+);
+
+/*
+ * FONT
+ */
+$font_size_items: (
+  xs: 12px,
+  sm: 14px,
+  md: 16px,
+  lg: 18px,
+  xl: 24px,
+);
+
+$font_family_items: (
+  default: (
+    YakuHanJP,
+    'Noto Sans JP',
+    sans-serif,
+  ),
+  en: (
+    'EB Garamond',
+    serif,
+  ),
+);
+
+/*
+ * DURATION
+ */
+$duration_items: (
+  fast: 0.3s,
+  default: 0.5s,
+  slow: 0.7s,
+);
+
+/*
+ * EASING
+ */
+$easing_items: (
+  default: EasingList(sine, out),
+);
+
+/*
+ * BORDER RADIUS
+ */
+$radius_items: (
+  default: 4px,
+  card: 12px,
+);
+
+/*
+ * SHADOW
+ */
+$shadow_items: (
+  default: ShadowList2(1),
+  float: ShadowList(12),
+);
+
+/*
+ * Z INDEX
+ */
+$z_index_items: (
+  float: 100,
+  header: 101,
+  modal: 1000,
+  overlay: 10000,
+);
+
+/*
+ * OPACITY
+ */
+$opacity_items: (
+  default: 0.6,
+);

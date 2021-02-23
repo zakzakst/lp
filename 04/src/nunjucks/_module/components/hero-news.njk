@@ -1,0 +1,16 @@
+{% macro news(
+  link='',
+  date='',
+  text=''
+)%}
+
+<div class="hero-news">
+  <div class="container">
+    <a href="{{ link }}" class="hero-news__content">
+      <span class="hero-news__date">{{ date }}</span>
+      <span class="hero-news__text">{{ text | safe }}</span>
+    </a>
+  </div>
+</div>
+
+{% endmacro %}

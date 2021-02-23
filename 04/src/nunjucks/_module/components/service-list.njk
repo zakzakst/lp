@@ -1,0 +1,25 @@
+{% macro list( items ) %}
+
+<div class="service-list">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-0">
+    {% for item in items %}
+      <div class="col">
+        <a href="{{ item.link }}" class="service-list-item">
+          <h3 class="service-list-item__heading">
+            <span>{{ item.text | safe }}</span>
+          </h3>
+          <img
+            class="service-list-item__img"
+            src="{{ item.img }}"
+            width="400"
+            height="200"
+            alt=""
+          >
+          <div class="service-list-item__bg"></div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endmacro %}
