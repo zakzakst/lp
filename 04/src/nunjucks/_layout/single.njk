@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- head -->
+  {% block head %}
+    {% include '../_module/head/head.njk' %}
+  {% endblock %}
+</head>
+
+<body>
+  <!-- ロード画面 -->
+  {# {% include '../_module/components/loader/loader.njk' %} #}
+
+  <!-- ヘッダー -->
+  {# {% include '../_module/components/header/header.njk' %} #}
+
+  <!-- メインコンテンツ -->
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+
+  <!-- フッター -->
+  {# {% include '../_module/components/footer/footer.njk' %} #}
+
+  <!-- foot -->
+  {% block foot %}
+    {% include '../_module/foot/foot.njk' %}
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,65 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.news-list';
+
+#{ $BLOCK_NAME } {
+  &__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 16px 0;
+    transition: color Dur() Ease();
+    @include Mq(md) {
+      flex-wrap: nowrap;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 1px;
+      content: '';
+    }
+    &::before {
+      background: Color(border);
+    }
+    &::after {
+      background: Color(secondary);
+      transition: transform Dur() Ease();
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    &:hover {
+      color: Color(secondary);
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  &__date {
+    flex-shrink: 0;
+    width: 72px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  &__cat {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 120px;
+    padding: 2px 4px 4px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: Color(white);
+    text-align: center;
+    background-color: Color(gray);
+  }
+  &__text {
+    flex-grow: 1;
+    margin-top: 8px;
+    @include Mq(md) {
+      margin-top: 0;
+    }
+  }
+}

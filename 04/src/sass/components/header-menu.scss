@@ -1,0 +1,108 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.header-menu';
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: Z(overlay);
+  display: none;
+  background: rgba(Color(blackDark), Op());
+  opacity: 0;
+  @include Mq(md) {
+    display: none !important;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 240px;
+    background: Color(primary);
+    box-shadow: Shadow(float);
+    transform: translateX(300px);
+  }
+
+  &__item {
+    display: block;
+    padding: 12px;
+    color: Color(white);
+    border-bottom: 1px solid rgba(Color(white), 0.3);
+    transition: all Dur() Ease();
+    &:hover {
+      color: Color(white);
+      background: Color(secondary);
+    }
+  }
+
+  &__links {
+    height: 0;
+    overflow: hidden;
+    background: Color(white);
+  }
+
+  &__links-inner {
+    padding: 8px 12px 10px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 2px 0 2px 20px;
+    color: Color(primary);
+    transition: opacity Dur(fast) Ease();
+    &::before {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      display: block;
+      width: 8px;
+      height: 1px;
+      content: '';
+      background: Color(primary);
+      opacity: 0.4;
+    }
+    &:hover {
+      color: Color(primary);
+      opacity: Op();
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 48px;
+    height: 48px;
+    background: Color(white);
+    border: none;
+    transition: background-color Dur(fast) Ease();
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 32px;
+      height: 1px;
+      margin: auto;
+      content: '';
+      background: Color(primary);
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      background: Color(secondaryLight);
+    }
+  }
+}

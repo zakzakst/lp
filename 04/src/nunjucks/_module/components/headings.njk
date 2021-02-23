@@ -1,0 +1,13 @@
+{% macro h2(
+  text='',
+  subText=''
+)%}
+
+<div class="heading">
+  <div class="heading__inner">
+    <div class="heading__sub-text">{{ subText }}</div>
+    <h2 class="heading__text">{{ text }}</h2>
+  </div>
+</div>
+
+{% endmacro %}

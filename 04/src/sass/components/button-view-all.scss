@@ -1,0 +1,36 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.button-view-all';
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: inline-block;
+  padding-right: 80px;
+  font-family: Ff(en);
+  color: Color(primary);
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 72px;
+    height: 1px;
+    margin: auto 0;
+    content: '';
+  }
+  &::before {
+    background: Color(border);
+  }
+  &::after {
+    background: Color(primary);
+    transition: transform Dur(fast) Ease();
+    transform: scaleX(0.2);
+    transform-origin: left;
+  }
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
