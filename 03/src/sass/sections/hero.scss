@@ -45,6 +45,7 @@ $text_shadow: (1px 1px 10px Color(primary), -1px -1px 10px Color(primary));
   &__bg-item {
     position: relative;
     height: $height_bg;
+    overflow: hidden;
     & > img {
       position: absolute;
       top: 0;

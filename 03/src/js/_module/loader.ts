@@ -71,6 +71,7 @@ export class Loader {
     if (!this.el) return;
     const self = this;
     const tl = gsap.timeline();
+    this.clearWindow();
     tl
       .to(this.el, {
         autoAlpha: 0,
@@ -78,7 +79,6 @@ export class Loader {
       .set(this.el, {
         display: 'none',
         onComplete:() => {
-          self.clearWindow();
           self.callback();
         }
       });

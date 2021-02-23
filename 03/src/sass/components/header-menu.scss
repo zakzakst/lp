@@ -22,7 +22,7 @@ $BLOCK_NAME: '.header-menu';
     bottom: 0;
     display: block;
     width: 240px;
-    background: Color(white);
+    background: Color(primary);
     box-shadow: Shadow(float);
     transform: translateX(300px);
   }
@@ -30,11 +30,45 @@ $BLOCK_NAME: '.header-menu';
   &__item {
     display: block;
     padding: 12px;
-    border-bottom: 1px solid Color(primary);
+    color: Color(white);
+    border-bottom: 1px solid rgba(Color(white), 0.3);
     transition: all Dur() Ease();
     &:hover {
       color: Color(white);
+      background: Color(secondary);
+    }
+  }
+
+  &__links {
+    height: 0;
+    overflow: hidden;
+    background: Color(white);
+  }
+
+  &__links-inner {
+    padding: 8px 12px 10px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 2px 0 2px 20px;
+    color: Color(primary);
+    transition: opacity Dur(fast) Ease();
+    &::before {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      display: block;
+      width: 8px;
+      height: 1px;
+      content: '';
       background: Color(primary);
+      opacity: 0.4;
+    }
+    &:hover {
+      color: Color(primary);
+      opacity: Op();
     }
   }
 
@@ -44,7 +78,7 @@ $BLOCK_NAME: '.header-menu';
     right: 100%;
     width: 48px;
     height: 48px;
-    background: Color(secondary);
+    background: Color(white);
     border: none;
     transition: background-color Dur(fast) Ease();
     &::before,
@@ -59,7 +93,7 @@ $BLOCK_NAME: '.header-menu';
       height: 1px;
       margin: auto;
       content: '';
-      background: Color(white);
+      background: Color(primary);
     }
     &::before {
       transform: rotate(45deg);

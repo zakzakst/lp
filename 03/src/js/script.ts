@@ -4,12 +4,13 @@ import { Hero } from './_module/hero';
 import { FooterGoTop } from './_module/footer-go-top';
 import { ScrollAnim } from './_module/scroll-anim';
 import { Header } from './_module/header';
+import { HeaderNav } from './_module/header-nav';
+import { HeaderMenu } from './_module/header-menu';
 
 // ページ表示スクリプトの実行
 (() => {
-  // MVスクリプトの初期化
+  // MVスクリプトのインスタンス作成
   const hero = new Hero('js-hero-bg');
-  hero.init();
   // ローダースクリプトの実行
   const loader = new Loader(
     'js-loader',
@@ -21,6 +22,7 @@ import { Header } from './_module/header';
     }
   );
   loader.init();
+  hero.init();
 })();
 
 // トップへ戻るスクリプトの実行
@@ -37,10 +39,24 @@ import { Header } from './_module/header';
 
 // ヘッダースクリプトの実行
 (() => {
+  // ヘッダー
   const header = new Header(
     'js-header-button',
     'js-header-menu',
     'js-header-close'
   );
   header.init();
+  // ヘッダーナビゲーション
+  const headerNav = new HeaderNav(
+    'js-header-nav',
+    'js-header-nav-wrapper',
+    'js-header-detail'
+  );
+  headerNav.init();
+  // ヘッダーメニュー
+  const headerMenuItems = document.getElementsByClassName('js-header-menu-item');
+  [...headerMenuItems].forEach(el => {
+    const headerMenuItem = new HeaderMenu(el);
+    headerMenuItem.init();
+  })
 })();
