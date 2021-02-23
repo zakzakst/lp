@@ -1,66 +1,6 @@
 @charset 'utf-8';
 $BLOCK_NAME: '.contact-section';
-$offset_content: 48px;
-$offset_arrow: 12px;
 
 #{ $BLOCK_NAME } {
-  &__wrapper {
-    padding-bottom: 12px;
-    background: Color(primary);
-  }
-
-  padding-top: 160px;
-  padding-bottom: 1px;
-  background: Color(black);
-  background: url(../img/contact/contact-bg.jpg) center center no-repeat;
-  background-size: cover;
-
-  &__content {
-    margin-bottom: -$offset_content - 1px;
-  }
-
-  &__button {
-    position: relative;
-    display: block;
-    padding: 32px;
-    color: Color(white);
-    text-align: center;
-    background: Color(secondary);
-    background: Grad();
-    background-position: 0% 50%;
-    background-size: 300% 100%;
-    box-shadow: Shadow();
-    transition: background-position Dur(slow) Ease();
-    &::after {
-      position: absolute;
-      right: $offset_arrow;
-      bottom: $offset_arrow;
-      display: block;
-      content: '';
-      border: 8px solid transparent;
-      border-right-color: Color(white);
-      border-bottom-color: Color(white);
-    }
-    &:hover {
-      color: Color(white);
-      background-position: 100% 50%;
-    }
-  }
-
-  &__icon {
-    display: block;
-    margin-top: -20px;
-    font-size: 36px;
-  }
-
-  &__heading {
-    display: block;
-    margin-top: 8px;
-  }
-
-  &__text {
-    margin-top: 8px;
-    font-size: 24px;
-    font-weight: bold;
-  }
+  //
 }
