@@ -1,0 +1,45 @@
+{%- import '../_module/components/about.njk' as about -%}
+
+<section class="about-section">
+  <div class="container">
+    <div class="row row-cols-2 align-items-center">
+      <div class="col">
+        {{ about.heading( content="<span>ここに見出しが</span><br><span>入ります</span>" ) }}
+        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+      </div>
+      <div class="col">
+        {{ about.img(
+          main="https://picsum.photos/id/1015/400/400",
+          sub="https://picsum.photos/id/1014/400/400"
+        ) }}
+      </div>
+    </div>
+    <div class="row row-cols-2 align-items-center flex-row-reverse mt-4">
+      <div class="col">
+        {{ about.heading( content="<span>ここに見出しが</span><br><span>入ります</span>" ) }}
+        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+      </div>
+      <div class="col">
+        {{ about.img(
+          main="https://picsum.photos/id/1083/400/400",
+          sub="https://picsum.photos/id/1014/400/400"
+        ) }}
+      </div>
+    </div>
+    <div class="row row-cols-2 align-items-center mt-4">
+      <div class="col">
+        {{ about.heading( content="<span>ここに見出しが</span><br><span>入ります</span>" ) }}
+        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+      </div>
+      <div class="col">
+        {{ about.img(
+          main="https://picsum.photos/id/1015/400/400",
+          sub="https://picsum.photos/id/1014/400/400"
+        ) }}
+      </div>
+    </div>
+  </div>
+</section>

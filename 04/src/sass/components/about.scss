@@ -1,0 +1,66 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.about';
+
+#{ $BLOCK_NAME } {
+  //
+}
+
+#{ $BLOCK_NAME }-img {
+  position: relative;
+  padding-left: 48px;
+  @at-root .flex-row-reverse & {
+    padding-right: 48px;
+    padding-left: 0;
+  }
+
+  &__main {
+    width: 100%;
+    overflow: hidden;
+    background: Color(white);
+    border: 6px solid Color(white);
+    border-radius: 50%;
+    box-shadow: Shadow();
+  }
+
+  &__sub {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    background: Color(white);
+    border: 4px solid Color(white);
+    border-radius: 50%;
+    box-shadow: Shadow();
+    @at-root .flex-row-reverse & {
+      left: 8px;
+    }
+  }
+}
+
+#{ $BLOCK_NAME }-heading {
+  font-weight: 700;
+  & > span {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    line-height: 1.6;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      left: 0;
+      z-index: -1;
+      height: 6px;
+      content: '';
+      background: Color(secondary);
+      border-radius: 3px;
+    }
+  }
+}
+
+#{ $BLOCK_NAME }-text {
+  margin-top: 12px;
+  font-size: 16px;
+}

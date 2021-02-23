@@ -2,5 +2,21 @@
 $BLOCK_NAME: '.projects-section';
 
 #{ $BLOCK_NAME } {
-  //
+  position: relative;
+  padding: 60px;
+  margin-top: 160px;
+  background: Color(primaryLight);
+  border-radius: 60px;
+
+  &__title {
+    position: absolute;
+    top: -120px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-size: 110px;
+    font-weight: 900;
+    color: Color(primaryLight);
+    text-align: center;
+  }
 }
