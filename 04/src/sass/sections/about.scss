@@ -2,29 +2,5 @@
 $BLOCK_NAME: '.about-section';
 
 #{ $BLOCK_NAME } {
-  &__inner {
-    opacity: 0;
-    transition: all Dur() Ease() Dur();
-    transform: translateY(24px);
-    @at-root .is-animated & {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  &__content {
-    & > p {
-      line-height: 1.75;
-      & + p {
-        margin-top: 8px;
-      }
-    }
-  }
-
-  &__img {
-    & > img {
-      width: 100%;
-      height: auto;
-    }
-  }
+  //
 }

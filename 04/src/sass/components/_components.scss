@@ -1,14 +1,5 @@
 @charset 'utf-8';
 
 @import 'common';
-@import 'header';
-// @import 'header-button';
-@import 'header-menu';
-@import 'footer';
-@import 'footer-go-top';
-@import 'heading';
-@import 'service-list';
-@import 'work-list';
-@import 'news-list';
-@import 'button-view-all';
-@import 'hero-news';
+@import 'header/header';
+@import 'footer/footer';

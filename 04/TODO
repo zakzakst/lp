@@ -1,5 +1,5 @@
 Todo:
-  ☐
+  ☐ 「使い方」「申し込みフロー」のようなパーツを組み込んだページも作っておきたい（別のページ作る時でいいので）
 
 Pend:
   ☐ tsconfigの設定調べる
@@ -9,14 +9,13 @@ Pend:
   ☐ SVGスプライト使えば、装飾の三角もっとスマートに記述できるか？
 
 Archive:
-  ✔ ヘッダー・メガメニュー作る @done(21-02-23 20:43) @project(Todo)
-  ✔ BootstrapのSASSでブレークポイントの設定方法調べる @done(21-02-23 08:30) @project(Pend)
-  ✔ 読込パーセンテージ表示するページローダー @done(21-02-23 08:30) @project(Todo)
-  ✔ ページ表示後にSlickを開始する @done(21-02-23 08:30) @project(Todo)
 
 Memo:
   ■■■ 参考 ■■■
-  ・Bootstrapのカスタマイズ
-  https://getbootstrap.com/docs/5.0/customize/sass/
+
+  ■■■ デザイン参考 ■■■
+  ・https://matsudo-yasashii-labo.jp/
+  ・http://www.ainowa.or.jp/
+  ・https://careers.classmethod.jp/
 
   ■■■ 反省など ■■■
