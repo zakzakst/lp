@@ -29,9 +29,10 @@ $width_container_items: (
  * COLOR
  */
 $color_items: (
-  primary: #363f4d,
-  secondary: #a7821d,
-  secondaryLight: #c3a348,
+  primary: #02a2f7,
+  primaryLight: #edf9ff,
+  secondary: #fffb26,
+  // secondaryLight: #c3a348,
   white: #fff,
   black: #555,
   blackDark: #222,
@@ -60,8 +61,7 @@ $font_size_items: (
 
 $font_family_items: (
   default: (
-    YakuHanJP,
-    'Noto Sans JP',
+    'M PLUS Rounded 1c',
     sans-serif,
   ),
   en: (
@@ -90,8 +90,8 @@ $easing_items: (
  * BORDER RADIUS
  */
 $radius_items: (
-  default: 4px,
-  card: 12px,
+  default: 12px,
+  card: 24px,
 );
 
 /*

@@ -1,0 +1,32 @@
+{% macro img( img="" ) %}
+<div class="projects-img">
+  <img
+    src="{{ img }}"
+    width="400"
+    height="200"
+    alt=""
+  >
+</div>
+{% endmacro %}
+
+{% macro heading( content="" ) %}
+<h3 class="projects-heading">
+  {{ content | safe }}
+</h3>
+{% endmacro %}
+
+{% macro text( content="" ) %}
+<p class="projects-text">
+  {{ content | safe }}
+</p>
+{% endmacro %}
+
+{% macro card() %}
+<div class="projects-card">
+  <div class="projects-card__img">
+    <img src="https://picsum.photos/id/1015/400/200" alt="">
+  </div>
+  <h4 class="projects-card__heading">見出しが入ります</h4>
+  <p class="projects-card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+</div>
+{% endmacro %}

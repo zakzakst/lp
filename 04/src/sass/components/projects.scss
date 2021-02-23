@@ -1,0 +1,48 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.projects';
+$width_border_img: 4px;
+
+#{ $BLOCK_NAME } {
+  //
+}
+
+#{ $BLOCK_NAME }-img {
+  overflow: hidden;
+  border-radius: Rad(card);
+}
+
+#{ $BLOCK_NAME }-heading {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+#{ $BLOCK_NAME }-text {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+#{ $BLOCK_NAME }-card {
+  padding: 12px;
+  background: Color(white);
+  border-radius: Rad();
+  // transition: box-shadow Dur() Ease();
+  // &:hover {
+  //   box-shadow: Shadow();
+  // }
+
+  &__img {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  &__heading {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+}

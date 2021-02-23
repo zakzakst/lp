@@ -1,0 +1,67 @@
+{%- import '../_module/components/button.njk' as button -%}
+{%- import '../_module/components/projects.njk' as projects -%}
+
+<section class="projects-section">
+  <div class="container">
+    <div class="projects-section__title">PROJECTS</div>
+    <div class="row row-cols-2">
+      <div class="col">
+        {{ projects.heading( content="見出しが入ります" ) }}
+        {{ projects.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+      </div>
+      <div class="col">
+        {{ projects.img( img="https://picsum.photos/id/1015/400/200" ) }}
+      </div>
+    </div>
+    <div class="row row-cols-4 mt-4">
+      <div class="col">
+        {{ projects.card() }}
+      </div>
+      <div class="col">
+        {{ projects.card() }}
+      </div>
+      <div class="col">
+        {{ projects.card() }}
+      </div>
+      <div class="col">
+        {{ projects.card() }}
+      </div>
+    </div>
+    <div class="w-50 mt-4 mx-auto">
+      {{ button.lg(
+        url="#",
+        text="一覧を見る"
+      ) }}
+    </div>
+
+    <div class="row row-cols-2 mt-5 flex-row-reverse">
+      <div class="col">
+        {{ projects.heading( content="見出しが入ります" ) }}
+        {{ projects.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+      </div>
+      <div class="col">
+        {{ projects.img( img="https://picsum.photos/id/1015/400/200" ) }}
+      </div>
+    </div>
+    <div class="row row-cols-4 mt-4">
+      <div class="col">
+        {{ projects.card() }}
+      </div>
+      <div class="col">
+        {{ projects.card() }}
+      </div>
+      <div class="col">
+        {{ projects.card() }}
+      </div>
+      <div class="col">
+        {{ projects.card() }}
+      </div>
+    </div>
+    <div class="w-50 mt-4 mx-auto">
+      {{ button.lg(
+        url="#",
+        text="一覧を見る"
+      ) }}
+    </div>
+  </div>
+</section>
