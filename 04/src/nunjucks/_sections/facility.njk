@@ -1,10 +1,20 @@
+{%- import '../_module/components/facility.njk' as facility -%}
+
 <section class="facility-section">
   <div class="container">
     <div class="row row-cols-4">
-      <div class="col">aaa</div>
-      <div class="col">aaa</div>
-      <div class="col">aaa</div>
-      <div class="col">aaa</div>
+      <div class="col">
+        {{ facility.card() }}
+      </div>
+      <div class="col">
+        {{ facility.card() }}
+      </div>
+      <div class="col">
+        {{ facility.card() }}
+      </div>
+      <div class="col">
+        {{ facility.card() }}
+      </div>
     </div>
   </div>
 </div>
