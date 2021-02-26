@@ -1,0 +1,44 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.facility';
+
+#{ $BLOCK_NAME } {
+  //
+}
+
+#{ $BLOCK_NAME }-card {
+  position: relative;
+  padding-bottom: 16px;
+
+  &__button {
+    position: absolute;
+    right: 12px;
+    bottom: 0;
+    left: 12px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    font-weight: 700;
+    color: Color(primary);
+    background: Color(white);
+    border-radius: 16px;
+    box-shadow: Shadow(float);
+    &:hover {
+      color: Color(primary);
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: Rad();
+    & > img {
+      transition: transform Dur() Ease();
+    }
+    @at-root #{ $BLOCK_NAME }-card__button:hover + & {
+      & > img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
