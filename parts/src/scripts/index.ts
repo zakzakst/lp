@@ -62,7 +62,7 @@
 // accordion01();
 
 // ギャラリー
-import { gallery01 } from './components/galleries/gallery01';
-gallery01();
+// import { gallery01 } from './components/galleries/gallery01';
+// gallery01();
 
 // セクション
