@@ -58,7 +58,11 @@
 // menu01();
 
 // アコーディオン
-// import { accordion01 } from './components/accordions/accordion01'
+// import { accordion01 } from './components/accordions/accordion01';
 // accordion01();
+
+// ギャラリー
+import { gallery01 } from './components/galleries/gallery01';
+gallery01();
 
 // セクション
