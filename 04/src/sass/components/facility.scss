@@ -11,21 +11,23 @@ $BLOCK_NAME: '.facility';
 
   &__button {
     position: absolute;
-    right: 12px;
+    right: 0;
     bottom: 0;
-    left: 12px;
+    left: 0;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 32px;
-    font-weight: 700;
-    color: Color(primary);
-    background: Color(white);
-    border-radius: 16px;
-    box-shadow: Shadow(float);
-    &:hover {
+    text-align: center;
+
+    & > span {
+      display: inline-block;
+      height: 32px;
+      padding: 0 12px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 32px;
       color: Color(primary);
+      background: Color(white);
+      border-radius: 16px;
+      box-shadow: Shadow();
     }
   }
 

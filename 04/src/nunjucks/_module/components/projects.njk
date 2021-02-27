@@ -21,12 +21,24 @@
 </p>
 {% endmacro %}
 
-{% macro card() %}
-<div class="projects-card">
+{% macro card(
+  link="",
+  img="",
+  heading="",
+  text=""
+) %}
+<a href="{{ link }}" class="projects-card">
   <div class="projects-card__img">
-    <img src="https://picsum.photos/id/1015/400/200" alt="">
+    <img
+      src="{{ img }}"
+      width="64"
+      height="64"
+      alt=""
+    >
   </div>
-  <h4 class="projects-card__heading">見出しが入ります</h4>
-  <p class="projects-card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-</div>
+  <div class="projects-card__content">
+    <h4 class="projects-card__heading">{{ heading }}</h4>
+    <p class="projects-card__text">{{ text }}</p>
+  </div>
+</a>
 {% endmacro %}

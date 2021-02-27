@@ -1,56 +1,60 @@
 @charset 'utf-8';
 $BLOCK_NAME: '.button';
+$size_button: 48px;
 
 #{ $BLOCK_NAME } {
   position: relative;
-  display: block;
-  padding-left: 1.5em;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 66px;
-  color: Color(white);
-  letter-spacing: 0.25em;
-  background: Color(primary);
-  border-radius: 99em;
-  box-shadow: Shadow();
-  transition: transform Dur() Ease();
-  &__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $size_button;
+  padding-left: $size_button - 12px;
+  font-size: 14px;
+
+  &__circle {
     position: absolute;
     top: 0;
-    right: 21px;
-    bottom: 0;
+    left: 0;
     display: block;
-    width: 33px;
-    height: 33px;
-    margin: auto 0;
+    width: $size_button;
+    height: $size_button;
     content: '';
-    border: 3px solid Color(white);
-    border-radius: 50%;
-    transition: background-color Dur() Ease();
-    &::before {
+    &::before,
+    &::after {
       position: absolute;
       top: 0;
-      right: 10px;
+      right: 0;
       bottom: 0;
+      left: 0;
       display: block;
-      width: 11px;
-      height: 11px;
-      margin: auto 0;
+      margin: auto;
       content: '';
-      border: solid Color(white);
-      border-width: 3px 3px 0 0;
-      transition: border-color Dur() Ease();
-      transform: rotate(45deg);
+      border-radius: 50%;
+      transition: transform Dur(fast) Ease();
+    }
+    &::before {
+      background: rgba(Color(primary), 0.4);
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1.05);
+      }
+    }
+    &::after {
+      z-index: 1;
+      width: 16px;
+      height: 16px;
+      background: Color(white);
+      transform: scale(0);
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1);
+      }
     }
   }
-  &:hover {
-    color: Color(white);
-    transform: scale(1.05);
-  }
-  &:hover &__arrow {
-    background: Color(white);
-    &::before {
-      border-color: Color(primary);
+
+  &__text {
+    z-index: 2;
+    transition: transform Dur(fast) Ease();
+    @at-root #{ $BLOCK_NAME }:hover & {
+      transform: translateX(5px);
     }
   }
 }

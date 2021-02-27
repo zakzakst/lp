@@ -2,5 +2,9 @@
 $BLOCK_NAME: '.gallery-section';
 
 #{ $BLOCK_NAME } {
-  //
+  padding: 64px 0;
+
+  &__content {
+    margin-top: 36px;
+  }
 }

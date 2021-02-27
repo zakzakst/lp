@@ -1,67 +1,125 @@
 {%- import '../_module/components/button.njk' as button -%}
 {%- import '../_module/components/projects.njk' as projects -%}
+{%- import '../_module/components/headings.njk' as headings -%}
+
+{% set projectLinkItems01 = [
+  {
+    link: '#',
+    img: 'https://picsum.photos/id/1015/64/64',
+    heading: '見出しが入ります',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    link: '#',
+    img: 'https://picsum.photos/id/1015/64/64',
+    heading: '見出しが入ります',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    link: '#',
+    img: 'https://picsum.photos/id/1015/64/64',
+    heading: '見出しが入ります',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    link: '#',
+    img: 'https://picsum.photos/id/1015/64/64',
+    heading: '見出しが入ります',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] -%}
+
+{% set projectLinkItems02 = [
+  {
+    link: '#',
+    img: 'https://picsum.photos/id/1015/64/64',
+    heading: '見出しが入ります',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    link: '#',
+    img: 'https://picsum.photos/id/1015/64/64',
+    heading: '見出しが入ります',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    link: '#',
+    img: 'https://picsum.photos/id/1015/64/64',
+    heading: '見出しが入ります',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    link: '#',
+    img: 'https://picsum.photos/id/1015/64/64',
+    heading: '見出しが入ります',
+    text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] -%}
 
 <section class="projects-section">
   <div class="container">
-    <div class="projects-section__title">PROJECTS</div>
-    <div class="row row-cols-2">
-      <div class="col">
-        {{ projects.heading( content="見出しが入ります" ) }}
-        {{ projects.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+    <div class="projects-section__title">PROJECT</div>
+    {{ headings.h2( text="プロジェクト", icon="project" ) }}
+    {{ headings.lead( text="テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+    <div class="projects-section__content">
+      <div class="projects-section__item">
+        <div class="projects-section__item-info row row-cols-2">
+          <div class="col">
+            {{ projects.heading( content="見出しが入ります" ) }}
+            {{ projects.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+          </div>
+          <div class="col">
+            {{ projects.img( img="https://picsum.photos/id/1015/400/200" ) }}
+          </div>
+        </div>
+        <div class="projects-section__item-links row row-cols-2 g-2">
+          {% for item in projectLinkItems01 %}
+            <div class="col">
+              {{ projects.card(
+                link=item.link,
+                img=item.img,
+                heading=item.heading,
+                text=item.text
+              ) }}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="projects-section__button">
+          {{ button.md(
+            url="#",
+            text="一覧を見る"
+          ) }}
+        </div>
       </div>
-      <div class="col">
-        {{ projects.img( img="https://picsum.photos/id/1015/400/200" ) }}
+      <div class="projects-section__item">
+        <div class="projects-section__item-info row row-cols-2">
+          <div class="col">
+            {{ projects.heading( content="見出しが入ります" ) }}
+            {{ projects.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+          </div>
+          <div class="col">
+            {{ projects.img( img="https://picsum.photos/id/1015/400/200" ) }}
+          </div>
+        </div>
+        <div class="projects-section__item-links row row-cols-2 g-2">
+          {% for item in projectLinkItems02 %}
+            <div class="col">
+              {{ projects.card(
+                link=item.link,
+                img=item.img,
+                heading=item.heading,
+                text=item.text
+              ) }}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="projects-section__button">
+          {{ button.md(
+            url="#",
+            text="一覧を見る"
+          ) }}
+        </div>
       </div>
-    </div>
-    <div class="row row-cols-4 mt-4">
-      <div class="col">
-        {{ projects.card() }}
-      </div>
-      <div class="col">
-        {{ projects.card() }}
-      </div>
-      <div class="col">
-        {{ projects.card() }}
-      </div>
-      <div class="col">
-        {{ projects.card() }}
-      </div>
-    </div>
-    <div class="w-50 mt-4 mx-auto">
-      {{ button.lg(
-        url="#",
-        text="一覧を見る"
-      ) }}
-    </div>
-
-    <div class="row row-cols-2 mt-5">
-      <div class="col">
-        {{ projects.heading( content="見出しが入ります" ) }}
-        {{ projects.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
-      </div>
-      <div class="col">
-        {{ projects.img( img="https://picsum.photos/id/1015/400/200" ) }}
-      </div>
-    </div>
-    <div class="row row-cols-4 mt-4">
-      <div class="col">
-        {{ projects.card() }}
-      </div>
-      <div class="col">
-        {{ projects.card() }}
-      </div>
-      <div class="col">
-        {{ projects.card() }}
-      </div>
-      <div class="col">
-        {{ projects.card() }}
-      </div>
-    </div>
-    <div class="w-50 mt-4 mx-auto">
-      {{ button.lg(
-        url="#",
-        text="一覧を見る"
-      ) }}
     </div>
   </div>
 </section>

@@ -3,7 +3,7 @@ $BLOCK_NAME: '.projects-section';
 
 #{ $BLOCK_NAME } {
   position: relative;
-  padding: 60px;
+  padding: 60px 0;
   margin-top: 160px;
   background: Color(primaryLight);
   border-radius: 60px;
@@ -18,5 +18,24 @@ $BLOCK_NAME: '.projects-section';
     font-weight: 900;
     color: Color(primaryLight);
     text-align: center;
+  }
+
+  &__content {
+    margin-top: 36px;
+  }
+
+  &__item {
+    & + & {
+      margin-top: 64px;
+    }
+  }
+
+  &__item-links {
+    margin-top: 24px;
+  }
+
+  &__button {
+    margin-top: 16px;
+    text-align: right;
   }
 }
