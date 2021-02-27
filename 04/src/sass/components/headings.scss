@@ -1,16 +1,23 @@
 @charset 'utf-8';
 $BLOCK_NAME: '.heading';
-$size_icon: 80px;
+$size_icon: 60px;
+$size_icon_md: 80px;
 $size_heading_decoration: 8px;
 
 #{ $BLOCK_NAME } {
   position: relative;
-  padding-top: $size_icon * 0.9;
+  padding-top: $size_icon;
   text-align: center;
+  @include Mq(md) {
+    padding-top: $size_icon_md * 0.9;
+  }
 
   &__text {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
+    @include Mq(md) {
+      font-size: 32px;
+    }
   }
 
   &__icon {
@@ -21,6 +28,9 @@ $size_heading_decoration: 8px;
     width: $size_icon;
     margin: auto;
     fill: Color(primary);
+    @include Mq(md) {
+      width: $size_icon_md;
+    }
   }
 
   &__lead {

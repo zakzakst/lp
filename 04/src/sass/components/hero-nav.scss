@@ -5,11 +5,15 @@ $BLOCK_NAME: '.hero-nav';
   &__item {
     position: relative;
     display: block;
-    padding: 0 16px 16px;
-    font-size: 20px;
+    padding: 12px;
+    font-size: 16px;
     font-weight: 700;
     text-align: center;
     transition: color Dur() Ease();
+    @include Mq(md) {
+      padding: 16px;
+      font-size: 20px;
+    }
     &::after {
       position: absolute;
       right: 0;

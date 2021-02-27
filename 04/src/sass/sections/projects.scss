@@ -3,21 +3,30 @@ $BLOCK_NAME: '.projects-section';
 
 #{ $BLOCK_NAME } {
   position: relative;
-  padding: 60px 0;
-  margin-top: 160px;
+  padding: 36px 0;
+  margin-top: 120px;
   background: Color(primaryLight);
-  border-radius: 60px;
+  border-radius: 36px;
+  @include Mq(md) {
+    padding: 60px 0;
+    margin-top: 160px;
+    border-radius: 60px;
+  }
 
   &__title {
     position: absolute;
-    top: -120px;
+    top: -64px;
     right: 0;
     left: 0;
     margin: auto;
-    font-size: 110px;
+    font-size: 60px;
     font-weight: 900;
     color: Color(primaryLight);
     text-align: center;
+    @include Mq(md) {
+      top: -120px;
+      font-size: 110px;
+    }
   }
 
   &__content {

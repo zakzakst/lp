@@ -7,10 +7,16 @@ $BLOCK_NAME: '.about';
 
 #{ $BLOCK_NAME }-img {
   position: relative;
-  padding-left: 48px;
-  @at-root .about-section__content-item:nth-child(even) & {
-    padding-right: 48px;
-    padding-left: 0;
+  max-width: 300px;
+  margin: 0 auto;
+  @include Mq(md) {
+    max-width: none;
+    padding-left: 48px;
+    margin: 0;
+    @at-root .about-section__content-item:nth-child(even) & {
+      padding-right: 48px;
+      padding-left: 0;
+    }
   }
 
   &__main {
@@ -26,8 +32,8 @@ $BLOCK_NAME: '.about';
     position: absolute;
     right: 8px;
     bottom: 8px;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     overflow: hidden;
     background: Color(white);
     border: 4px solid Color(white);
@@ -36,16 +42,27 @@ $BLOCK_NAME: '.about';
     @at-root .about-section__content-item:nth-child(even) & {
       left: 8px;
     }
+    @include Mq(lg) {
+      width: 120px;
+      height: 120px;
+    }
   }
 }
 
 #{ $BLOCK_NAME }-heading {
   font-weight: 700;
+  text-align: center;
+  @include Mq(md) {
+    text-align: left;
+  }
   & > span {
     position: relative;
     z-index: 1;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.6;
+    @include Mq(md) {
+      font-size: 24px;
+    }
     &::before {
       position: absolute;
       right: 0;
