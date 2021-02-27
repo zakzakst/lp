@@ -60,10 +60,10 @@
   <div class="container">
     <div class="projects-section__title">PROJECT</div>
     {{ headings.h2( text="プロジェクト", icon="project" ) }}
-    {{ headings.lead( text="テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+    {{ headings.lead( text='テキストが入ります。テキストが入ります。テキストが入ります。<br class="d-none d-sm-block">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。' ) }}
     <div class="projects-section__content">
       <div class="projects-section__item">
-        <div class="projects-section__item-info row row-cols-2">
+        <div class="projects-section__item-info row row-cols-1 row-cols-md-2 g-2">
           <div class="col">
             {{ projects.heading( content="見出しが入ります" ) }}
             {{ projects.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
@@ -72,7 +72,7 @@
             {{ projects.img( img="https://picsum.photos/id/1015/400/200" ) }}
           </div>
         </div>
-        <div class="projects-section__item-links row row-cols-2 g-2">
+        <div class="projects-section__item-links row row-cols-1 row-cols-md-2 g-2">
           {% for item in projectLinkItems01 %}
             <div class="col">
               {{ projects.card(
@@ -92,7 +92,7 @@
         </div>
       </div>
       <div class="projects-section__item">
-        <div class="projects-section__item-info row row-cols-2">
+        <div class="projects-section__item-info row row-cols-1 row-cols-md-2 g-2">
           <div class="col">
             {{ projects.heading( content="見出しが入ります" ) }}
             {{ projects.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
@@ -101,7 +101,7 @@
             {{ projects.img( img="https://picsum.photos/id/1015/400/200" ) }}
           </div>
         </div>
-        <div class="projects-section__item-links row row-cols-2 g-2">
+        <div class="projects-section__item-links row row-cols-1 row-cols-md-2 g-2">
           {% for item in projectLinkItems02 %}
             <div class="col">
               {{ projects.card(

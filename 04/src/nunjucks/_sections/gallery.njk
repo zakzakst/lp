@@ -47,9 +47,9 @@
 <section class="gallery-section">
   <div class="container">
     {{ headings.h2( text="ギャラリー", icon="gallery" ) }}
-    {{ headings.lead( text="テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
+    {{ headings.lead( text='テキストが入ります。テキストが入ります。テキストが入ります。<br class="d-none d-sm-block">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。' ) }}
     <div class="gallery-section__content">
-      <div class="row row-cols-4 g-2">
+      <div class="row row-cols-2 row-cols-md-4 g-2">
         {% for item in galleryItems %}
           <div class="col">
             {{ gallery.item(

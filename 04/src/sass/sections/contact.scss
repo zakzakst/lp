@@ -8,17 +8,23 @@ $section_bg_url: 'https://picsum.photos/id/1015/400/400';
   background-size: cover;
 
   &__content {
-    padding: 48px;
+    padding: 24px;
     margin: 0 auto;
     background: rgba(Color(primaryDark), 0.8);
     border-radius: Rad();
+    @include Mq(md) {
+      padding: 48px;
+    }
   }
 
   &__heading {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     color: Color(white);
     text-align: center;
+    @include Mq(md) {
+      font-size: 32px;
+    }
   }
 
   &__lead {
@@ -28,6 +34,9 @@ $section_bg_url: 'https://picsum.photos/id/1015/400/400';
   }
 
   &__buttons {
-    margin-top: 48px;
+    margin-top: 16px;
+    @include Mq(md) {
+      margin-top: 24px;
+    }
   }
 }

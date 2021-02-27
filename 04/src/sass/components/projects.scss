@@ -12,8 +12,13 @@ $width_border_img: 4px;
 }
 
 #{ $BLOCK_NAME }-heading {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 900;
+  text-align: center;
+  @include Mq(md) {
+    font-size: 24px;
+    text-align: left;
+  }
 }
 
 #{ $BLOCK_NAME }-text {

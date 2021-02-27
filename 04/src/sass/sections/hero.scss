@@ -2,18 +2,24 @@
 $BLOCK_NAME: '.hero-section';
 
 #{ $BLOCK_NAME } {
-  padding: 32px;
+  padding: 12px 12px 0;
+  @include Mq(md) {
+    padding: 32px 32px 0;
+  }
 
   &__content {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1280px;
-    height: 480px;
+    height: 360px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 48px;
+    @include Mq(md) {
+      max-width: 1280px;
+      height: 480px;
+    }
   }
 
   &__img {

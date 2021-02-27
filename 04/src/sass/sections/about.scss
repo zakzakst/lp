@@ -2,7 +2,10 @@
 $BLOCK_NAME: '.about-section';
 
 #{ $BLOCK_NAME } {
-  padding-top: 90px;
+  padding-top: 48px;
+  @include Mq(md) {
+    padding-top: 90px;
+  }
 
   &__content {
     margin-top: 16px;
@@ -13,7 +16,10 @@ $BLOCK_NAME: '.about-section';
       flex-direction: row-reverse;
     }
     & + & {
-      margin-top: 24px;
+      margin-top: 48px;
+      @include Mq(md) {
+        margin-top: 24px;
+      }
     }
   }
 }
