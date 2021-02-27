@@ -1,0 +1,31 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.gallery';
+
+#{ $BLOCK_NAME }-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: Rad();
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: Color(primary);
+    opacity: 0;
+    transition: opacity Dur() Ease();
+    & > i {
+      font-size: 24px;
+      line-height: 24px;
+      color: Color(white);
+    }
+    @at-root #{ $BLOCK_NAME }-item:hover & {
+      opacity: 0.7;
+    }
+  }
+}

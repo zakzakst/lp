@@ -1,45 +1,57 @@
 {%- import '../_module/components/about.njk' as about -%}
+{%- import '../_module/components/headings.njk' as headings -%}
+
+{% set aboutItems = [
+  {
+    heading: '<span>ここに見出しが</span><br><span>入ります</span>',
+    texts: [
+      'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+      'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    ],
+    mainImg: 'https://picsum.photos/id/1015/400/400',
+    subImg: 'https://picsum.photos/id/1014/400/400'
+  },
+  {
+    heading: '<span>ここに見出しが</span><br><span>入ります</span>',
+    texts: [
+      'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+      'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    ],
+    mainImg: 'https://picsum.photos/id/1015/400/400',
+    subImg: 'https://picsum.photos/id/1014/400/400'
+  },
+  {
+    heading: '<span>ここに見出しが</span><br><span>入ります</span>',
+    texts: [
+      'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+      'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    ],
+    mainImg: 'https://picsum.photos/id/1015/400/400',
+    subImg: 'https://picsum.photos/id/1014/400/400'
+  }
+] -%}
 
 <section class="about-section">
   <div class="container">
-    <div class="row row-cols-2 align-items-center">
-      <div class="col">
-        {{ about.heading( content="<span>ここに見出しが</span><br><span>入ります</span>" ) }}
-        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
-        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
-      </div>
-      <div class="col">
-        {{ about.img(
-          main="https://picsum.photos/id/1015/400/400",
-          sub="https://picsum.photos/id/1014/400/400"
-        ) }}
-      </div>
-    </div>
-    <div class="row row-cols-2 align-items-center flex-row-reverse mt-4">
-      <div class="col">
-        {{ about.heading( content="<span>ここに見出しが</span><br><span>入ります</span>" ) }}
-        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
-        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
-      </div>
-      <div class="col">
-        {{ about.img(
-          main="https://picsum.photos/id/1083/400/400",
-          sub="https://picsum.photos/id/1014/400/400"
-        ) }}
-      </div>
-    </div>
-    <div class="row row-cols-2 align-items-center mt-4">
-      <div class="col">
-        {{ about.heading( content="<span>ここに見出しが</span><br><span>入ります</span>" ) }}
-        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
-        {{ about.text( content="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。" ) }}
-      </div>
-      <div class="col">
-        {{ about.img(
-          main="https://picsum.photos/id/1015/400/400",
-          sub="https://picsum.photos/id/1014/400/400"
-        ) }}
-      </div>
+    {{ headings.h2( text="○○について", icon="about" ) }}
+    {{ headings.lead( text="テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。" ) }}
+    <div class="about-section__content">
+      {% for item in aboutItems %}
+        <div class="about-section__content-item row row-cols-2 align-items-center">
+          <div class="col">
+            {{ about.heading( content=item.heading ) }}
+            {% for text in item.texts %}
+              {{ about.text( content=text ) }}
+            {% endfor %}
+          </div>
+          <div class="col">
+            {{ about.img(
+              main=item.mainImg,
+              sub=item.subImg
+            ) }}
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>

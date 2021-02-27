@@ -1,11 +1,16 @@
-{% macro card() %}
+{% macro card( link="", text="", img="") %}
 
 <div class="facility-card">
-  <a href="#" class="facility-card__button">
-    施設名が入ります
+  <a href="{{ link }}" class="facility-card__button">
+    <span>{{ text }}</span>
   </a>
   <div class="facility-card__img">
-    <img src="https://picsum.photos/id/1015/400/200" alt="">
+    <img
+      src="{{ img }}"
+      width="400"
+      height="200"
+      alt=""
+    >
   </div>
 </div>
 

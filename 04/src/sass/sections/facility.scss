@@ -2,5 +2,9 @@
 $BLOCK_NAME: '.facility-section';
 
 #{ $BLOCK_NAME } {
-  //
+  padding-top: 64px;
+
+  &__content {
+    margin-top: 36px;
+  }
 }

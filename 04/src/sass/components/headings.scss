@@ -1,0 +1,64 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.heading';
+$size_icon: 80px;
+$size_heading_decoration: 8px;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  padding-top: $size_icon * 0.9;
+  text-align: center;
+
+  &__text {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: $size_icon;
+    margin: auto;
+    fill: Color(primary);
+  }
+
+  &__lead {
+    position: relative;
+    padding-bottom: 32px;
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &__lead-decoration {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: $size_heading_decoration;
+    height: $size_heading_decoration;
+    margin: auto;
+    background: Color(primary);
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: $size_heading_decoration;
+      height: $size_heading_decoration;
+      content: '';
+      background: rgba(Color(primary), 0.4);
+      border-radius: 50%;
+    }
+    &::before {
+      left: -200%;
+    }
+    &::after {
+      right: -200%;
+    }
+  }
+}

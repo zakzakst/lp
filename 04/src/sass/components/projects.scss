@@ -22,27 +22,33 @@ $width_border_img: 4px;
 }
 
 #{ $BLOCK_NAME }-card {
-  padding: 12px;
-  background: Color(white);
-  border-radius: Rad();
-  // transition: box-shadow Dur() Ease();
-  // &:hover {
-  //   box-shadow: Shadow();
-  // }
+  display: flex;
 
   &__img {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
     overflow: hidden;
     border-radius: 8px;
   }
 
+  &__content {
+    flex-grow: 1;
+    padding-left: 8px;
+    transition: color Dur(fast) Ease();
+    @at-root #{ $BLOCK_NAME }-card:hover & {
+      color: Color(primary);
+    }
+  }
+
   &__heading {
-    margin-top: 12px;
     font-size: 16px;
     font-weight: 700;
   }
 
   &__text {
+    width: 100%;
     margin-top: 8px;
-    font-size: 14px;
+    font-size: 12px;
   }
 }

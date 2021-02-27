@@ -1,6 +1,6 @@
-{% macro lg( url="", text="" ) %}
+{% macro md( url="", text="" ) %}
 <a href="{{ url }}" class="button">
-  {{ text }}
-  <span class="button__arrow"></span>
+  <span class="button__circle"></span>
+  <span class="button__text">{{ text }}</span>
 </a>
 {% endmacro %}

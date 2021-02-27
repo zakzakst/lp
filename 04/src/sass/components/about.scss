@@ -8,7 +8,7 @@ $BLOCK_NAME: '.about';
 #{ $BLOCK_NAME }-img {
   position: relative;
   padding-left: 48px;
-  @at-root .flex-row-reverse & {
+  @at-root .about-section__content-item:nth-child(even) & {
     padding-right: 48px;
     padding-left: 0;
   }
@@ -33,7 +33,7 @@ $BLOCK_NAME: '.about';
     border: 4px solid Color(white);
     border-radius: 50%;
     box-shadow: Shadow();
-    @at-root .flex-row-reverse & {
+    @at-root .about-section__content-item:nth-child(even) & {
       left: 8px;
     }
   }
