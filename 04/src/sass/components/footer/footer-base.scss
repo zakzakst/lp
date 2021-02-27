@@ -2,9 +2,14 @@
 $BLOCK_NAME: '.footer';
 
 #{ $BLOCK_NAME } {
-  padding: 90px 0 0;
   color: Color(white);
-  background: Color(primary);
+  // background: Color(primary);
+  background: Color(black);
+
+  &__top {
+    padding: 48px 0;
+    border-bottom: 1px solid rgba(Color(white), Op());
+  }
 
   &__heading {
     padding-bottom: 12px;
@@ -42,7 +47,8 @@ $BLOCK_NAME: '.footer';
 
   // フッター下部
   &__bottom {
-    background: Color(blackDark);
+    // background: Color(primary);
+    background: Color(primaryDark);
   }
 
   &__bottom-inner {

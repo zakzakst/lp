@@ -1,6 +1,33 @@
 @charset 'utf-8';
 $BLOCK_NAME: '.contact-section';
+$section_bg_url: 'https://picsum.photos/id/1015/400/400';
 
 #{ $BLOCK_NAME } {
-  //
+  padding: 48px 0;
+  background: url($section_bg_url) no-repeat center center;
+  background-size: cover;
+
+  &__content {
+    padding: 48px;
+    margin: 0 auto;
+    background: rgba(Color(primaryDark), 0.8);
+    border-radius: Rad();
+  }
+
+  &__heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: Color(white);
+    text-align: center;
+  }
+
+  &__lead {
+    margin-top: 12px;
+    color: Color(white);
+    text-align: center;
+  }
+
+  &__buttons {
+    margin-top: 48px;
+  }
 }

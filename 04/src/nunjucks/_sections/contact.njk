@@ -1,0 +1,25 @@
+{%- import '../_module/components/button.njk' as button -%}
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-section__content">
+      <h2 class="contact-section__heading">お問い合わせ</h2>
+      <p class="contact-section__lead">テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+      <div class="contact-section__buttons row row-cols-2">
+        <div class="col">
+          {{ button.lg(
+            url="#",
+            text="△△について",
+            color="secondary"
+          ) }}
+        </div>
+        <div class="col">
+          {{ button.lg(
+            url="#",
+            text="□□について"
+          ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
