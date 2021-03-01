@@ -6,6 +6,7 @@ import 'lightbox2';
 import { Loader } from './_module/loader';
 import { FooterGoTop } from './_module/footer-go-top';
 import { AnchorScroll } from './_module/anchor-scroll';
+import { Header2 } from './_module/header2';
 
 // ページ表示アニメーション
 (() => {
@@ -31,4 +32,14 @@ import { AnchorScroll } from './_module/anchor-scroll';
 (() => {
   const anchorScroll = new AnchorScroll('js-anchor-scroll');
   anchorScroll.init();
+})();
+
+// ヘッダースクリプトの実行
+(() => {
+  const header2 = new Header2(
+    'js-header',
+    'js-hero-nav',
+    'js-hero-nav-activate'
+  );
+  header2.init();
 })();

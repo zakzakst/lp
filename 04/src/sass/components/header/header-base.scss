@@ -3,44 +3,39 @@ $BLOCK_NAME: '.header';
 
 #{ $BLOCK_NAME } {
   position: fixed;
-  top: 0;
+  top: 12px;
   right: 0;
   left: 0;
   z-index: Z(header);
-  height: 60px;
-  background: Color(primary);
-  box-shadow: Shadow();
+  transition: transform Dur() Ease();
+  transform: translateY(-100px);
+  &.is-active {
+    transform: translateY(0);
+  }
 
   &__inner {
     display: flex;
     align-items: center;
-    height: 100%;
-  }
-
-  &__logo {
-    font-family: Ff(en);
-    font-size: 32px;
-    color: Color(white);
-    &:hover {
-      color: Color(white);
+    justify-content: center;
+    height: 48px;
+    padding: 0 24px;
+    background: Color(white);
+    border-radius: 9999px;
+    box-shadow: Shadow(float);
+    @include Mq(md) {
+      height: 60px;
+      padding: 0 36px;
     }
-  }
-
-  &__nav-wrapper {
-    position: relative;
-    height: 100%;
-    margin-left: auto;
   }
 
   &__nav {
-    display: none;
+    display: flex;
     align-items: center;
+    width: 100%;
     height: 100%;
     & > li {
+      width: 25%;
       height: 100%;
-    }
-    @include Mq(md) {
-      display: flex;
     }
   }
 
@@ -48,95 +43,33 @@ $BLOCK_NAME: '.header';
     position: relative;
     display: block;
     height: 100%;
-    padding: 16px 16px 0;
-    color: Color(white);
+    padding: 16px 0 0;
+    font-size: 10px;
+    text-align: center;
     transition: color Dur() Ease();
+    @include Mq(md) {
+      padding: 16px 16px 0;
+      font-size: 16px;
+    }
     &::after {
       position: absolute;
-      right: 0;
+      right: 4px;
       bottom: 4px;
-      left: 0;
+      left: 4px;
       display: block;
-      height: 2px;
+      height: 4px;
       content: '';
-      background: Color(white);
+      background: Color(primary);
+      border-radius: 2px;
       opacity: 0;
       transition: opacity Dur() Ease();
     }
+    &.is-active,
     &:hover {
-      color: Color(white);
+      color: Color(primary);
       &::after {
         opacity: 1;
       }
-    }
-  }
-
-  &__detail {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    display: none;
-    padding-top: 8px;
-    overflow: hidden;
-    opacity: 0;
-  }
-
-  &__detail-inner {
-    height: 100%;
-    padding: 12px;
-    background: Color(white);
-    box-shadow: Shadow(float);
-  }
-
-  &__detail-links {
-    // display: flex;
-    display: none;
-    flex-wrap: wrap;
-    & > li {
-      width: 50%;
-    }
-  }
-
-  &__detail-link {
-    position: relative;
-    display: block;
-    padding: 2px 4px 2px 24px;
-    color: Color(primary);
-    transition: opacity Dur(fast) Ease();
-    &::before {
-      position: absolute;
-      top: 14px;
-      left: 4px;
-      display: block;
-      width: 8px;
-      height: 1px;
-      content: '';
-      background: Color(primary);
-      opacity: 0.4;
-    }
-    &:hover {
-      color: Color(primary);
-      opacity: Op();
-    }
-  }
-
-  &__button {
-    width: 80px;
-    padding: 6px 6px 7px;
-    margin-left: auto;
-    font-size: 14px;
-    color: Color(white);
-    background: Color(primary);
-    border: 1px solid Color(white);
-    border-radius: 2px;
-    transition: all Dur(fast) Ease();
-    &:hover {
-      color: Color(primary);
-      background: Color(white);
-    }
-    @include Mq(md) {
-      display: none;
     }
   }
 }

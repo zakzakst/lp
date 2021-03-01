@@ -1,136 +1,30 @@
 {% set items = [
   {
-    id: 'menu1',
-    label: 'メニュー1',
-    links: [
-      {
-        label: 'リンク1-1',
-        url: '#'
-      },
-      {
-        label: 'リンク1-2',
-        url: '#'
-      },
-      {
-        label: 'リンク1-3',
-        url: '#'
-      },
-      {
-        label: 'リンク1-4',
-        url: '#'
-      },
-      {
-        label: 'リンク1-5',
-        url: '#'
-      }
-    ]
+    id: 'about',
+    label: '○○について'
   },
   {
-    id: 'menu2',
-    label: 'メニュー2',
-    links: [
-      {
-        label: 'リンク2-1',
-        url: '#'
-      },
-      {
-        label: 'リンク2-2',
-        url: '#'
-      },
-      {
-        label: 'リンク2-3',
-        url: '#'
-      }
-    ]
+    id: 'project',
+    label: 'プロジェクト'
   },
   {
-    id: 'menu3',
-    label: 'メニュー3',
-    links: [
-      {
-        label: 'リンク3-1',
-        url: '#'
-      },
-      {
-        label: 'リンク3-2',
-        url: '#'
-      },
-      {
-        label: 'リンク3-3',
-        url: '#'
-      },
-      {
-        label: 'リンク3-4',
-        url: '#'
-      },
-      {
-        label: 'リンク3-5',
-        url: '#'
-      },
-      {
-        label: 'リンク3-6',
-        url: '#'
-      },
-      {
-        label: 'リンク3-7',
-        url: '#'
-      }
-    ]
+    id: 'facility',
+    label: '施設'
   },
   {
-    id: 'menu4',
-    label: 'メニュー4',
-    links: [
-      {
-        label: 'リンク4-1',
-        url: '#'
-      },
-      {
-        label: 'リンク4-2',
-        url: '#'
-      },
-      {
-        label: 'リンク4-3',
-        url: '#'
-      },
-      {
-        label: 'リンク4-4',
-        url: '#'
-      },
-      {
-        label: 'リンク4-5',
-        url: '#'
-      }
-    ]
+    id: 'gallery',
+    label: 'ギャラリー'
   }
 ] -%}
 
-<header class="header js-fix-content">
-  <div class="header__inner container">
-    <a href="#" class="header__logo">
-      {# <img src="https://via.placeholder.com/120x40/ffffff/363f4d/?text=LOGO" alt=""> #}
-      LOGO
-    </a>
-    <div class="header__nav-wrapper" id="js-header-nav-wrapper">
-      <ul class="header__nav" id="js-header-nav">
+<header class="header" id="js-header">
+  <div class="container">
+    <div class="header__inner">
+      <ul class="header__nav">
         {% for item in items %}
-          <li><a href="#" class="header__nav-item" data-target="{{ item.id }}">{{ item.label }}</a></li>
+          <li><a href="#{{ item.id }}" class="header__nav-item js-anchor-scroll" id="header-nav-item--{{ item.id }}">{{ item.label }}</a></li>
         {% endfor %}
       </ul>
-      <div class="header__detail" id="js-header-detail">
-        <div class="header__detail-inner">
-          {% for item in items %}
-            <ul class="header__detail-links" id="js-header-detail-links-{{ item.id }}">
-              {% for link in item.links %}
-                <li><a href="{{ link.url }}" class="header__detail-link">{{ link.label }}</a></li>
-              {% endfor %}
-            </ul>
-          {% endfor %}
-        </div>
-      </div>
     </div>
-    <button class="header__button" id="js-header-button">MENU</button>
   </div>
 </header>
-
-{% include './header-menu.njk' %}
