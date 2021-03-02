@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+body {
+  font-family: Ff();
+  color: Color(black);
+}
+
+main {
+  overflow: hidden;
+}
+
+a {
+  color: Color(black);
+  text-decoration: none;
+  &:hover {
+    color: Color(black);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}

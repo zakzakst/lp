@@ -1,0 +1,65 @@
+{%- import '../_module/components/gallery.njk' as gallery -%}
+{%- import '../_module/components/headings.njk' as headings -%}
+
+{% set galleryItems = [
+  {
+    link: 'img/gallery/gallery01.jpg',
+    img: 'img/gallery/gallery01.jpg',
+    alt: '画像の説明文'
+  },
+  {
+    link: 'img/gallery/gallery02.jpg',
+    img: 'img/gallery/gallery02.jpg',
+    alt: '画像の説明文'
+  },
+  {
+    link: 'img/gallery/gallery03.jpg',
+    img: 'img/gallery/gallery03.jpg',
+    alt: '画像の説明文'
+  },
+  {
+    link: 'img/gallery/gallery04.jpg',
+    img: 'img/gallery/gallery04.jpg',
+    alt: '画像の説明文'
+  },
+  {
+    link: 'img/gallery/gallery05.jpg',
+    img: 'img/gallery/gallery05.jpg',
+    alt: '画像の説明文'
+  },
+  {
+    link: 'img/gallery/gallery06.jpg',
+    img: 'img/gallery/gallery06.jpg',
+    alt: '画像の説明文'
+  },
+  {
+    link: 'img/gallery/gallery07.jpg',
+    img: 'img/gallery/gallery07.jpg',
+    alt: '画像の説明文'
+  },
+  {
+    link: 'img/gallery/gallery08.jpg',
+    img: 'img/gallery/gallery08.jpg',
+    alt: '画像の説明文'
+  }
+] -%}
+
+<section class="gallery-section  js-hero-nav-activate" id="gallery">
+  <div class="container">
+    {{ headings.h2( text="ギャラリー", icon="gallery" ) }}
+    {{ headings.lead( text='テキストが入ります。テキストが入ります。テキストが入ります。<br class="d-none d-sm-block">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。' ) }}
+    <div class="gallery-section__content">
+      <div class="row row-cols-2 row-cols-md-4 g-2">
+        {% for item in galleryItems %}
+          <div class="col">
+            {{ gallery.item(
+              link=item.link,
+              img=item.img,
+              alt=item.alt
+            ) }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

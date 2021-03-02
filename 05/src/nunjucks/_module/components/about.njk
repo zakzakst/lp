@@ -1,0 +1,32 @@
+{% macro img( main="", sub="" ) %}
+<div class="about-img">
+  <div class="about-img__main">
+    <img
+      src="{{ main }}"
+      width="400"
+      height="400"
+      alt=""
+    >
+  </div>
+  <div class="about-img__sub">
+    <img
+      src="{{ sub }}"
+      width="400"
+      height="400"
+      alt=""
+    >
+  </div>
+</div>
+{% endmacro %}
+
+{% macro heading( content="" ) %}
+<h3 class="about-heading">
+  {{ content | safe }}
+</h3>
+{% endmacro %}
+
+{% macro text( content="" ) %}
+<p class="about-text">
+  {{ content | safe }}
+</p>
+{% endmacro %}

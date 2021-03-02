@@ -1,0 +1,126 @@
+{% set items = [
+  {
+    id: 'menu1',
+    label: 'メニュー1',
+    links: [
+      {
+        label: 'リンク1-1',
+        url: '#'
+      },
+      {
+        label: 'リンク1-2',
+        url: '#'
+      },
+      {
+        label: 'リンク1-3',
+        url: '#'
+      },
+      {
+        label: 'リンク1-4',
+        url: '#'
+      },
+      {
+        label: 'リンク1-5',
+        url: '#'
+      }
+    ]
+  },
+  {
+    id: 'menu2',
+    label: 'メニュー2',
+    links: [
+      {
+        label: 'リンク2-1',
+        url: '#'
+      },
+      {
+        label: 'リンク2-2',
+        url: '#'
+      },
+      {
+        label: 'リンク2-3',
+        url: '#'
+      }
+    ]
+  },
+  {
+    id: 'menu3',
+    label: 'メニュー3',
+    links: [
+      {
+        label: 'リンク3-1',
+        url: '#'
+      },
+      {
+        label: 'リンク3-2',
+        url: '#'
+      },
+      {
+        label: 'リンク3-3',
+        url: '#'
+      },
+      {
+        label: 'リンク3-4',
+        url: '#'
+      },
+      {
+        label: 'リンク3-5',
+        url: '#'
+      },
+      {
+        label: 'リンク3-6',
+        url: '#'
+      },
+      {
+        label: 'リンク3-7',
+        url: '#'
+      }
+    ]
+  },
+  {
+    id: 'menu4',
+    label: 'メニュー4',
+    links: [
+      {
+        label: 'リンク4-1',
+        url: '#'
+      },
+      {
+        label: 'リンク4-2',
+        url: '#'
+      },
+      {
+        label: 'リンク4-3',
+        url: '#'
+      },
+      {
+        label: 'リンク4-4',
+        url: '#'
+      },
+      {
+        label: 'リンク4-5',
+        url: '#'
+      }
+    ]
+  }
+] -%}
+
+<div id="js-header-menu" class="header-menu js-fix-content">
+  <div class="header-menu__content">
+    <ul class="header-menu__items">
+      {% for item in items %}
+        <li>
+          <a href="#" class="header-menu__item js-header-menu-item">{{ item.label }}</a>
+          <div class="header-menu__links js-header-menu-links">
+            <ul class="header-menu__links-inner">
+              {% for link in item.links %}
+                <li><a href="{{ link.url }}" class="header-menu__link">{{ link.label }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <button class="header-menu__close js-header-close"></button>
+  </div>
+</div>
