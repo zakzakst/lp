@@ -1,0 +1,46 @@
+{%- import '../_module/components/hero.njk' as hero -%}
+
+{% set navItems = [
+  {
+    link: '#about',
+    text: '○○について'
+  },
+  {
+    link: '#project',
+    text: 'プロジェクト'
+  },
+  {
+    link: '#facility',
+    text: '施設'
+  },
+  {
+    link: '#gallery',
+    text: 'ギャラリー'
+  }
+] %}
+
+<section class="hero-section">
+  <div class="hero-section__content">
+    <div class="hero-section__img">
+      <img src="img/hero/mv.jpg" alt="">
+    </div>
+    <div class="hero-section__text">
+      <h1 class="hero-section__title">タイトルが入ります</h1>
+      <p class="hero-section__lead">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    </div>
+  </div>
+</section>
+<div class="hero-nav" id="js-hero-nav">
+  <div class="container">
+    <div class="row row-cols-2 row-cols-md-4">
+      {% for item in navItems %}
+        <div class="col">
+          {{ hero.navItem(
+            link=item.link,
+            text=item.text
+          ) }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

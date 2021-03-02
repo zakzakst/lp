@@ -1,0 +1,97 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.footer';
+
+#{ $BLOCK_NAME } {
+  color: Color(white);
+  // background: Color(primary);
+  background: Color(black);
+
+  &__top {
+    padding: 48px 0;
+    border-bottom: 1px solid rgba(Color(white), Op());
+  }
+
+  &__heading {
+    padding-bottom: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(Color(white), Op());
+  }
+
+  &__links {
+    margin-top: 12px;
+    font-weight: 100;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 2px 0 2px 20px;
+    color: Color(white);
+    transition: opacity Dur(fast) Ease();
+    &::before {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      display: block;
+      width: 8px;
+      height: 1px;
+      content: '';
+      background: Color(white);
+      opacity: 0.4;
+    }
+    &:hover {
+      color: Color(white);
+      opacity: Op();
+    }
+  }
+
+  // フッター下部
+  &__bottom {
+    // background: Color(primary);
+    background: Color(primaryDark);
+  }
+
+  &__bottom-inner {
+    @include Mq(md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__bottom-links {
+    margin-bottom: 12px;
+    text-align: center;
+    @include Mq(md) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    & > li {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 1;
+      & + li {
+        padding-left: 12px;
+        margin-left: 12px;
+        border-left: 1px solid Color(white);
+      }
+    }
+  }
+
+  &__bottom-link {
+    color: Color(white);
+    transition: opacity Dur(fast) Ease();
+    &:hover {
+      color: Color(white);
+      opacity: Op();
+    }
+  }
+
+  &__bottom-copy {
+    font-size: 12px;
+    color: Color(white);
+    text-align: center;
+    opacity: Op();
+  }
+}

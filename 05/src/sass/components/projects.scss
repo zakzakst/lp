@@ -1,0 +1,59 @@
+@charset 'utf-8';
+$BLOCK_NAME: '.projects';
+$width_border_img: 4px;
+
+#{ $BLOCK_NAME } {
+  //
+}
+
+#{ $BLOCK_NAME }-img {
+  overflow: hidden;
+  border-radius: Rad(card);
+}
+
+#{ $BLOCK_NAME }-heading {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  @include Mq(md) {
+    font-size: 24px;
+    text-align: left;
+  }
+}
+
+#{ $BLOCK_NAME }-text {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+#{ $BLOCK_NAME }-card {
+  display: flex;
+
+  &__img {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding-left: 8px;
+    transition: color Dur(fast) Ease();
+    @at-root #{ $BLOCK_NAME }-card:hover & {
+      color: Color(primary);
+    }
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__text {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
