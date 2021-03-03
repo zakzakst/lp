@@ -1,0 +1,45 @@
+$BLOCK_NAME: ".button-22";
+
+#{ $BLOCK_NAME } {
+  display: inline-block;
+  padding: 1rem 4.375rem 1rem 1rem;
+  background: #eb0000;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    color: #fff;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 100%;
+    background: #fff;
+    transform: skewX(-10deg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -webkit-calc(100% - 54px);
+    left: calc(100% - 54px);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: auto;
+    background: url(https://www.sejuku.net/assets/images/button_arrow.svg)
+      center/contain no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0.9375rem;
+  }
+}
