@@ -1,0 +1,68 @@
+$BLOCK_NAME: ".button-28";
+$color_primary: #1f3134;
+$color_white: #fff;
+$duration_default: 0.3s;
+$duration_slide: 0.5s;
+$easing_default: cubic-bezier(0.29, 0.8, 0.35, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 265px;
+  height: 60px;
+  background: $color_white;
+  border: 1px solid $color_primary;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 320px;
+    height: 280px;
+    border: 1px solid $color_primary;
+    transition: all $duration_slide $easing_default;
+  }
+
+  &::before {
+    top: 0;
+    left: calc(100% - 10px);
+    transform-origin: left top;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    bottom: 0;
+    right: calc(100% - 10px);
+    transform-origin: right bottom;
+    transform: rotate(-45deg);
+  }
+
+  & > span {
+    position: relative;
+    font-family: YuGothic, Yu Gothic, sans-serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: $color_primary;
+    z-index: 1;
+    transition: $duration_default;
+  }
+
+  &:hover {
+    &::before {
+      background: $color_primary;
+      transform: translateX(-100%) rotate(-45deg);
+    }
+    &::after {
+      background: $color_primary;
+      transform: translateX(100%) rotate(-45deg);
+    }
+    & > span {
+      color: $color_white;
+    }
+  }
+}
